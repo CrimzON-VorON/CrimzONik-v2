@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Серіали</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../ressources/css/anime.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Головна</a></li>
+                    <li><a href="info.html">Інфа</a></li>
+                    <li><a href="watching.html">Просмотровий</a></li>
+                    <li><a href="gamehub.html">Ігрохаб</a></li>
+                    <li><a href="cookpad.html">Інстахавка</a></li>
+                    <li><a href="cool-things.html">Затишний уголок</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <button id="toggleSidebar" class="toggle-btn">☰</button>
+
+            <!-- Секція з пошуком та тегами -->
+            <section class="global-search">
+                <h2>Пошук по всіх розділах</h2>
+                <div class="global-controls">
+                    <div class="search-box">
+                        <input type="text" id="globalSearch" placeholder="Пошук серіалів..." class="search-input">
+                    </div>
+                    <div class="sort-controls">
+                        <select id="globalSort" class="sort-select">
+                            <option>Вибрати сортування:</option>
+                            <option value="name">- За назвою</option>
+                            <option value="rating">- За рейтингом</option>
+                        </select>
+                    </div>
+                    <div class="tags-filter">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Улюблене -->
+            <section class="anime-section" data-section="favorites">
+                <div class="section-header" data-toggle="favorites">
+                    <h2>Улюблені</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="favorites">
+                    <div class="anime-grid">
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">2 сезони</div>
+                            <div class="rating">10</div>
+                            <img src="../img/series/Каратель.webp" alt="">
+                            <div class="anime-title">Каратель</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                Імба
+                                <div class="anime-review-images">
+
+                                <img src="../img/series/1.webp" alt="">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">1~ сезон</div>
+                            <div class="rating">10</div>
+                            <img src="../img/series/Охотничьи_пси.webp" alt="">
+                            <div class="anime-title">Гончі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                Імба
+                                <div class="anime-review-images">
+
+                                <img src="../img/series/1.webp" alt="">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">3 сезони</div>
+                            <div class="rating">10</div>
+                            <img src="../img/series/Королівство.webp" alt="">
+                            <div class="anime-title">Королівство</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                Імба
+                                <div class="anime-review-images">
+
+                                <img src="../img/series/1.webp" alt="">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">3 сезони</div>
+                            <div class="rating">10</div>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcZ0soNdirb8gQrGtgtfTbHQBiBUEbPoFzw&s" alt="">
+                            <div class="anime-title">Аватар. Легенда про Аанга</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Дивлюся -->
+            <section class="anime-section" data-section="watching">
+                <div class="section-header" data-toggle="watching">
+                    <h2>Дивлюся</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="watching">
+                    <div class="anime-grid">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Заплановані -->
+            <section class="anime-section" data-section="planned">
+                <div class="section-header" data-toggle="planned">
+                    <h2>Заплановані</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="planned">
+                    <div class="anime-grid">
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating"></div>
+                            <img src="../img/series/Незнакомцы_из_ада.webp" alt="">
+                            <div class="anime-title">Незнайомці з пеки</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"> </span>
+                                <span class="tag"> </span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating"></div>
+                            <img src="../img/series/Скотт_Пилигрим_жмёт_на_газ.webp" alt="">
+                            <div class="anime-title">Скотт Пілігрим тисне на газ</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"> </span>
+                                <span class="tag"> </span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating"></div>
+                            <img src="../img/series/Голосование_по_поводу_смертной_казни.webp" alt="">
+                            <div class="anime-title">Голосування з приводу смертної кари</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"> </span>
+                                <span class="tag"> </span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Проглянуті -->
+            <section class="anime-section" data-section="completed">
+                <div class="section-header" data-toggle="completed">
+                    <h2>Проглянуті</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="completed">
+                    <div class="anime-grid">
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Твін Пікс.webp" alt="">
+                            <div class="anime-title">Твін Пікс</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">4</div>
+                            <img src="../img/series/Пітьма.webp" alt="">
+                            <div class="anime-title">Пітьма</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">8</div>
+                            <img src="../img/series/Игра_в_Кальмара_2.webp" alt="">
+                            <div class="anime-title">Гра в Кальмара 2</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Лост.webp" alt="">
+                            <div class="anime-title">Лост</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">2</div>
+                            <img src="../img/series/Шоу_восьми.webp" alt="">
+                            <div class="anime-title">Шоу Восьми</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">8</div>
+                            <img src="../img/series/Ван_Пис.webp" alt="">
+                            <div class="anime-title">Ван Піс</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Десятое_королевство.webp" alt="">
+                            <div class="anime-title">Десяте Королівство</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Игра_в_Кальмара.webp" alt="">
+                            <div class="anime-title">Гра в Кальмара</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">3</div>
+                            <img src="../img/series/Человек_против_пчелы.webp" alt="">
+                            <div class="anime-title">Людина проти бджоли</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">6</div>
+                            <img src="../img/series/Уенсдей.webp" alt="">
+                            <div class="anime-title">Уенсдей</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">6</div>
+                            <img src="../img/series/Дневники_Вампира.webp" alt="">
+                            <div class="anime-title">Щоденники Вампіра</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Древние.webp" alt="">
+                            <div class="anime-title">Древні</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">2</div>
+                            <img src="../img/series/Наследие.webp" alt="">
+                            <div class="anime-title">Спадщина</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Миротворец.webp" alt="">
+                            <div class="anime-title">Миротворець</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">10</div>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcZ0soNdirb8gQrGtgtfTbHQBiBUEbPoFzw&s" alt="">
+                            <div class="anime-title">Аватар. Легенда про Аанга</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Аватар_Легенда_про_Кору.webp" alt="">
+                            <div class="anime-title">Аватар. Легенда про Кору</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">10</div>
+                            <img src="../img/series/Таємниці_Ґравіті_Фолз.webp" alt="">
+                            <div class="anime-title">Таємниці Ґравіті Фолз</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">6</div>
+                            <img src="../img/series/Дом_совы.webp" alt="">
+                            <div class="anime-title">Будинок сови</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/ХБ.webp" alt="">
+                            <div class="anime-title">ХБ</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">6</div>
+                            <img src="../img/series/Боишься_ли_ты_темноты.webp" alt="">
+                            <div class="anime-title">Чи боїшся ти темряви?</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Судная_ночь.webp" alt="">
+                            <div class="anime-title">Судна ніч</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Футурама.webp" alt="">
+                            <div class="anime-title">Футурама</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">6</div>
+                            <img src="../img/series/Симпсоны.webp" alt="">
+                            <div class="anime-title">Сімпсони</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">3</div>
+                            <img src="../img/series/южный_парк.webp" alt="">
+                            <div class="anime-title">Південний парк</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Пацаны.webp" alt="">
+                            <div class="anime-title">Пацани</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Поколение_Ви.webp" alt="">
+                            <div class="anime-title">Покоління Ві</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Очень_странные_дела.webp" alt="">
+                            <div class="anime-title">Дуже дивні справи</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Неуязвимый.webp" alt="">
+                            <div class="anime-title">Неуязвимий</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Слабый_герой.webp" alt="">
+                            <div class="anime-title">Слабкий Герой</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">8</div>
+                            <img src="../img/series/Плохой_и_сумасшедший.webp" alt="">
+                            <div class="anime-title">Поганий і божевільний</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">6</div>
+                            <img src="../img/series/Ведьмак.webp" alt="">
+                            <div class="anime-title">Відьмак</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">9</div>
+                            <img src="../img/series/Наступает_ночь_(корейское).webp" alt="">
+                            <div class="anime-title">Настає ніч</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Ки_и_Пил.webp" alt="">
+                            <div class="anime-title">Кі і Піл</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">8</div>
+                            <img src="../img/series/Во_все_тяжки.webp" alt="">
+                            <div class="anime-title">У всі тяжкі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Лучше_звоните_Солу.webp" alt="">
+                            <div class="anime-title">Краще дзвоніть Солу</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">8</div>
+                            <img src="../img/series/Фаллаут.webp" alt="">
+                            <div class="anime-title">Фалаут</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">6</div>
+                            <img src="../img/series/Однажды_в_сказке.webp" alt="">
+                            <div class="anime-title">Якось в казці</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Чёрное_зеркало.webp" alt="">
+                            <div class="anime-title">Чорне дзеркало</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">10</div>
+                            <img src="../img/series/Охотничьи_пси.webp" alt="">
+                            <div class="anime-title">Гончі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">8</div>
+                            <img src="../img/series/Декстер.webp" alt="">
+                            <div class="anime-title">Декстер</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Бумажний_дом.webp" alt="">
+                            <div class="anime-title">Бумажний будинок</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">10</div>
+                            <img src="../img/series/Королівство.webp" alt="">
+                            <div class="anime-title">Королівство</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="../img/series/Зелена_стріла.webp" alt="">
+                            <div class="anime-title">Зелена стріла</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">7</div>
+                            <img src="https://static.hdrezka.ac/i/2021/2/15/i3d945f500cb0lx37f23m.png" alt="">
+                            <div class="anime-title">Шибайголова</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">10</div>
+                            <img src="../img/series/Каратель.webp" alt="">
+                            <div class="anime-title">Каратель</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Флеш.webp" alt="">
+                            <div class="anime-title">Флеш</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Брошені -->
+            <section class="anime-section" data-section="dropped">
+                <div class="section-header" data-toggle="dropped">
+                    <h2>Брошені</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="dropped">
+                    <div class="anime-grid">
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes"></div>
+                            <div class="rating">5</div>
+                            <img src="../img/series/Джек_Ричер.webp" alt="">
+                            <div class="anime-title">Джек Річер</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+    </div>
+        <!-- Попап функціювання серіалів -->
+    <div class="anime-popup">
+        <div class="popup-content">
+            <button class="close-popup">×</button>
+            <div class="popup-header">
+                <h2></h2>
+                <div class="popup-info">
+                    <span class="popup-episodes"></span>
+                    <span class="popup-rating"></span>
+                </div>
+            </div>
+            <div class="popup-tags"></div>
+            <div class="popup-review"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 CrimzONik v2</p>
+            <p>Version 0.5.0 alpha</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+    <script src="../../ressources/js/anime.js"></script>
+</body>
+</html>

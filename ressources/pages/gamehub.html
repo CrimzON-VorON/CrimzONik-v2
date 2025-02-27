@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ігрохаб</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../ressources/css/gamehub.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Головна</a></li>
+                    <li><a href="info.html">Інфа</a></li>
+                    <li><a href="watching.html">Просмотровий</a></li>
+                    <li><a href="gamehub.html" class="active">Ігрохаб</a></li>
+                    <li><a href="cookpad.html">Інстахавка</a></li>
+                    <li><a href="cool-things.html">Затишний уголок</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <button id="toggleSidebar" class="toggle-btn">☰</button>
+            
+            <div class="game-container">
+                <div class="game-link left" id="openPopup">
+                    <img id="gameImage" src="../img/games/minecraft/novaskin-wallpaper-egg.webp" alt="Minecraft">
+                    <div class="game-overlay">
+                        <h2>Майнкрафт</h2>
+                    </div>
+                </div>
+                <div class="game-link right">
+                    <a href="games.html">
+                        <img src="../img/games/games.webp" alt=" Games">
+                        <div class="game-overlay">
+                            <h2>Ігролист</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="popup" id="gamePopup">
+                <div class="popup-content">
+                    <button class="close-popup">×</button>
+                    <section class="popup-section">
+                        <h2>Favorite Games</h2>
+                        <div class="game-grid">
+                            <!-- Add game items here -->
+                        </div>
+                    </section>
+                    <section class="popup-section">
+                        <h2>Recently Played</h2>
+                        <div class="game-grid">
+                            <!-- Add game items here -->
+                        </div>
+                    </section>
+                    <section class="popup-section">
+                        <h2>Achievements</h2>
+                        <div class="game-grid">
+                            <!-- Add game items here -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 CrimzONik v2</p>
+            <p>Version 0.5.0 alpha</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+    <script src="../../ressources/js/gamehub.js"></script>
+</body>
+</html>

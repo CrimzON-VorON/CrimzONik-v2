@@ -1,0 +1,215 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Book Animation
+    const bookOverlay = document.querySelector('.book-overlay');
+    const book = document.querySelector('.book');
+    const bookContent = document.querySelector('.book-content');
+    let isBookOpened = false;
+
+    book.addEventListener('click', () => {
+        if (!isBookOpened) {
+            isBookOpened = true;
+            book.classList.add('opened');
+            
+            // Wait for book animation to complete
+            setTimeout(() => {
+                bookOverlay.classList.add('hidden');
+                bookContent.classList.add('visible');
+            }, 1000);
+        }
+    });
+
+    // Existing gallery and popup functionality
+    const recipeCards = document.querySelectorAll('.recipe-card');
+    const popups = document.querySelectorAll('.recipe-popup');
+    const fullscreenGallery = document.querySelector('.fullscreen-gallery');
+    const fullscreenImage = fullscreenGallery.querySelector('.fullscreen-image img');
+    const closeFullscreenBtn = document.querySelector('.close-fullscreen');
+    
+    let currentPopup = null;
+    let currentGalleryContainer = null;
+    let autoScrollInterval = null;
+
+    // Initialize galleries for each popup
+    popups.forEach(popup => {
+        const galleryContainer = popup.querySelector('.gallery-container');
+        const thumbnailsContainer = popup.querySelector('.thumbnails-container');
+        const thumbnails = popup.querySelectorAll('.thumbnail');
+        const prevBtn = popup.querySelector('.gallery-btn.prev');
+        const nextBtn = popup.querySelector('.gallery-btn.next');
+        const closeBtn = popup.querySelector('.close-popup');
+
+        let currentIndex = 0;
+        let visibleThumbnails = 3;
+        let totalThumbnails = thumbnails.length;
+        let direction = 1;
+
+        function updateThumbnails() {
+            const offset = -(currentIndex * (100 / visibleThumbnails));
+            thumbnailsContainer.querySelector('.thumbnails').style.transform = `translateX(${offset}%)`;
+        }
+
+        function autoScroll() {
+            if (direction === 1 && currentIndex >= totalThumbnails - visibleThumbnails) {
+                direction = -1;
+            } else if (direction === -1 && currentIndex <= 0) {
+                direction = 1;
+            }
+            
+            currentIndex += direction;
+            updateThumbnails();
+        }
+
+        function startAutoScroll() {
+            stopAutoScroll();
+            autoScrollInterval = setInterval(autoScroll, 3000);
+        }
+
+        function stopAutoScroll() {
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = null;
+            }
+        }
+
+        // Thumbnail navigation
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateThumbnails();
+            }
+            stopAutoScroll();
+            startAutoScroll();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < totalThumbnails - visibleThumbnails) {
+                currentIndex++;
+                updateThumbnails();
+            }
+            stopAutoScroll();
+            startAutoScroll();
+        });
+
+        // Fullscreen functionality
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                const img = thumbnail.querySelector('img');
+                fullscreenImage.src = img.src;
+                fullscreenGallery.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                currentGalleryContainer = { thumbnails, currentIndex: index };
+            });
+        });
+
+        // Close popup
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('active');
+            document.body.style.overflow = '';
+            stopAutoScroll();
+            currentPopup = null;
+        });
+
+        // Auto-scroll controls
+        galleryContainer.addEventListener('mouseenter', stopAutoScroll);
+        galleryContainer.addEventListener('mouseleave', startAutoScroll);
+    });
+
+    // Recipe card click handlers
+    recipeCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const recipeId = card.getAttribute('data-recipe');
+            const popup = document.getElementById(`popup-${recipeId}`);
+            
+            if (currentPopup) {
+                currentPopup.classList.remove('active');
+            }
+            
+            popup.classList.add('active');
+            currentPopup = popup;
+            document.body.style.overflow = 'hidden';
+
+            // Reset and start gallery
+            const thumbnailsContainer = popup.querySelector('.thumbnails-container');
+            const thumbnails = popup.querySelectorAll('.thumbnail');
+            thumbnailsContainer.querySelector('.thumbnails').style.transform = 'translateX(0)';
+            
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+            }
+            autoScrollInterval = setInterval(() => {
+                const currentIndex = parseInt(thumbnailsContainer.querySelector('.thumbnails').style.transform.match(/-?\d+/) || 0);
+                const maxOffset = -(thumbnails.length - 3) * (100 / 3);
+                
+                if (currentIndex <= maxOffset) {
+                    thumbnailsContainer.querySelector('.thumbnails').style.transform = 'translateX(0)';
+                } else {
+                    thumbnailsContainer.querySelector('.thumbnails').style.transform = `translateX(${currentIndex - (100 / 3)}%)`;
+                }
+            }, 1600);
+        });
+    });
+
+    // Fullscreen gallery navigation
+    fullscreenGallery.querySelector('.prev').addEventListener('click', () => {
+        if (currentGalleryContainer) {
+            const { thumbnails, currentIndex } = currentGalleryContainer;
+            const newIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+            const img = thumbnails[newIndex].querySelector('img');
+            fullscreenImage.src = img.src;
+            currentGalleryContainer.currentIndex = newIndex;
+        }
+    });
+
+    fullscreenGallery.querySelector('.next').addEventListener('click', () => {
+        if (currentGalleryContainer) {
+            const { thumbnails, currentIndex } = currentGalleryContainer;
+            const newIndex = (currentIndex + 1) % thumbnails.length;
+            const img = thumbnails[newIndex].querySelector('img');
+            fullscreenImage.src = img.src;
+            currentGalleryContainer.currentIndex = newIndex;
+        }
+    });
+
+    closeFullscreenBtn.addEventListener('click', () => {
+        fullscreenGallery.classList.remove('active');
+        document.body.style.overflow = '';
+        currentGalleryContainer = null;
+    });
+
+    // Global click and keyboard handlers
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('recipe-popup')) {
+            e.target.classList.remove('active');
+            document.body.style.overflow = '';
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = null;
+            }
+            currentPopup = null;
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (fullscreenGallery.classList.contains('active')) {
+                fullscreenGallery.classList.remove('active');
+                document.body.style.overflow = '';
+                currentGalleryContainer = null;
+            } else if (currentPopup) {
+                currentPopup.classList.remove('active');
+                document.body.style.overflow = '';
+                if (autoScrollInterval) {
+                    clearInterval(autoScrollInterval);
+                    autoScrollInterval = null;
+                }
+                currentPopup = null;
+            }
+        } else if (currentGalleryContainer) {
+            if (e.key === 'ArrowLeft') {
+                fullscreenGallery.querySelector('.prev').click();
+            } else if (e.key === 'ArrowRight') {
+                fullscreenGallery.querySelector('.next').click();
+            }
+        }
+    });
+});

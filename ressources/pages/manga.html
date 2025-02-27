@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Манга</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../ressources/css/anime.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Головна</a></li>
+                    <li><a href="info.html">Інфа</a></li>
+                    <li><a href="watching.html">Просмотровий</a></li>
+                    <li><a href="gamehub.html">Ігрохаб</a></li>
+                    <li><a href="cookpad.html">Інстахавка</a></li>
+                    <li><a href="cool-things.html">Затишний уголок</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <button id="toggleSidebar" class="toggle-btn">☰</button>
+
+            <!-- Секція з пошуком та тегами -->
+            <section class="global-search">
+                <h2>Пошук по всіх розділах</h2>
+                <div class="global-controls">
+                    <div class="search-box">
+                        <input type="text" id="globalSearch" placeholder="Пошук манги..." class="search-input">
+                    </div>
+                    <div class="sort-controls">
+                        <select id="globalSort" class="sort-select">
+                            <option>Вибрати сортування:</option>
+                            <option value="name">- За назвою</option>
+                            <option value="rating">- За рейтингом</option>
+                            <option value="episodes">- За кількістю глав</option>
+                        </select>
+                    </div>
+                    <div class="tags-filter">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Улюблене -->
+            <section class="anime-section" data-section="favorites">
+                <div class="section-header" data-toggle="favorites">
+                    <h2>Улюблені</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="favorites">
+                    <div class="anime-grid">
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">370/378~ глав</div>
+                            <div class="rating">10</div>
+                            <img src="../img/manga/Berserk.webp" alt="">
+                            <div class="anime-title">Берсерк</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                Імба
+                                <div class="anime-review-images">
+
+                                <img src="../img/manga//1.webp" alt="">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">181 глав</div>
+                            <div class="rating">10</div>
+                            <img src="../img/manga/Brynhildr_in_the_Darkness.webp" alt="">
+                            <div class="anime-title">Темна сторона Брюнгільди</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                Імба
+                                <div class="anime-review-images">
+
+                                <img src="../img/manga//1.webp" alt="">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">181 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Sun-Ken_Rock.webp" alt="">
+                            <div class="anime-title">Скала Кен</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                Імба
+                                <div class="anime-review-images">
+
+                                <img src="../img/manga//1.webp" alt="">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">256 глав</div>
+                            <div class="rating">9</div>
+                            <img src="../img/manga/Kengan_Ashura.webp" alt="">
+                            <div class="anime-title">Кенган Ашура</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                Імба
+                                <div class="anime-review-images">
+
+                                <img src="../img/manga//1.webp" alt="">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">371 глав</div>
+                            <div class="rating">10</div>
+                            <img src="../img/manga/Baki_the_Grappler.webp" alt="">
+                            <div class="anime-title">Боєць Бакі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                Імба
+                                <div class="anime-review-images">
+
+                                <img src="../img/manga//1.webp" alt="">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">185 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/Cage_of_Eden.webp" alt="">
+                            <div class="anime-title">Клітка Едему</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                Імба
+                                <div class="anime-review-images">
+
+                                <img src="../img/manga//1.webp" alt="">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">73/87~ глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Monster Musume no Iru Nichijou.webp" alt="">
+                            <div class="anime-title">Повсякденне життя з дівчиною-монстром</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Читаю -->
+            <section class="anime-section" data-section="watching">
+                <div class="section-header" data-toggle="watching">
+                    <h2>Читаю</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="watching">
+                    <div class="anime-grid">
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Заплановані -->
+            <section class="anime-section" data-section="planned">
+                <div class="section-header" data-toggle="planned">
+                    <h2>Заплановані</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="planned">
+                    <div class="anime-grid">
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">73/87~ глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Monster Musume no Iru Nichijou.webp" alt="">
+                            <div class="anime-title">Повсякденне життя з дівчиною-монстром</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">10/123~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Kono Subarashii Sekai ni Shukufuku wo!.webp" alt="">
+                            <div class="anime-title">Коносуба</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">7/193 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Bakemonogatari.webp" alt="">
+                            <div class="anime-title">Гатарі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">3/108 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Ookami to Koushinryou.webp" alt="">
+                            <div class="anime-title">Вовчиця та прянощі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">215/256~ глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/One_Punch-Man.webp" alt="">
+                            <div class="anime-title">Ванпанчмен</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">370/378~ глав</div>
+                            <div class="rating">10</div>
+                            <img src="../img/manga/Berserk.webp" alt="">
+                            <div class="anime-title">Берсерк</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">132/154 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Baki-dou2.webp" alt="">
+                            <div class="anime-title">Шлях Бакі 2</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">18/94~ глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Goblin_Slayer.webp" alt="">
+                            <div class="anime-title">Вбивця гоблінів</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">143/277~ глав</div>
+                            <div class="rating">9</div>
+                            <img src="../img/manga/Kengan_Omega.webp" alt="">
+                            <div class="anime-title">Кенган Омега</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/135 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Ana_Satsujin.webp" alt="">
+                            <div class="anime-title">Вбивства крізь щілину</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/38~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Arifureta_Shokugyou_de_Sekai_Saikyou.webp" alt="">
+                            <div class="anime-title">Аріфурета: найсильніший ремісник у світі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/69~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Made_in_Abyss.webp" alt="">
+                            <div class="anime-title">Створений в Безодні</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/72 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/The_Breaker.webp" alt="">
+                            <div class="anime-title">Крушитель</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/77 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/GTO_Shonan_14_Days.webp" alt="">
+                            <div class="anime-title">Крутий учитель Онідзука: 14 днів у Шонані</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/111 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Helck.webp" alt="">
+                            <div class="anime-title">Хельк</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/39~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/The_World_is_Full_of_Monsters.webp" alt="">
+                            <div class="anime-title">Світ, повний монстрів, в якому я хочу жити</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/100 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Oneechan_wa_Koi_Youkai.webp" alt="">
+                            <div class="anime-title">Моя старша сестра – люблячий йокай</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/94~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Place_to_Place.webp" alt="">
+                            <div class="anime-title">З місця на місце</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/25 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Legend_of_Eccentric_Youth!_Nishio_Academy.webp" alt="">
+                            <div class="anime-title">Легенда ексцентричної молоді! Академія Нісіо</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/10 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Bad_Company.webp" alt="">
+                            <div class="anime-title">Погана компанія</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/208 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/GTO.webp" alt="">
+                            <div class="anime-title">Крутий учитель Онідзука</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/152 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Kubo_Won't_Let_Me_Be_Invisible.webp" alt="">
+                            <div class="anime-title">Кубо мене не прощає</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/141 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Sweet_Home.webp" alt="">
+                            <div class="anime-title">Милий дім</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/~ глав (Ранобе)</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Gokukoku_no_Brynhildr_The_Moment.webp" alt="">
+                            <div class="anime-title">Темна сторона Брюнгільди</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Overlord.webp" alt="">
+                            <div class="anime-title">Повелитель</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/116~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Pumpkin_Night.webp" alt="">
+                            <div class="anime-title">Гарбузова ніч</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/145~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Chained_Soldier.webp" alt="">
+                            <div class="anime-title">Місто Демонів Раб Спецназу</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/31 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Brother_Control.webp" alt="">
+                            <div class="anime-title">Управління старшим братом</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/37 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Rainbow_Revolution.webp" alt="">
+                            <div class="anime-title">Райдужна революція</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/41 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/citrus.webp" alt="">
+                            <div class="anime-title">Цитрус</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/85 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/I_don't_like_you_at_all,_Big_Brother!!.webp" alt="">
+                            <div class="anime-title">Я точно не закохана в свого брата</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/29~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Затворница-извращенка_Эроко.webp" alt="">
+                            <div class="anime-title">Атака на Ероко: доросла сестра, яка хоче зблизитися зі старшокласником</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/50 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Let's_Meet_at_the_End_of_the_World.webp" alt="">
+                            <div class="anime-title">Принцеса іншого світу</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/126~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Killing_Bites.webp" alt="">
+                            <div class="anime-title">Смертельний укус</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/96~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Valkyrie_of_the_End.webp" alt="">
+                            <div class="anime-title">Повість про кінець світу</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/59 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Mirai_Nikki.webp" alt="">
+                            <div class="anime-title">Щоденник майбутнього</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/20 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Another.webp" alt="">
+                            <div class="anime-title">Иная</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/49 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Peach_Mermaid.webp" alt="">
+                            <div class="anime-title">Рожева русалонька</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/5 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Evil_Blade.webp" alt="">
+                            <div class="anime-title">Клинок зла</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/58 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/The_Legend_of_Zelda_Twilight_Princess.webp" alt="">
+                            <div class="anime-title">The Legend of Zelda: Twilight Princess</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Прочитані -->
+            <section class="anime-section" data-section="completed">
+                <div class="section-header" data-toggle="completed">
+                    <h2>Прочитані</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="completed">
+                    <div class="anime-grid">
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">8 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/KenganAshura0.webp" alt="">
+                            <div class="anime-title">Каган Ашура 0</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">196 глав</div>
+                            <div class="rating">10</div>
+                            <img src="../img/manga/JitsuwaWatashiwa.webp" alt="">
+                            <div class="anime-title">Правда в тому, що я...</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">19 глав</div>
+                            <div class="rating">5</div>
+                            <img src="../img/manga/SecretXFolder.webp" alt="">
+                            <div class="anime-title">Схована папка</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">27 глав</div>
+                            <div class="rating">5</div>
+                            <img src="../img/manga/KitsunenoAkumatoKuroiGrimoire.webp" alt="">
+                            <div class="anime-title">Лисиця-демон і чорний гримуар</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">16 глав</div>
+                            <div class="rating">5</div>
+                            <img src="../img/manga/ShounenShoujo.webp" alt="">
+                            <div class="anime-title">Хвороба хлопчика, хвороба дівчинки</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">18 глав</div>
+                            <div class="rating">0</div>
+                            <img src="../img/manga/Hiai_Mousou.webp" alt="">
+                            <div class="anime-title">Маячна любов</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">12 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Pandemonium.webp" alt="">
+                            <div class="anime-title">Пандемоніум: Село магів</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">35 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Kaguya-samawaKokurasetaiDoujin-ban.webp" alt="">
+                            <div class="anime-title">Кагуя-сан: кохання схоже на війну - Додзінсі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">8 глав</div>
+                            <div class="rating">6</div>
+                            <img src="../img/manga/KirikoKill.webp" alt="">
+                            <div class="anime-title">Кіріко вбиває</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">5 глав</div>
+                            <div class="rating">5</div>
+                            <img src="../img/manga/Kiriko.webp" alt="">
+                            <div class="anime-title">Кіріко</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">6 глав</div>
+                            <div class="rating">5</div>
+                            <img src="../img/manga/ShikeiGame.webp" alt="">
+                            <div class="anime-title">Гра «Особисте покарання»</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">1 глав</div>
+                            <div class="rating">0</div>
+                            <img src="../img/manga/Garouden.webp" alt="">
+                            <div class="anime-title">Легенда про голодних вовків</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">9 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Hideout.webp" alt="">
+                            <div class="anime-title">Притулок</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">207 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/KimetsunoYaiba.webp" alt="">
+                            <div class="anime-title">Лезо винищувача демонів</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">114 глав</div>
+                            <div class="rating">4</div>
+                            <img src="../img/manga/GreenWorldz.webp" alt="">
+                            <div class="anime-title">Зелені світи</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">27 глав</div>
+                            <div class="rating">5</div>
+                            <img src="../img/manga/SokuochiMayuri-chan.webp" alt="">
+                            <div class="anime-title">Маюрі, який швидко здається</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">198 глав</div>
+                            <div class="rating">6</div>
+                            <img src="../img/manga/Baki-dou.webp" alt="">
+                            <div class="anime-title">Шлях Бакі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">1 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Shigoite!Gina-chan.webp" alt="">
+                            <div class="anime-title">Вичавлюй, Джина!</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">25 глав</div>
+                            <div class="rating">5</div>
+                            <img src="../img/manga/Buchimaru_Chaos.webp" alt="">
+                            <div class="anime-title">Хаос Бутімару</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">27 глав</div>
+                            <div class="rating">6</div>
+                            <img src="../img/manga/Signal100.webp" alt="">
+                            <div class="anime-title">Сигнал 100</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">8 глав</div>
+                            <div class="rating">6</div>
+                            <img src="../img/manga/BakiTokubetsu-henSaga.webp" alt="">
+                            <div class="anime-title">Бакі Боєць: Додаткове видання</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">312 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/HanmaBaki.webp" alt="">
+                            <div class="anime-title">Бакі – син Велетня</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">276 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/BakiNewGrapplerBaki.webp" alt="">
+                            <div class="anime-title">Боєць Бакі II</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">14 глав</div>
+                            <div class="rating">6</div>
+                            <img src="../img/manga/YosuganoSora.webp" alt="">
+                            <div class="anime-title">Зв'язані з небом</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">15 глав</div>
+                            <div class="rating">2</div>
+                            <img src="../img/manga/Idol+Pretender.webp" alt="">
+                            <div class="anime-title">Прикинутися кумиром</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">31 глав</div>
+                            <div class="rating">4</div>
+                            <img src="../img/manga/HarutoNatsu.webp" alt="">
+                            <div class="anime-title">Весна і літо</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">11 глав</div>
+                            <div class="rating">0</div>
+                            <img src="../img/manga/Yuuhi+Romance.webp" alt="">
+                            <div class="anime-title">Роман Юхі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">3 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Даже_если_твой_рот_разорван.webp" alt="">
+                            <div class="anime-title">Навіть якщо у вас розірваний рот</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">24 глав</div>
+                            <div class="rating">2</div>
+                            <img src="../img/manga/The_Island_of_Giant_Insects.webp" alt="">
+                            <div class="anime-title">Острів гігантських комах</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">1 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Final_Girl.webp" alt="">
+                            <div class="anime-title">Остання дівчина</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">34 глав</div>
+                            <div class="rating">4</div>
+                            <img src="../img/manga/Pupa.webp" alt="">
+                            <div class="anime-title">Доллі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">62 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/Happy_Sugar_Life.webp" alt="">
+                            <div class="anime-title">Солодке життя</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">56 глав</div>
+                            <div class="rating">6</div>
+                            <img src="../img/manga/Bougyaku_no_Kokekko.webp" alt="">
+                            <div class="anime-title">Напад півнів</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">49 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Apocalypse_no_Toride.webp" alt="">
+                            <div class="anime-title">Фортеця Апокаліпсису</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">4 глав</div>
+                            <div class="rating">2</div>
+                            <img src="../img/manga/Momo_no_Musume!.webp" alt="">
+                            <div class="anime-title">Дочки Момо</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">14 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Dragon's_Dogma_Progress.webp" alt="">
+                            <div class="anime-title">Догма Дракона: прогресія</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">21 глав</div>
+                            <div class="rating">4</div>
+                            <img src="../img/manga/Kamisama_no_Iutoori.webp" alt="">
+                            <div class="anime-title">Страшна воля богів</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">1 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Furou_Kyoudai.webp" alt="">
+                            <div class="anime-title">Близнюки Фуро</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">9 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/BakitheGrapplerSideStoryIgarisMountToba.webp" alt="">
+                            <div class="anime-title">Боєць Бакі: Ігарі проти гори Тоба</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">6 глав</div>
+                            <div class="rating">4</div>
+                            <img src="../img/manga/The_Furou_Siblings.webp" alt="">
+                            <div class="anime-title">Близнюки Фуро</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">29 глав</div>
+                            <div class="rating">4</div>
+                            <img src="../img/manga/Juuni_Taisen.webp" alt="">
+                            <div class="anime-title">Війна дванадцятьох</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">97 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/Chainsaw_Man.webp" alt="">
+                            <div class="anime-title">Людина бензопила</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">185 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/Cage_of_Eden.webp" alt="">
+                            <div class="anime-title">Клітка Едему</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">1 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Sister_Blood.webp" alt="">
+                            <div class="anime-title">Кровна сестра</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">16 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/Imawabi_no_Dakini.webp" alt="">
+                            <div class="anime-title">Траур Дакіні</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">65 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Lucifer_and_the_Biscuit_Hammer.webp" alt="">
+                            <div class="anime-title">Люцифер і бісквітний молот</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">181 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Sun-Ken_Rock.webp" alt="">
+                            <div class="anime-title">Скала Кен</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">22 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/Wallman.webp" alt="">
+                            <div class="anime-title">Воллмен</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">256 глав</div>
+                            <div class="rating">9</div>
+                            <img src="../img/manga/Kengan_Ashura.webp" alt="">
+                            <div class="anime-title">Кенган Ашура</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">371 глав</div>
+                            <div class="rating">10</div>
+                            <img src="../img/manga/Baki_the_Grappler.webp" alt="">
+                            <div class="anime-title">Боєць Бакі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">31 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Masturbation_Master_Kurosawa.webp" alt="">
+                            <div class="anime-title">Майстер вздрочки Куросава</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">201 глав</div>
+                            <div class="rating">6</div>
+                            <img src="../img/manga/Solo_Leveling.webp" alt="">
+                            <div class="anime-title">Підвищення рівня наодинці</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">94 глав</div>
+                            <div class="rating">9</div>
+                            <img src="../img/manga/Bastard.webp" alt="">
+                            <div class="anime-title">Сволота</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">33 глав</div>
+                            <div class="rating">9</div>
+                            <img src="../img/manga/Искатель_подземелий.webp" alt="">
+                            <div class="anime-title">У пошуках підземелля</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">7 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/Metamorphosis.webp" alt="">
+                            <div class="anime-title">Реінкарнація</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">11 глав</div>
+                            <div class="rating">9</div>
+                            <img src="../img/manga/ReZERO1.webp" alt="">
+                            <div class="anime-title">Re:Zero. Життя з нуля в альтернативному світі — розділ перший. Повсякденне життя імперського міста</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">15 глав</div>
+                            <div class="rating">7</div>
+                            <img src="../img/manga/Scumbag_Loser.webp" alt="">
+                            <div class="anime-title">Повний невдаха</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">1 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Fairy_TailxThe_7_Deadly_Sins.webp" alt="">
+                            <div class="anime-title">Хвіст феї x Сім смертних гріхів: Різдвяний спецвипуск</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">8 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/The_Seven_Stories.webp" alt="">
+                            <div class="anime-title">Сім історій</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">364 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/The _Seven_Deadly_Sins.webp" alt="">
+                            <div class="anime-title">Сім смертних гріхів</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">705 глав</div>
+                            <div class="rating">8</div>
+                            <img src="../img/manga/Bleach.webp" alt="">
+                            <div class="anime-title">Бліч</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">113 глав</div>
+                            <div class="rating">10</div>
+                            <img src="../img/manga/Elfen_Lied.webp" alt="">
+                            <div class="anime-title">Ельфійська пісня</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">181 глав</div>
+                            <div class="rating">10</div>
+                            <img src="../img/manga/Brynhildr_in_the_Darkness.webp" alt="">
+                            <div class="anime-title">Темна сторона Брюнгільди</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Брошені -->
+            <section class="anime-section" data-section="dropped">
+                <div class="section-header" data-toggle="dropped">
+                    <h2>Брошені</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="section-content" id="dropped">
+                    <div class="anime-grid">
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/10 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Dragon's Dogma Revives.webp" alt="">
+                            <div class="anime-title">Догма дракона: Відродження</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">0/40 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Rosario to Vampire.webp" alt="">
+                            <div class="anime-title">Розаріо + Вампір</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">16/492~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Komi-san wa, Comyushou desu..webp" alt="">
+                            <div class="anime-title">У Комі проблеми зі спілкуванням</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">45/107 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Pandora Hearts.webp" alt="">
+                            <div class="anime-title">Серця Пандори</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">10/111~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Chichi_Chichi.webp" alt="">
+                            <div class="anime-title">Сиськи Сиськи</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">5/89~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Why_are_you_here_Sensei!.webp" alt="">
+                            <div class="anime-title">Чого ти тут, учителю?!</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">16/32 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Do_You_Love_Your_Mom_and_Her_Two-Hit_Multi-Target+Attacks.webp" alt="">
+                            <div class="anime-title">Ви любите матусю, чиї удари потрапляють у зону з подвійною шкодою, чи не так?</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">18/85~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Lv999_no_Murabito.webp" alt="">
+                            <div class="anime-title">Дев'ятсот дев'яносто дев'ятий рівень селянина</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">8/225~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Tower_of_God.webp" alt="">
+                            <div class="anime-title">Вежа Бога</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">52/174 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Don't_Toy_With_Me,_Miss_Nagatoro.webp" alt="">
+                            <div class="anime-title">Не знущайся, Нагаторо</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">38/93~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/The_Great_Jahy_Will_Not_Be_Defeated!.webp" alt="">
+                            <div class="anime-title">Джахі не впадає у відчай!</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">2/87 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Origin.webp" alt="">
+                            <div class="anime-title">Прототип</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">23/52 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Interspecies_Reviewers.webp" alt="">
+                            <div class="anime-title">Рецензенти різних видів</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">1/45 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Spirit_Circle.webp" alt="">
+                            <div class="anime-title">Каблучка з духом</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">3/35 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/No.6.webp" alt="">
+                            <div class="anime-title">Шоста зона</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">11/11~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/The_sister_of_the_Woods_with_a_Thousand_Young,_An_Elder_Sister.webp" alt="">
+                            <div class="anime-title">Демон, який став моєю сестрою - Додзінзі</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">13/19~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Rent-A-(Really_Shy!)-Girlfriend.webp" alt="">
+                            <div class="anime-title">Стесняшка на час</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">37/61~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Girl_That_Can_See_It.webp" alt="">
+                            <div class="anime-title">Дівчина, яка це бачить</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">2/31 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/I_Want_to_Be_the_Strongest_in_the_World.webp" alt="">
+                            <div class="anime-title">Я хочу стати найсильнішою у світі!</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">24/67 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Love_is_Still_Too_Early_for_Himeno-chan.webp" alt="">
+                            <div class="anime-title">Хімено занадто молода для кохання</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">175/319 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Skilled_Teaser_(Former)_Takagi-san.webp" alt="">
+                            <div class="anime-title">Майстер дразнилок (раніше) Такагі-сан</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">159/182 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Teasing_Master_Takagi-san.webp" alt="">
+                            <div class="anime-title">Майстер дразнилок Такагі-сан</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">44/45~ глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/The_Elder_Sister-Like_One.webp" alt="">
+                            <div class="anime-title">Демон, який став моєю сестрою</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="anime-card" data-anime-id="">
+                            <div class="episodes">3/90 глав</div>
+                            <div class="rating"></div>
+                            <img src="../img/manga/Even_If_You_Slit_My_Mouth.webp" alt="">
+                            <div class="anime-title">Навіть якщо твій рот розірваний</div>
+                            <div class="anime-tags" hidden>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                                <span class="tag"></span>
+                            </div>
+                            <div class="anime-review" hidden>
+                                
+                                <div class="anime-review-images">
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+    </div>
+        <!-- Попап функціювання манг -->
+    <div class="anime-popup">
+        <div class="popup-content">
+            <button class="close-popup">×</button>
+            <div class="popup-header">
+                <h2></h2>
+                <div class="popup-info">
+                    <span class="popup-episodes"></span>
+                    <span class="popup-rating"></span>
+                </div>
+            </div>
+            <div class="popup-tags"></div>
+            <div class="popup-review"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 CrimzONik v2</p>
+            <p>Version 0.5.0 alpha</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+    <script src="../../ressources/js/anime.js"></script>
+</body>
+</html>

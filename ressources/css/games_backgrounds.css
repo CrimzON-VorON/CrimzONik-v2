@@ -1,0 +1,688 @@
+[class^="review-content"] {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    padding: 30px;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    max-height: 90vh;
+    overflow-y: hidden;
+    min-height: 73vh;
+}
+.review-content1 {
+    position: relative;
+    overflow: auto;
+}
+.review-content2 {
+    position: relative;
+    overflow: auto;
+    background: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzR6MG1sbWE3cnA2NHJ6NjJlN20ybnRxbno1NHNpdnQ0djF3eXAxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6i6DHjicGKMMHzws2a/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content4 {
+    background: url(https://pbs.twimg.com/media/FiL6qCSXkAwk1dN?format=jpg&name=large);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content5 {
+    background: url(https://media1.tenor.com/m/vpccEfL7l3YAAAAd/io-code-vein.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content6 {
+    background: url(https://i.ibb.co/z75H6Pv/Arashi-Spring-Op-Scarlet-Nexus-Gif.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content7 {
+    background: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGRzbnc1b3ExZzh1Nng4MDMxdTMzajBqMTJwMDB2ZGx3M2I3Y3prcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/52hmeAPKVr2rpH6Fdx/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content8 {
+    background: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXZkZXBvd3BrdWpndDk4c3VsbnVtdmlvbjZmd3B3b3ptbncxMm45aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GvnbM0prmqwQRgEohB/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content9 {
+    background: url(https://media1.tenor.com/m/QR_vYEv43U0AAAAd/lawn-mowing.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content10 {
+    background: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWVxejRjYzl6ZHo4cWZlbmRiYnE4Y25hamFxdzJwYTgyOXhvajE1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/STUAgwgXPdZDO/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content11 {
+    background: url(https://media.tenor.com/QRbZgyfn7WgAAAAj/isaac-the-binding-of-isaac.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content12 {
+    background: url(https://i.pinimg.com/originals/7b/6d/3b/7b6d3bd4325b33f388e4dde66d28fe40.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content13 {
+    background: url(https://media1.tenor.com/m/XWYeIclD7hgAAAAd/saiko-no-sutoka.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content14 {
+    background: url(https://media1.tenor.com/m/7USHggwmKdsAAAAC/saiko-no-sutoka-yangire.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content15 {
+    background: url(../img/video/alice.gif);
+    background-repeat: round;
+    background-size: auto;
+    background-position: center;
+}
+.review-content16 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/780728477812793109/9B4A33B35B0285F992C3F312EB0B4D8D5A164CF7/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content17 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1227890/capsule_616x353.jpg?t=1735619997);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content18 {
+    background: url(https://gaming-cdn.com/images/products/15632/orig/winter-memories-pc-game-steam-cover.jpg?v=1704884167);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content19 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/42323244763296156/872560047A44ED0629DCF6129E6C031A697BED43/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content20 {
+    background: url(https://windowscustomization.com/wp-content/uploads/2018/10/new-vegas-courrier.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content21 {
+    background: url(https://media1.tenor.com/m/naHLMJN9RpoAAAAC/fallout-welcome-home.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content22 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/2066632617694195096/5F3C620F511BFD6EAC176A709658A25C82B060CC/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content23 {
+    background: url(https://media1.tenor.com/m/B9rn4uVRnJQAAAAC/doom.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content24 {
+    background: url(https://media1.tenor.com/m/ujLwY-mn2XwAAAAd/doom-doom-eternal.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content25 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/548680779286644613/DC0955DB16975CFC07B3E76C4FC6947F18F1B9FC/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content26 {
+    background: url(https://giffiles.alphacoders.com/743/74364.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content27 {
+    background: url(https://64.media.tumblr.com/403be556303496d54bce7915897d2264/8ff3b780e7246e39-fa/s400x600/a58b72f48a703aee85063a004e7e7eec07b7d954.gifv);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content28 {
+    background: url(https://64.media.tumblr.com/138d7ecf63aafbca55e57e659652e32c/4e1b6bd154010ee0-9a/s1280x1920/b019cda8a3b988f57247ed9178ac6cf1fb9e8b0e.gifv);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content29 {
+    background: url(https://media1.tenor.com/m/EK9cjkUEz3kAAAAC/about-to-kiss-geralt-of-rivia.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content30 {
+    background: url(https://qph.cf2.quoracdn.net/main-qimg-60b6d2356cf2a7b2f121f30b458b8a6c);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content31 {
+    background: url(https://media1.tenor.com/m/0vwlqr2FORcAAAAd/nfs-nfsmw.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content32 {
+    background: url(https://media1.tenor.com/m/R13bAxDjZGQAAAAC/need-for-speed-need-for-speed-hot-pursuit.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content33 {
+    background: url(https://media1.tenor.com/m/-JMzIdJ5ZC8AAAAC/need-for.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content34 {
+    background: url(https://media1.tenor.com/m/ZL7cozaJo1QAAAAd/stalker.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content35 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/20510/extras/light.gif?t=1733838943);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content36 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/49072302461793245/727904FD6374EC4D78DDA02EA28F02DEE21E0B1E/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content37 {
+    background: url(https://media1.tenor.com/m/3AtjtZvMIXcAAAAd/stalker2-artifact.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content38 {
+    background: url(https://media1.tenor.com/m/RRNVjRShUogAAAAC/emre-emreni-erme.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content39 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/1682619256775877221/C6FD497A460B878EC35851886E601EF7652A81BD/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content40 {
+    background: url(https://media1.tenor.com/m/5syFyIJVl3cAAAAd/dying-light-%D1%83%D0%B8%D0%B8%D0%B8.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content41 {
+    background: url(https://64.media.tumblr.com/09cfe06775b4fc94078afcc3e323f847/tumblr_op0561ZDYn1w01hqgo1_1280.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content42 {
+    background: url(https://external-preview.redd.it/_VrWkEfjcPXgP7SOumfmXefgMvXLvJe7VI8sdQai0kM.gif?auto=webp&s=1f956e695decb037374412d37d05559d4421311b);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content43 {
+    background: url(https://ladygeekgirl.wordpress.com/wp-content/uploads/2014/08/borderlands-2-lilith-maya-fist-bump.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content44 {
+    background: url(../img/video/Hololive.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content45 {
+    background: url(https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1669980/extras/%E5%A5%B3%E5%84%BFgif1en.gif?t=1735270220);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+}
+.review-content46 {
+    background: url(https://i.gifer.com/9sP9.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content47 {
+    background: url(https://cdn.smartlydressedgames.com/original/3X/6/5/65abe55bf01ccef4f843e4d396b8a14c9a6493f5.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content48 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/2100425780495410325/CBC977884FF87EF413D0E2FB20FB621D35D120DC/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content49 {
+    background: url(https://media1.tenor.com/m/Zmrfx77vS-YAAAAd/l4d2.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content50 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/434950296031169278/4584C13D4BB25A6A7EA81AF9178125A6870C7B30/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content51 {
+    background: url(https://cdn.shopify.com/s/files/1/1199/9926/files/Strawverry-Fruit-Salad_large.gif?v=1520807306);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content52 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/2464123430270588132/1211824E6C00E15C42319A0677E5220959ED90AD/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content53 {
+    background: url(https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3210350/extras/ThosePeople---charactersVers02.gif?t=1731510096);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content54 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/775102877231957212/BDFF99AECF2EEE0190614879C2DC422121C84363/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content55 {
+    background: url(https://i.ytimg.com/vi/BSsKy6pMQCs/maxresdefault.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content56 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/29599705855346320/B10BAC3BA676AE8F41F670F8E940871045C64A93/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content57 {
+    background: url(https://assetsio.gnwcdn.com/endless_legend_4.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content58 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/803243633605638090/951BC3EB7CE0AF819A91FB608BB350B17A59B0CE/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content59 {
+    background: url(https://i0.wp.com/shin-reviews.com/wp-content/uploads/2020/12/05.gif?resize=640%2C357&ssl=1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content60 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/788613673873230046/239249FE5B7A68C1F8694B761D0A57E0D5404318/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.review-content61 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/2038492407326764585/FF8EDB8C6545FC27092F4CAB0B19CCC22DA51850/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content62 {
+    background: url(https://64.media.tumblr.com/1c9b55415771bf8e9708fe3637faa9e9/tumblr_mw17i2FfVk1qbmd0ao1_500.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content63 {
+    background: url(https://static.wikia.nocookie.net/magicite/images/f/fb/Percyl_Jump_Sprint.gif/revision/latest/scale-to-width-down/562?cb=20140711182152);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content64 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/851592505495635087/9D1441ACF3BB68FCE9E4078579E51A5065ABB019/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content65 {
+    background: url(https://static.wikia.nocookie.net/projectzomboid/images/8/86/Zombi.gif/revision/latest?cb=20231012114952);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content66 {
+    background: url(https://clan.fastly.steamstatic.com/images//41223450/e897737d1e9187a30c5de38ccc02a69e33b5c75c.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content67 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/31843884701965906/D0C691075BB7F0E6EB43769EE8BAAA4B380640FF/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content68 {
+    background: url(https://25.media.tumblr.com/88cade1429424b89efe15614ecf44719/tumblr_mt5qbhqUPo1rsbhbyo1_500.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content69 {
+    background: url(https://i.pinimg.com/originals/c7/95/0a/c7950a25ee1c68c626d084c4b5c20d1c.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.review-content70 {
+    background: url(https://i.redd.it/szz3qqys6bcc1.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content71 {
+    background: url(https://lparchive.org/Doki-Doki-Literature-Club/Update%2012/16-2obWAbA.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content72 {
+    background: url(https://i.imgur.com/SjylLZX.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content73 {
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgx1J07t7rCDC-ZXtiLKfITHNkiSEEiAZ5QrszSXAzLyGV3qRdn21-wshriREImRS057HaBydHXOaomTFtlxLyiAiOKMFm6c_KS2ePG6fH75bprLOpuGB4ot2SIPGGddMf-WG7PKUlGAA/s280/17+FOXBOROUGH+UNVEILED.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content74 {
+    background: url(https://img.itch.zone/aW1hZ2UvMzUyOTExLzE3NTg2NzUuanBn/original/ORv6h0.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content75 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/951840457007025254/830B591398DEE13AEEDACD737F7F298A2DA7B268/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content76 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1118200/extras/zoom2.gif?t=1717246983);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content77 {
+    background: url(https://i.pinimg.com/originals/09/70/24/09702438bb8ff0a6073a390917be447d.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content78 {
+    background: url(https://culturedvultures.com/wp-content/uploads/2017/04/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content79 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/1833536237986440148/3F4CEA1814BE4F28FF560E80FABEBFD9DFFC623F/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content80 {
+    background: url(https://images.squarespace-cdn.com/content/v1/5caf2dea93a63238c9069ba4/e28f9382-8c3e-4965-833a-b14214c26978/Buckshot+Roulette+3.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content81 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/922546367830433416/C8AFA108CC78C615BC09C55E053118911B5DB7FD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content82 {
+    background: url(../img/video/portal.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content83 {
+    background: url(https://i.gifer.com/3f4T.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content84 {
+    background: url(https://static.wikia.nocookie.net/rhythm-game-database/images/d/db/Osu_Logo_2.gif/revision/latest?cb=20210926012822);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content85 {
+    background: url(https://techcrunch.com/wp-content/uploads/2016/08/reign-giph2.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content86 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15970/0000003077.1920x1080.jpg?t=1688474238);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content87 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/304390/extras/GIF_FOR_HONOR_01.gif?t=1738011125);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content88 {
+    background: url(https://i.imgur.com/R0232OZ.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content89 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT1Mn_JpAzCA_u23y4rLNwdYX8WxKoAMJ2-A&s);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content90 {
+    background: url(https://img3.gelbooru.com//images/df/22/df222ac676a6559c70b91ec3761521c6.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content91 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/738882403565985580/A5FEA3DC53B88F74727BCA76FE6E310F0E339F48/);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.review-content92 {
+    background: url(https://media.altchar.com/prod/images/620_350/gm-1aab7f5f-9021-4ae2-98ce-453cc2f95bff-seriousgif.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content93 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1987080/extras/ENTITIES_GIF.gif?t=1730653653);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content94 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2141730/extras/Hazmat_Walk.gif?t=1725491752);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content95 {
+    background: url(https://images.ctfassets.net/rporu91m20dc/6AsOID4YpyCcCYsIIY0s0W/a5ccd86e3d31aea71eb331791f386d65/QC_Gore_Clutch_2.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content96 {
+    background: url(https://i.ytimg.com/vi/7oiy39rhuVA/maxresdefault.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content97 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1408860/extras/SilenceChannel_Gif01_FQ.gif?t=1734161895);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content98 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2145220/extras/SL2_Gif03.gif?t=1734161870);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content99 {
+    background: url(https://static.wikia.nocookie.net/spookys-house-of-jump-scares/images/3/3d/SpookyNormal.gif/revision/latest?cb=20161022122258);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.review-content100 {
+    background: url(https://img.4gamers.com.tw/news-image/e54b368f-65ac-4552-b332-b22a69978d49.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content101 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/434420/capsule_616x353.jpg?t=1574484919);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content102 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/569970/ss_869a4562db4d302c21ee9b47da4691b285b46244.1920x1080.jpg?t=1574484110);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content103 {
+    background: url(https://lazytoad.com/teamtoad/spore/fuzik-evo1.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.review-content104 {
+    background: url(https://itorrents-igruha.org/uploads/posts/2021-08/1629149976_ss_6f6a198c60a863b64e298c3f91142a79921347df.1920x1080.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content105 {
+    background: url(https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_Viviette_image1600w.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content106 {
+    background: url(https://cs9.pikabu.ru/post_img/2017/02/17/6/1487323919110865809.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content107 {
+    background: url(https://static.wikia.nocookie.net/memes-pedia/images/f/ff/Ah_shit%2C_here_we_go_again_gif.gif/revision/latest/thumbnail/width/360/height/360?cb=20210616165544&path-prefix=es);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content108 {
+    background: url(https://i.gifer.com/8pbw.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content109 {
+    background: url(https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/298260/ss_b0fcedeafa82fde5fccb3f4a9428cc04e714af51.1920x1080.jpg?t=1694713993);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content110 {
+    background: url(https://cs9.pikabu.ru/post_img/2020/06/04/11/159129539912219362.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content111 {
+    background: url(https://i.imgur.com/kH16gbL.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content112 {
+    background: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/431540/ss_1df5e355a71c36e165120975e5d6e34ec49ec3e4.1920x1080.jpg?t=1452371013);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-content113 {
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/954089699032050362/54B349E9E2F8BA960FEC02C4AE2A52F331294012/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

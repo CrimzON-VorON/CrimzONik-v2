@@ -1,0 +1,499 @@
+body.cookbookimage {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../img/misc/open book.webp') no-repeat center center fixed;
+    background-size: 115%;
+
+}
+
+/* Book Animation */
+.book-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/misc/open book.webp') no-repeat center center fixed;
+    background-size: 115%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.book-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.book-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.book {
+    width: 550px;
+    height: 98%;
+    position: relative;
+    perspective: 1500px;
+    cursor: pointer;
+}
+
+.book-page {
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/misc/IMG_1217.webp') no-repeat center;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 
+        0 0 20px rgba(139, 0, 0, 0.2),
+        5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.book-cover {
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    transform-origin: left;
+    transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    box-shadow: 
+        0 0 20px rgba(139, 0, 0, 0.2),
+        5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.book-cover::before,
+.book-cover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.book-cover::before {
+    background: url('../img/misc/unnamed2.webp') no-repeat center;
+    background-size: cover;
+}
+
+.book-cover::after {
+    background: url('../img/misc/closed book.webp') no-repeat center;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+.book.opened .book-cover {
+    transform: rotateY(-180deg);
+}
+
+.book-spine {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 98%;
+    background: var(--second-color);
+    transform: rotateY(90deg) translateZ(-25px);
+}
+
+.book-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.book-content.visible {
+    opacity: 1;
+}
+
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.cookpad-logo {
+    margin-top: -100px;
+    margin-bottom: -100px;
+    top: 0;
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
+}
+
+/* Recipe Grid */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Recipe Card */
+.recipe-card {
+    background-color: var(--third-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+}
+
+.recipe-image {
+    position: relative;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+}
+
+.recipe-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .recipe-image img {
+    transform: scale(1.1);
+}
+
+.recipe-content {
+    padding: 1.5rem;
+}
+
+.recipe-content h3 {
+    color: var(--second-color);
+    margin-bottom: 0.5rem;
+}
+
+.recipe-content p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Recipe Popup */
+.recipe-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+.recipe-popup.active {
+    display: block;
+}
+
+.popup-content {
+    position: relative;
+    background-color: var(--main-color);
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.close-popup {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--second-color);
+    color: var(--text-color);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.close-popup:hover {
+    background-color: var(--hover-color);
+}
+
+/* Gallery */
+.gallery-container {
+    position: relative;
+    margin-bottom: 2rem;
+    background-color: var(--third-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.gallery-wrapper {
+    overflow: hidden;
+    margin: 0 40px;
+}
+
+.thumbnails-container {
+    overflow: hidden;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease;
+}
+
+.thumbnail {
+    flex: 0 0 calc(33.333% - 0.67rem); /* Show 3 thumbnails */
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: var(--second-color);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--second-color);
+    color: var(--text-color);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.gallery-btn.prev {
+    left: 5px;
+}
+
+.gallery-btn.next {
+    right: 5px;
+}
+
+/* Fullscreen Gallery */
+.fullscreen-gallery {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-gallery.active {
+    display: flex;
+}
+
+.fullscreen-gallery .gallery-btn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+.fullscreen-gallery .gallery-btn.prev {
+    left: 2rem;
+}
+
+.fullscreen-gallery .gallery-btn.next {
+    right: 2rem;
+}
+
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-image img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.close-fullscreen {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--second-color);
+    color: var(--text-color);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 2001;
+}
+
+.close-fullscreen:hover {
+    background-color: var(--hover-color);
+}
+
+/* Recipe Details */
+.recipe-details {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    height: fit-content;
+}
+
+.ingredients-box {
+    background-color: var(--third-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--second-color);
+}
+
+.ingredients-box h3 {
+    color: var(--second-color);
+    margin-bottom: 1rem;
+}
+
+.ingredients-box ul {
+    list-style: none;
+}
+
+.ingredients-box li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.ingredients-box li::before {
+    content: "•";
+    color: var(--second-color);
+    position: absolute;
+    left: 0;
+}
+
+.cooking-steps {
+    padding: 1.5rem;
+}
+
+.cooking-steps h3 {
+    color: var(--second-color);
+    margin-bottom: 1.5rem;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.step img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.step p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1360px) {
+    .book-cover::before {
+    background: url('../img/misc/unnamed2.webp') no-repeat bottom;
+    background-size: cover;
+    height: 99%;
+    width: auto;
+    }
+    .book-cover::after {
+    background: url('../img/misc/closed book.webp') no-repeat center;
+    background-size: cover;
+    transform: rotateY(180deg);
+    }
+
+}
+    .recipes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1200px) {
+    .recipes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-details {
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .step img {
+        margin: 0 auto;
+    }
+
+    body.cookbookimage {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../img/misc/open book.webp') no-repeat center center fixed;
+    background-size: cover; 
+    }
+}
