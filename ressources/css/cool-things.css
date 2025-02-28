@@ -298,7 +298,8 @@
 /* PSP Gallery Section */
 .psp-gallery {
     padding: 2rem 2rem;
-    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
 }
 
 .psp-main {
@@ -346,10 +347,11 @@
 }
 
 .picture-item {
-    background: #1a1a1a;
     border-radius: 12px;
     overflow: hidden;
     padding-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
 }
 
 .picture-item img {
@@ -555,6 +557,8 @@ html, body {
 .video-gallery {
     padding: 2rem 2rem;
     background-color: #111;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
 }
 
 .video-container {
@@ -775,7 +779,8 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(77, 77, 77, 0.95);
+    background: rgba(77, 77, 77, 0.7);
+    backdrop-filter: blur(3px);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
 

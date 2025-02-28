@@ -2,6 +2,8 @@
     margin-bottom: 2rem;
     background-color: var(--third-color);
     border-radius: 8px;
+    background: rgba(45, 45, 45, 0.4);
+    backdrop-filter: blur(3px);
     padding: 1.5rem;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
