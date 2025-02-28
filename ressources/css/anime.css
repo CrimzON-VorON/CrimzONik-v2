@@ -22,7 +22,8 @@
 /* Anime Sections */
 .anime-section {
     margin-bottom: 2rem;
-    background-color: var(--third-color);
+    background-color: rgba(45, 45, 45, 0.4);
+    backdrop-filter: blur(3px);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -146,7 +147,6 @@
     position: absolute;
     left: -2px;
     top: -2px;
-    background: linear-gradient(45deg, #ff0000, #e3902c, #ed9121, #126ede, #720b98);
     background-size: 400%;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
@@ -155,7 +155,7 @@
 }
 .anime-card:hover::before {
     opacity: 1;
-    box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; /* Neon red glow */
+    box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; 
 }
 
 @keyframes steam {
