@@ -5,6 +5,7 @@ const mainContent = document.querySelector('.main-content');
 const slider = document.querySelector('.slider');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
+const sidebarLinks = document.querySelectorAll('.sidebar a');
 
 // Load sidebar state from localStorage
 function loadSidebarState() {
@@ -12,15 +13,52 @@ function loadSidebarState() {
     if (isHidden) {
         sidebar.classList.add('hidden');
         mainContent.classList.add('full');
+        toggleBtn.style.left = '1rem';
+    } else {
+        // Ensure links are visible when sidebar is shown
+        sidebarLinks.forEach((link, index) => {
+            link.style.opacity = '1';
+            link.style.transform = 'translateX(0)';
+        });
+        toggleBtn.style.left = '250px';
     }
 }
 
 // Toggle Sidebar and save state
 document.getElementById('toggleSidebar').addEventListener('click', () => {
+    const isHiding = !sidebar.classList.contains('hidden');
+    
     sidebar.classList.toggle('hidden');
     mainContent.classList.toggle('full');
+    
+    // Update toggle button position
+    if (isHiding) {
+        toggleBtn.style.left = '1rem';
+    } else {
+        toggleBtn.style.left = '250px';
+    }
+    
+    // Save state to localStorage
     localStorage.setItem('sidebarHidden', sidebar.classList.contains('hidden'));
+    
+    // Animate links
+    sidebarLinks.forEach((link, index) => {
+        if (isHiding) {
+            // Hiding sidebar - fade out links with delay based on position
+            link.style.opacity = '0';
+            link.style.transform = 'translateX(-20px)';
+        } else {
+            // Showing sidebar - fade in links with delay
+            setTimeout(() => {
+                link.style.opacity = '1';
+                link.style.transform = 'translateX(0)';
+            }, 200 + (index * 50)); // Staggered animation
+        }
+    });
 });
+
+// Initialize sidebar state on page load
+document.addEventListener('DOMContentLoaded', loadSidebarState);
 
 // Slider functionality - Only initialize if slider exists
 if (slider && prevBtn && nextBtn) {
@@ -56,8 +94,26 @@ if (slider && prevBtn && nextBtn) {
     // Responsive handling
     window.addEventListener('resize', updateSlider);
 
-    // Auto slide every 5 seconds
-    setInterval(nextSlide, 5000);
+    // Auto slide functionality with pause on hover
+    let autoSlideInterval;
+    
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 2000);
+    }
+    
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+    
+    // Pause auto-sliding when mouse is over the slider container
+    const sliderContainer = document.querySelector('.slider-container');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+    }
+    
+    // Start auto-sliding initially
+    startAutoSlide();
 
     // Initialize slider
     updateSlider();
