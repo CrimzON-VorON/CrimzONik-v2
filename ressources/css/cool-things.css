@@ -442,7 +442,7 @@ html, body {
 }
 
 .game-box:nth-child(8) {
-    background: url('') top/contain;
+    background: url('https://pdacdn.com/app/6381d799a1a61/1461677383_1424130785_ppssppwindows64-2015-02-17-02-46-02-794.jpg') top/contain;
     background-repeat: no-repeat;
 }
 
@@ -452,7 +452,7 @@ html, body {
 }
 
 .game-box:nth-child(10) {
-    background: url('') top/contain;
+    background: url('https://static.wikia.nocookie.net/luxor-game-series/images/b/b1/PIC1.png/revision/latest?cb=20211030141025') top/contain;
     background-repeat: no-repeat;
 }
 
@@ -464,6 +464,27 @@ html, body {
 .game-box:nth-child(12) {
     background: url('') top/contain;
     background-repeat: no-repeat;
+}
+
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+.logo-container img {
+    backdrop-filter: blur(0px);
+    border-radius: 18px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
+}
+
+.cookpad-logo {
+    margin-top: -50px;
+    margin-bottom: -89px;
+    top: 0;
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
 
 .game-box-content {

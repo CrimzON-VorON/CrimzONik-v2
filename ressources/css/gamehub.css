@@ -518,6 +518,27 @@
     right: 20px;
 }
 
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+.logo-container img {
+    backdrop-filter: blur(0px);
+    border-radius: 18px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
+}
+
+.cookpad-logo {
+    margin-top: -50px;
+    margin-bottom: -60px;
+    top: 0;
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
+}
+
 /* Search and Filter Section */
 .search-filter {
     margin-bottom: 2rem;
