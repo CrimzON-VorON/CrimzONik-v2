@@ -447,7 +447,7 @@ html, body {
 }
 
 .game-box:nth-child(9) {
-    background: url('') top/contain;
+    background: url('../img/Штуки/PSP/game/harry.webp') top/contain;
     background-repeat: no-repeat;
 }
 
