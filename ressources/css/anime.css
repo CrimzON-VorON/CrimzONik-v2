@@ -287,6 +287,7 @@
     max-height: 65vh;
 }
 
+
 @keyframes neonGlow2 {
     0% {
         box-shadow: 0 0 5px rgba(255, 69, 0, 0.8), 0 0 0 rgba(0, 0, 0, 0);
@@ -308,7 +309,7 @@
 
 
 .close-popup {
-    position: absolute;
+    position: fixed;
     top: 1rem;
     right: 1rem;
     background: none;
@@ -345,6 +346,8 @@
 }
 
 .popup-review {
+    word-wrap: normal;
+    word-break: break-word;
     line-height: 1.6;
     overflow: hidden;
 }
