@@ -452,7 +452,7 @@ html, body {
 }
 
 .game-box:nth-child(10) {
-    background: url('https://static.wikia.nocookie.net/luxor-game-series/images/b/b1/PIC1.png/revision/latest?cb=20211030141025') top/contain;
+    background: url('../img/Штуки/PSP/game/PIC1.webp') top/contain;
     background-repeat: no-repeat;
 }
 
