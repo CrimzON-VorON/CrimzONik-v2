@@ -171,6 +171,20 @@ body {
     color: var(--second-color);
 }
 
+.updates a {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--text-color);
+    background-color: var(--second-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.updates a:hover {
+    background-color: var(--second-color);
+    transform: scale(1.1);
+}
+
 .slider-container {
     position: relative;
     overflow: hidden;
@@ -215,6 +229,7 @@ body {
     padding: 1rem;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 2;
 }
 
 .slider-btn.prev {
