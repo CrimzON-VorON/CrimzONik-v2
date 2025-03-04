@@ -53,9 +53,12 @@
 
 .card-frame {
     position: relative;
-    border-width: var(--card-border-width);
+    border-image-slice: 22 30 27 25;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 13px 13px 13px 13px;
+    border-image-repeat: round round;
+    border-image-source: url("../img/waifus/border/Minimap_Frame_Leaf.webp");
     border-style: solid;
-    border-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=500') 30 stretch;
     background-color: white;
     box-shadow: var(--card-shadow);
     overflow: hidden;
@@ -155,12 +158,33 @@
 .popup-frame {
     display: flex;
     background-color: white;
-    border-width: var(--popup-border-width);
-    border-style: solid;
-    border-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=500') 30 stretch;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
+    overflow: hidden;}
+
+.popup-frame::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: inherit;
+            background: linear-gradient(270deg, hsl(234, 100%, 50%), hsl(324, 100%, 50%));
+            background-size: 200% 200%;
+            animation: animate-border 2s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes animate-border {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
 .popup-image-container {
     flex: 1;
@@ -416,7 +440,7 @@
     border-image-outset: 0px 0px 0px 0px;
     border-image-repeat: round round;
     border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-6.svg");
-    border-style: solid;
+    border-style: double;
     padding: 2rem;
     text-align: center;
     backdrop-filter: blur(5px);
@@ -495,11 +519,11 @@
 
 .waifu-shrine.active {
     display: block;
-    border-image-slice: 27 27 27 27;
-    border-image-width: 20px 20px 20px 20px;
+    border-image-slice: 150 150 150 150;
+    border-image-width: 50px 50px 50px 50px;
     border-image-outset: 0px 0px 0px 0px;
-    border-image-repeat: stretch stretch;
-    border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-1.png");
+    border-image-repeat: repeat repeat;
+    border-image-source: url("../img/waifus/border/shinobu_border.png");
     border-style: solid;
     z-index: 1;
 }
