@@ -61,6 +61,7 @@ body {
     background-color: var(--third-color);
     padding: 2rem 0;
     transition: transform 0.3s ease;
+    z-index: 2;
 }
 
 .sidebar.hidden {

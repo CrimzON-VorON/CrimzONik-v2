@@ -2,17 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Character data
     const waifuData = {
         1: {
-            name: "Мікаса Акерман",
+            name: "Shinobu Oshino",
             anime: "Атака Титанів",
-            description: `Мікаса Акерман — одна з головних героїнь аніме "Атака Титанів". Вона надзвичайно сильна, віддана і готова на все, щоб захистити Ерена Єгера. Її бойові навички неперевершені, а її холоднокровність у бою робить її однією з найсильніших воїнів людства.
+            description: `Ака - Kiss-Shot Acerola-Orion Heart-Under-Blade. Моя #1 Вайфу назавжди! Перше знайомство було колись давно, випадково натрапив у ютубі у якихось нарізках. Пізніше побачив файт Arararagi і Shinobu в коубі і це мене дуже заворожило, що я одразу кинувся дивитися. Вона була чудова, у всьому, і я відразу її полюбив. Думаю поступлю в універ, повернуся з пар і піду пізно в метро і зустріну там її, але насправді зустрів гопників, но ладно. Реальність все-таки сосе. (Думав весь час, що коли з'явиться дівчина, то я її обов'язково попросю закосплеїти Shinobu, ну добре, що не дійшло до цього з тією. Чекаю кращих часів і я обов'язково вмовлю іншу так зробити:). Так само я натрапив на симулятор, переважно для VR. Моєму щастю не було межі, я забив на все, одразу засів і надовго і весь час просто гуляв та розглядав її. Це було просто неймовірно!
             <br><br>
-            Незважаючи на свою зовнішню стриманість, Мікаса має глибокі емоції та непохитну відданість тим, кого вона любить. Її характер сформувався після травматичних подій дитинства, коли Ерен врятував її від викрадачів.`,
+            Вона ж прекрасна у всьому: може бути Hot Milf Mommy у своїй гарячій дорослій формі, так само юною дівчиною, тінейджером і навіть лолі, що зазвичай вона і буває. Чарівна і мила зовнішність, приваблива фігура, чудове волосся та їх форма з цими закрутками біля вух та на кінчиках. Цікавий характер, що поєднує кілька типів настроїв. Та й до того ж це вампір, прекрасний вампір, вік та сила буде залежати від того, скільки вона випила крові. Куди ставати донором? Дякую також тобі, Денисе! За чудову подушку, я дуже задоволений :3`,
             stats: {
-                strength: 95,
-                intelligence: 80,
-                charisma: 65,
-                kawaii: 75
-            }
+                strength: 100,
+                intelligence: 100,
+                charisma: 100,
+                kawaii: 100
+            },
+            shrineMusic: "../audio/waifus/holo.mp3"
         },
         2: {
             name: "Асуна Юкі",
@@ -117,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupImage = document.querySelector('.popup-image');
     const characterTheme = document.getElementById('characterTheme');
     const statFills = document.querySelectorAll('.stat-fill');
+    const waifuShrine = document.getElementById('mikasaShrine');
+    const shrineAudio = document.getElementById('shrineAudio');
 
     // Toggle sidebar functionality
     const toggleSidebar = document.getElementById('toggleSidebar');
@@ -126,48 +129,113 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.toggle('active');
     });
 
-    // Show popup for specific waifu
-    waifuCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const waifuId = card.getAttribute('data-waifu-id');
-            const musicUrl = card.getAttribute('data-music');
-            const bgColor = card.getAttribute('data-color');
-            const popupImageUrl = card.getAttribute('data-popup-image');
-            const waifu = waifuData[waifuId];
+    // Create character looking element
+    const characterLooking = document.createElement('img');
+    characterLooking.className = 'character-looking';
+    characterLooking.src = '../img/waifus/avatar/shinobuyapp.webp';
+    characterLooking.alt = 'Мікаса дивиться';
+    document.body.appendChild(characterLooking);
+
+    // Initially hide the shrine
+    if (waifuShrine) {
+        waifuShrine.style.display = 'none';
+    }
+
+    // Special functionality for first card
+    const firstCard = document.querySelector('.waifu-card[data-waifu-id="1"]');
+    
+    firstCard.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent regular popup
+        
+        // Show character looking
+        characterLooking.classList.add('active');
+        
+        // Set up character looking click event
+        characterLooking.addEventListener('click', function characterClickHandler() {
+            // Destroy animations
+            firstCard.classList.add('destroying');
+            characterLooking.classList.add('destroying');
             
-            if (waifu) {
-                // Set popup content
-                popupName.textContent = waifu.name;
-                popupAnime.textContent = waifu.anime;
-                popupDescription.innerHTML = waifu.description;
+            // Remove elements after animation
+            setTimeout(() => {
+                firstCard.style.display = 'none';
+                characterLooking.style.display = 'none';
                 
-                // Use different image for popup if available
-                popupImage.src = popupImageUrl || card.querySelector('.waifu-image').src;
-                popupImage.alt = waifu.name;
-                
-                // Set background color
-                document.querySelector('.popup-overlay').style.backgroundColor = bgColor + 'dd'; // Add transparency
-                
-                // Set stats
-                statFills.forEach(fill => {
-                    const statType = fill.getAttribute('data-stat');
-                    if (waifu.stats[statType]) {
-                        setTimeout(() => {
-                            fill.style.width = waifu.stats[statType] + '%';
-                        }, 100);
+                // Show shrine
+                if (waifuShrine) {
+                    waifuShrine.style.display = 'block';
+                    waifuShrine.classList.add('active');
+                    
+                    // Scroll to shrine
+                    waifuShrine.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Play shrine music
+                    if (shrineAudio) {
+                        shrineAudio.play().catch(e => console.log("Audio autoplay prevented:", e));
                     }
-                });
-                
-                // Play music
-                if (musicUrl) {
-                    characterTheme.src = musicUrl;
-                    characterTheme.play().catch(e => console.log("Audio autoplay prevented:", e));
                 }
                 
-                // Show popup
-                popup.classList.add('active');
+                // Remove event listener to prevent multiple triggers
+                characterLooking.removeEventListener('click', characterClickHandler);
+            }, 1000);
+        });
+    });
+
+    // Make shrine text clickable to stop music
+    const shrineText = waifuShrine ? waifuShrine.querySelector('.shrine-text') : null;
+    if (shrineText) {
+        shrineText.addEventListener('click', () => {
+            if (shrineAudio) {
+                shrineAudio.pause();
+                shrineAudio.currentTime = 0;
             }
         });
+    }
+
+    // Show popup for other waifu cards
+    waifuCards.forEach(card => {
+        if (card.getAttribute('data-waifu-id') !== "1") {
+            card.addEventListener('click', () => {
+                const waifuId = card.getAttribute('data-waifu-id');
+                const musicUrl = card.getAttribute('data-music');
+                const bgColor = card.getAttribute('data-color');
+                const popupImageUrl = card.getAttribute('data-popup-image');
+                const waifu = waifuData[waifuId];
+                
+                if (waifu) {
+                    // Set popup content
+                    popupName.textContent = waifu.name;
+                    popupAnime.textContent = waifu.anime;
+                    popupDescription.innerHTML = waifu.description;
+                    
+                    // Use different image for popup if available
+                    popupImage.src = popupImageUrl || card.querySelector('.waifu-image').src;
+                    popupImage.alt = waifu.name;
+                    
+                    // Set background color
+                    document.querySelector('.popup-overlay').style.backgroundColor = bgColor + 'dd'; // Add transparency
+                    
+                    // Set stats
+                    statFills.forEach(fill => {
+                        const statType = fill.getAttribute('data-stat');
+                        if (waifu.stats[statType]) {
+                            setTimeout(() => {
+                                fill.style.width = waifu.stats[statType] + '%';
+                            }, 100);
+                        }
+                    });
+                    
+                    // Play music
+                    if (musicUrl) {
+                        characterTheme.src = musicUrl;
+                        characterTheme.play().catch(e => console.log("Audio autoplay prevented:", e));
+                    }
+                    
+                    // Show popup
+                    popup.classList.add('active');
+                }
+            });
+        }
     });
 
     // Close popup
@@ -195,6 +263,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && popup.classList.contains('active')) {
             closePopup.click();
+        } else if (e.key === 'Escape' && waifuShrine && waifuShrine.classList.contains('active')) {
+            waifuShrine.classList.remove('active');
+            waifuShrine.style.display = 'none';
+            if (shrineAudio) {
+                shrineAudio.pause();
+                shrineAudio.currentTime = 0;
+            }
         }
     });
 
@@ -202,7 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function preloadImages() {
         waifuCards.forEach(card => {
             const img = new Image();
-            img.src = card.querySelector('.waifu-image').src;
+            const imgElement = card.querySelector('.waifu-image');
+            if (imgElement && imgElement.src) {
+                img.src = imgElement.src;
+            }
             
             // Also preload popup images
             const popupImg = card.getAttribute('data-popup-image');

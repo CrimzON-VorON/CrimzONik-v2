@@ -311,3 +311,292 @@
 .waifu-card:hover .card-frame {
     animation: pulse 1.5s infinite;
 }
+
+/* Special animations for first card */
+.waifu-card[data-waifu-id="1"] {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.waifu-card[data-waifu-id="1"] .card-frame {
+    box-shadow: 0 0 15px 5px rgba(255, 107, 107, 0.7);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px 5px rgba(255, 107, 107, 0.7);
+    }
+    to {
+        box-shadow: 0 0 25px 10px rgba(255, 107, 107, 0.9);
+    }
+}
+
+.waifu-card[data-waifu-id="1"]:hover {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    20% { transform: translate(-5px, 0) rotate(-5deg); }
+    40% { transform: translate(5px, 0) rotate(5deg); }
+    60% { transform: translate(-3px, 0) rotate(-3deg); }
+    80% { transform: translate(3px, 0) rotate(3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Character looking image */
+.character-looking {
+    position: fixed;
+    right: -300px;
+    bottom: 50px;
+    width: 300px;
+    height: auto;
+    z-index: 1001;
+    transition: right 0.5s ease;
+    cursor: pointer;
+}
+
+.character-looking.active {
+    right: 20px;
+}
+
+/* Destroy animations */
+@keyframes destroy {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.destroying {
+    animation: destroy 1s forwards;
+}
+
+/* Shrine styles */
+.waifu-shrine {
+    display: none;
+    margin: 2rem auto;
+    max-width: 1600px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.shrine-content {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.shrine-center {
+    background: linear-gradient(135deg, #ff6b6b22, #6b66ff22);
+    border-image-slice: 42 42 42 42;
+    border-image-width: 42px 42px 42px 42px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round round;
+    border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-6.svg");
+    border-style: solid;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+    color: white;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.shrine-name {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
+}
+
+.shrine-text {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.shrine-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.shrine-side {
+    width: 25%;
+}
+
+.shrine-side img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.shrine-small-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shrine-big-images {
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.shrine-small-images img {
+    width: 48%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.shrine-big-images img {
+    width: 200%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    clip-path: inset(0px round 10px);
+}
+
+.waifu-shrine.active {
+    display: block;
+    border-image-slice: 27 27 27 27;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-1.png");
+    border-style: solid;
+    z-index: 1;
+}
+
+.waifu-shrine.active .shrine-content {
+    opacity: 1;
+}
+
+.waifu-shrine.active img {
+    opacity: 1;
+}
+
+/* Delay for images to appear sequentially */
+.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(1) {
+    transition-delay: 0.3s;
+    transform: translateY(0) rotate(35deg);
+    margin-right: 100px;
+}
+.waifu-shrine.active .shrine-left .shrine-small-images img:nth-child(1) {
+    transition-delay: 0.3s;
+    transform: translateY(0) rotate(-35deg);
+    margin-left: 100px;
+}
+.waifu-shrine.active .shrine-right .shrine-big-images img {
+    transition-delay: 0.3s;
+    transform: translateY(0) rotate(5deg) scaleX(-1);
+    margin-left: -60px;
+}
+.waifu-shrine.active .shrine-left .shrine-big-images img {
+    transition-delay: 0.3s;
+    transform:  rotate(-5deg);
+    margin-left: -160px;
+}
+
+.waifu-shrine.active .shrine-side img:nth-child(2) {
+    transition-delay: 0.6s;
+}
+
+.waifu-shrine.active .shrine-small-images img:nth-child(1) {
+    transition-delay: 0.4s;
+}
+
+.waifu-shrine.active .shrine-small-images img:nth-child(2) {
+    transition-delay: 0.5s;
+}
+
+.waifu-shrine.active .shrine-small-images img:nth-child(3) {
+    transition-delay: 0.7s;
+}
+
+.waifu-shrine.active .shrine-small-images img:nth-child(4) {
+    transition-delay: 0.8s;
+}
+
+/* Add a close button for the shrine */
+.shrine-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.shrine-close:hover {
+    background-color: #ff4f4f;
+}
+
+/* Responsive shrine */
+@media (max-width: 992px) {
+    .shrine-images {
+        flex-direction: column;
+    }
+    
+    .shrine-side {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .shrine-center {
+        order: -1;
+    }
+    
+    .shrine-name {
+        font-size: 2rem;
+    }
+    
+    .shrine-text {
+        font-size: 1rem;
+    }
+}
