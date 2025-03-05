@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const waifuData = {
         1: {
             name: "Shinobu Oshino",
-            anime: "Атака Титанів",
+            anime: "Monogatari",
             description: `Ака - Kiss-Shot Acerola-Orion Heart-Under-Blade. Моя #1 Вайфу назавжди! Перше знайомство було колись давно, випадково натрапив у ютубі у якихось нарізках. Пізніше побачив файт Arararagi і Shinobu в коубі і це мене дуже заворожило, що я одразу кинувся дивитися. Вона була чудова, у всьому, і я відразу її полюбив. Думаю поступлю в універ, повернуся з пар і піду пізно в метро і зустріну там її, але насправді зустрів гопників, но ладно. Реальність все-таки сосе. (Думав весь час, що коли з'явиться дівчина, то я її обов'язково попросю закосплеїти Shinobu, ну добре, що не дійшло до цього з тією. Чекаю кращих часів і я обов'язково вмовлю іншу так зробити:). Так само я натрапив на симулятор, переважно для VR. Моєму щастю не було межі, я забив на все, одразу засів і надовго і весь час просто гуляв та розглядав її. Це було просто неймовірно!
             <br><br>
             Вона ж прекрасна у всьому: може бути Hot Milf Mommy у своїй гарячій дорослій формі, так само юною дівчиною, тінейджером і навіть лолі, що зазвичай вона і буває. Чарівна і мила зовнішність, приваблива фігура, чудове волосся та їх форма з цими закрутками біля вух та на кінчиках. Цікавий характер, що поєднує кілька типів настроїв. Та й до того ж це вампір, прекрасний вампір, вік та сила буде залежати від того, скільки вона випила крові. Куди ставати донором? Дякую також тобі, Денисе! За чудову подушку, я дуже задоволений :3`,
@@ -12,20 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 intelligence: 100,
                 charisma: 100,
                 kawaii: 100
-            },
-            shrineMusic: "../audio/waifus/holo.mp3"
+            } 
         },
         2: {
-            name: "Асуна Юкі",
-            anime: "Мастер Меча Онлайн",
-            description: `Асуна Юкі, також відома як "Блискавична Спалах", є однією з головних героїнь аніме "Мастер Меча Онлайн". Вона не лише надзвичайно красива, але й дуже талановита фехтувальниця, яка стала віце-командиром гільдії "Лицарі Крові".
-            <br><br>
-            Асуна відома своєю рішучістю, інтелектом та лідерськими якостями. Протягом серіалу вона розвивається від наляканої гравчині до впевненої в собі жінки, яка готова боротися за своє майбутнє. Її стосунки з Кіріто є центральною романтичною лінією серіалу.`,
+            name: "Hex Maniac",
+            anime: "Pokemon",
+            description: `Hex Maniac, таємнича тренерка привидових покемонів, відома своєю загадковою аурою та глибоким розумінням потойбічного світу. Її присутність завжди створює атмосферу містики та інтриги.
+
+            Вона спеціалізується на темних та привидових типах покемонів, досконало володіючи мистецтвом містичних битв. Її погляд, сповнений таємничості, та загадкова посмішка стали її візитною карткою.
+
+            Hex Maniac живе у світі, де межа між реальністю та потойбіччям розмита, і саме це робить її такою унікальною та привабливою особистістю.`,
             stats: {
-                strength: 85,
-                intelligence: 90,
-                charisma: 88,
-                kawaii: 92
+                strength: 100,
+                intelligence: 100,
+                charisma: 100,
+                kawaii: 100
             }
         },
         3: {
@@ -35,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <br><br>
             Незважаючи на свою зовнішню м'якість, Рем надзвичайно сильна в бою, особливо коли використовує свою демонічну силу. Її безумовна любов до головного героя Субару зробила її однією з найпопулярніших вайфу в аніме-спільноті.`,
             stats: {
-                strength: 88,
-                intelligence: 75,
-                charisma: 80,
-                kawaii: 98
+                strength: 100,
+                intelligence: 100,
+                charisma: 100,
+                kawaii: 100
             }
         },
         4: {
@@ -48,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <br><br>
             Маї відома своєю зрілістю, розумом та прямолінійністю. Незважаючи на свою холодну зовнішність, вона має добре серце і глибоко піклується про головного героя Сакуту. Її стосунки з ним розвиваються природно і зворушливо протягом серіалу.`,
             stats: {
-                strength: 60,
-                intelligence: 95,
-                charisma: 90,
+                strength: 100,
+                intelligence: 100,
+                charisma: 100,
                 kawaii: 85
             }
         },
@@ -118,8 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupImage = document.querySelector('.popup-image');
     const characterTheme = document.getElementById('characterTheme');
     const statFills = document.querySelectorAll('.stat-fill');
-    const waifuShrine = document.getElementById('mikasaShrine');
+    const waifuShrine = document.getElementById('shinobuShrine');
     const shrineAudio = document.getElementById('shrineAudio');
+    const shrineAudioControl = document.getElementById('shrineAudioControl');
+    const hexShrine = document.getElementById('hexShrine');
+    const hexShrineAudio = document.getElementById('hexShrineAudio');
+    const hexShrineAudioControl = document.getElementById('hexShrineAudioControl');
+    let isHexShrineAudioPlaying = false;
+    let isShrineAudioPlaying = false;
 
     // Toggle sidebar functionality
     const toggleSidebar = document.getElementById('toggleSidebar');
@@ -129,93 +136,153 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.toggle('active');
     });
 
-    // Create character looking element
+// Create character looking element for Shinobu
     const characterLooking = document.createElement('img');
-    characterLooking.className = 'character-looking';
+    characterLooking.classList.add('character-looking');
     characterLooking.src = '../img/waifus/avatar/shinobuyapp.webp';
-    characterLooking.alt = 'Мікаса дивиться';
+    characterLooking.alt = 'Shinobu дивиться';
     document.body.appendChild(characterLooking);
 
-    // Initially hide the shrine
+// Create character looking element for Hex Maniac
+    const hexLooking = document.createElement('img');
+    hexLooking.classList.add('character-looking', 'hex-looking');
+    hexLooking.src = '../img/waifus/hexy.webp';
+    hexLooking.alt = 'Hex Maniac дивиться';
+    document.body.appendChild(hexLooking);
+
+
+    // Initially hide the shrines
     if (waifuShrine) {
         waifuShrine.style.display = 'none';
     }
+    if (hexShrine) {
+        hexShrine.style.display = 'none';
+    }
 
-    // Special functionality for first card
-    const firstCard = document.querySelector('.waifu-card[data-waifu-id="1"]');
-    
-    firstCard.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent regular popup
-        
-        // Show character looking
-        characterLooking.classList.add('active');
-        
-        // Set up character looking click event
-        characterLooking.addEventListener('click', function characterClickHandler() {
-            // Destroy animations
-            firstCard.classList.add('destroying');
-            characterLooking.classList.add('destroying');
+    // Update shrine audio control functionality
+    if (shrineAudioControl) {
+    const audioSrc = shrineAudioControl.getAttribute('data-audio-src');
+    if (audioSrc && shrineAudio) {
+        shrineAudio.src = audioSrc;
+    }
+
+    shrineAudioControl.addEventListener('click', () => {
+        if (!shrineAudio.paused) {
+            shrineAudio.pause();
+            shrineAudioControl.innerHTML = '<i class="fas fa-play"></i><span>Тема</span>';
+        } else {
+            shrineAudio.play().catch(e => console.log("Audio autoplay prevented:", e));
+            shrineAudioControl.innerHTML = '<i class="fas fa-pause"></i><span>Тема</span>';
+        }
+    });
+}
+
+    // Handle Hex's music control
+    if (hexShrineAudioControl) {
+    hexShrineAudioControl.addEventListener('click', () => {
+        if (!hexShrineAudio.paused) {
+            hexShrineAudio.pause();
+            hexShrineAudioControl.innerHTML = '<i class="fas fa-play"></i><span>Тема</span>';
+        } else {
+            hexShrineAudio.play().catch(e => console.log("Audio autoplay prevented:", e));
+            hexShrineAudioControl.innerHTML = '<i class="fas fa-pause"></i><span>Тема</span>';
+        }
+    });
+}
+
+    // Helper function for destroy animation
+    function handleDestroyAnimation(card, lookingImage, shrine, audio, audioControl, isAudioPlaying) {
+        return function destroyHandler() {
+            card.classList.add('destroying');
+            lookingImage.classList.add('destroying');
             
-            // Remove elements after animation
             setTimeout(() => {
-                firstCard.style.display = 'none';
-                characterLooking.style.display = 'none';
+                card.style.display = 'none';
+                lookingImage.style.display = 'none';
                 
-                // Show shrine
-                if (waifuShrine) {
-                    waifuShrine.style.display = 'block';
-                    waifuShrine.classList.add('active');
+                if (shrine) {
+                    shrine.style.display = 'block';
+                    shrine.classList.add('active');
+                    shrine.scrollIntoView({ behavior: 'smooth' });
                     
-                    // Scroll to shrine
-                    waifuShrine.scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Play shrine music
-                    if (shrineAudio) {
-                        shrineAudio.play().catch(e => console.log("Audio autoplay prevented:", e));
+                    if (audio) {
+                        audio.play()
+                            .then(() => {
+                                isAudioPlaying = true;
+                                audioControl.innerHTML = '<i class="fas fa-pause"></i><span>Тема</span>';
+                            })
+                            .catch(e => console.log("Audio autoplay prevented:", e));
                     }
                 }
                 
-                // Remove event listener to prevent multiple triggers
-                characterLooking.removeEventListener('click', characterClickHandler);
+                lookingImage.removeEventListener('click', destroyHandler);
             }, 1000);
-        });
-    });
+        };
+    }
 
-    // Make shrine text clickable to stop music
-    const shrineText = waifuShrine ? waifuShrine.querySelector('.shrine-text') : null;
-    if (shrineText) {
-        shrineText.addEventListener('click', () => {
-            if (shrineAudio) {
-                shrineAudio.pause();
-                shrineAudio.currentTime = 0;
-            }
+    // First card click handler
+    const firstCard = document.querySelector('.waifu-card[data-waifu-id="1"]');
+    if (firstCard) {
+        firstCard.addEventListener('click', (e) => {
+            e.stopPropagation();
+            characterLooking.classList.add('active');
+            characterLooking.addEventListener('click', handleDestroyAnimation(
+                firstCard,
+                characterLooking,
+                waifuShrine,
+                shrineAudio,
+                shrineAudioControl,
+                isShrineAudioPlaying
+            ));
         });
     }
 
-    // Show popup for other waifu cards
+    // Second card click handler
+    const secondCard = document.querySelector('.waifu-card[data-waifu-id="2"]');
+    if (secondCard) {
+    secondCard.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hexLooking.classList.add('active');
+
+        // Видаляємо старий обробник, якщо він є
+        hexLooking.removeEventListener('click', destroyHandlerHex);
+        
+        function destroyHandlerHex() {
+            hexLooking.classList.remove('hex-float'); // Вимикаємо ефект плавання
+            handleDestroyAnimation(
+                secondCard,
+                hexLooking,
+                hexShrine,
+                hexShrineAudio,
+                hexShrineAudioControl,
+                isHexShrineAudioPlaying
+            )();
+            hexLooking.removeEventListener('click', destroyHandlerHex);
+        }
+
+        hexLooking.addEventListener('click', destroyHandlerHex);
+    });
+}
+
+
+    // Show popup for other waifu cards (3 and above)
     waifuCards.forEach(card => {
-        if (card.getAttribute('data-waifu-id') !== "1") {
+        const waifuId = parseInt(card.getAttribute('data-waifu-id'));
+        if (waifuId > 2) {
             card.addEventListener('click', () => {
-                const waifuId = card.getAttribute('data-waifu-id');
                 const musicUrl = card.getAttribute('data-music');
                 const bgColor = card.getAttribute('data-color');
                 const popupImageUrl = card.getAttribute('data-popup-image');
                 const waifu = waifuData[waifuId];
                 
                 if (waifu) {
-                    // Set popup content
                     popupName.textContent = waifu.name;
                     popupAnime.textContent = waifu.anime;
                     popupDescription.innerHTML = waifu.description;
-                    
-                    // Use different image for popup if available
                     popupImage.src = popupImageUrl || card.querySelector('.waifu-image').src;
                     popupImage.alt = waifu.name;
+                    document.querySelector('.popup-overlay').style.backgroundColor = bgColor + 'dd';
                     
-                    // Set background color
-                    document.querySelector('.popup-overlay').style.backgroundColor = bgColor + 'dd'; // Add transparency
-                    
-                    // Set stats
                     statFills.forEach(fill => {
                         const statType = fill.getAttribute('data-stat');
                         if (waifu.stats[statType]) {
@@ -225,13 +292,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
                     
-                    // Play music
                     if (musicUrl) {
                         characterTheme.src = musicUrl;
                         characterTheme.play().catch(e => console.log("Audio autoplay prevented:", e));
                     }
                     
-                    // Show popup
                     popup.classList.add('active');
                 }
             });
@@ -241,13 +306,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close popup
     closePopup.addEventListener('click', () => {
         popup.classList.remove('active');
-        
-        // Reset stats for next opening
         statFills.forEach(fill => {
             fill.style.width = '0';
         });
-        
-        // Stop music
         characterTheme.pause();
         characterTheme.currentTime = 0;
     });
@@ -263,17 +324,27 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && popup.classList.contains('active')) {
             closePopup.click();
-        } else if (e.key === 'Escape' && waifuShrine && waifuShrine.classList.contains('active')) {
-            waifuShrine.classList.remove('active');
-            waifuShrine.style.display = 'none';
-            if (shrineAudio) {
-                shrineAudio.pause();
-                shrineAudio.currentTime = 0;
+        } else if (e.key === 'Escape') {
+            if (waifuShrine && waifuShrine.classList.contains('active')) {
+                waifuShrine.classList.remove('active');
+                waifuShrine.style.display = 'none';
+                if (shrineAudio) {
+                    shrineAudio.pause();
+                    shrineAudio.currentTime = 0;
+                }
+            }
+            if (hexShrine && hexShrine.classList.contains('active')) {
+                hexShrine.classList.remove('active');
+                hexShrine.style.display = 'none';
+                if (hexShrineAudio) {
+                    hexShrineAudio.pause();
+                    hexShrineAudio.currentTime = 0;
+                }
             }
         }
     });
 
-    // Preload images for smoother experience
+    // Preload images
     function preloadImages() {
         waifuCards.forEach(card => {
             const img = new Image();
@@ -282,7 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.src = imgElement.src;
             }
             
-            // Also preload popup images
             const popupImg = card.getAttribute('data-popup-image');
             if (popupImg) {
                 const popupImgObj = new Image();

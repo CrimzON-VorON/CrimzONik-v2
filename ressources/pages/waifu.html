@@ -6,6 +6,8 @@
     <title>Вайфу</title>
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../ressources/css/waifu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../ressources/css/hex-shrine.css">
 </head>
 <body>
     <div class="container">
@@ -32,8 +34,7 @@
                 <p>Найкращі аніме персонажі, які назавжди залишаться в моєму серці</p>
             </section>
 
-            <!-- Waifu Shrine Section - Added directly in HTML -->
-            <section class="waifu-shrine" id="mikasaShrine">
+            <section class="waifu-shrine" id="shinobuShrine">
                 <div class="shrine-content">
                     <div class="shrine-images">
                         <div class="shrine-side shrine-left">
@@ -48,7 +49,13 @@
                             </div>
                         </div>
                         <div class="shrine-center">
-                            <h2 class="shrine-name">Shinobu Oshino</h2>
+                            <div class="shrine-header">
+                                <h2 class="shrine-name">Shinobu Oshino</h2>
+                                <button class="shrine-music-btn" id="shrineAudioControl" data-audio-src="../audio/waifus/holo.mp3">
+                                    <i class="fas fa-play"></i>
+                                    <span>Тема</span>
+                                </button>
+                            </div>
                             <div class="shrine-text">Ака - Kiss-Shot Acerola-Orion Heart-Under-Blade. Моя #1 Вайфу назавжди! Перше знайомство було колись давно, випадково натрапив у ютубі у якихось нарізках. Пізніше побачив файт Arararagi і Shinobu в коубі і це мене дуже заворожило, що я одразу кинувся дивитися. Вона була чудова, у всьому, і я відразу її полюбив. Думаю поступлю в універ, повернуся з пар і піду пізно в метро і зустріну там її, але насправді зустрів гопників, но ладно. Реальність все-таки сосе. (Думав весь час, що коли з'явиться дівчина, то я її обов'язково попросю закосплеїти Shinobu, ну добре, що не дійшло до цього з тією. Чекаю кращих часів і я обов'язково вмовлю іншу так зробити:). Так само я натрапив на симулятор, переважно для VR. Моєму щастю не було межі, я забив на все, одразу засів і надовго і весь час просто гуляв та розглядав її. Це було просто неймовірно! <br>Вона ж прекрасна у всьому: може бути Hot Milf Mommy у своїй гарячій дорослій формі, так само юною дівчиною, тінейджером і навіть лолі, що зазвичай вона і буває. Чарівна і мила зовнішність, приваблива фігура, чудове волосся та їх форма з цими закрутками біля вух та на кінчиках. Цікавий характер, що поєднує кілька типів настроїв. Та й до того ж це вампір, прекрасний вампір, вік та сила буде залежати від того, скільки вона випила крові. Куди ставати донором? Дякую також тобі, Денисе! За чудову подушку, я дуже задоволений :3</div>
                         </div>
                         <div class="shrine-side shrine-right">
@@ -66,13 +73,50 @@
                 </div>
             </section>
 
+            <section class="hex-shrine" id="hexShrine">
+                <div class="hex-shrine-content">
+                    <div class="hex-shrine-images">
+                        <div class="hex-shrine-side hex-shrine-left">
+                            <div class="hex-shrine-small-images">
+                                <img src="../img/waifus/hex/small1.webp" alt="Hex Maniac">
+                                <img src="../img/waifus/hex/small2.webp" alt="Hex Maniac">
+                            </div>
+                            <img src="../img/waifus/hex/left.webp" alt="Hex Maniac" class="hex-shrine-large">
+                        </div>
+                        <div class="hex-shrine-center">
+                            <div class="hex-shrine-header">
+                                <h2 class="hex-shrine-name">Hex Maniac</h2>
+                                <button class="hex-music-btn" id="hexShrineAudioControl">
+                                    <i class="fas fa-play"></i>
+                                    <span>Тема</span>
+                                </button>
+                            </div>
+                            <div class="hex-shrine-text">
+                                Hex Maniac, таємнича тренерка привидових покемонів, відома своєю загадковою аурою та глибоким розумінням потойбічного світу. Її присутність завжди створює атмосферу містики та інтриги.
+
+                                Вона спеціалізується на темних та привидових типах покемонів, досконало володіючи мистецтвом містичних битв. Її погляд, сповнений таємничості, та загадкова посмішка стали її візитною карткою.
+
+                                Hex Maniac живе у світі, де межа між реальністю та потойбіччям розмита, і саме це робить її такою унікальною та привабливою особистістю. Її глибоке розуміння надприродного та зв'язок з привидовими покемонами роблять її однією з найзагадковіших тренерів у світі покемонів.
+                            </div>
+                        </div>
+                        <div class="hex-shrine-side hex-shrine-right">
+                            <div class="hex-shrine-small-images">
+                                <img src="../img/waifus/hex/small3.webp" alt="Hex Maniac">
+                                <img src="../img/waifus/hex/small4.webp" alt="Hex Maniac">
+                            </div>
+                            <img src="../img/waifus/hex/right.webp" alt="Hex Maniac" class="hex-shrine-large">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="waifu-gallery">
                 <div class="waifu-grid">
                     <!-- Character 1 -->
                     <div class="waifu-card" data-waifu-id="1" data-music="../audio/waifus/holo.mp3" data-color="#ffcce6" data-popup-image="../img/waifus/avatar/hex.webp">
                         <div class="card-frame">
                             <div class="image-container">
-                                <img src="../img/waifus/avatar/shinobuyapp.webp" alt="Мікаса Акерман" class="waifu-image">
+                                <img src="../img/waifus/avatar/shinobuyapp.webp" alt="Shinobu" class="waifu-image">
                             </div>
                             <div class="waifu-info">
                                 <div class="waifu-name">Shinobu Oshino</div>
@@ -82,95 +126,278 @@
                     </div>
 
                     <!-- Character 2 -->
-                    <div class="waifu-card" data-waifu-id="2" data-music="../audio/waifus/holo.mp3" data-color="#e6ccff" data-popup-image="">
+                    <div class="waifu-card" data-waifu-id="2" data-music="../audio/waifus/holo.mp3" data-color="#e6ccff" data-popup-image="../img/waifus/hexy.webp">
                         <div class="card-frame">
                             <div class="image-container">
-                                <img src="../img/waifus/avatar/hex.webp" alt="Асуна Юкі" class="waifu-image">
+                                <img src="../img/waifus/avatar/hex.webp" alt="Hex Maniac" class="waifu-image">
                             </div>
                             <div class="waifu-info">
-                                <div class="waifu-name">Асуна Юкі</div>
-                                <div class="waifu-anime">Мастер Меча Онлайн</div>
+                                <div class="waifu-name">Hex Maniac</div>
+                                <div class="waifu-anime">Pokemon</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Character 3 -->
-                    <div class="waifu-card" data-waifu-id="3" data-music="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" data-color="#ccf2ff" data-popup-image="https://images.unsplash.com/photo-1580489944761-15a19d654956">
+                    <div class="waifu-card" data-waifu-id="3" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
                         <div class="card-frame">
                             <div class="image-container">
-                                <img src="../img/waifus/avatar/hex.webp" alt="Рем" class="waifu-image">
+                                <img src="../img/waifus/avatar/kuroha.webp" alt="" class="waifu-image">
                             </div>
                             <div class="waifu-info">
-                                <div class="waifu-name">Рем</div>
-                                <div class="waifu-anime">Re:Zero</div>
+                                <div class="waifu-name">Neko Kuroha</div>
+                                <div class="waifu-anime">Brynhildr In The Darkness</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Character 4 -->
-                    <div class="waifu-card" data-waifu-id="4" data-music="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" data-color="#d9f2d9" data-popup-image="https://images.unsplash.com/photo-1597248374161-426f0d6d2fc9">
+                    <div class="waifu-card" data-waifu-id="4" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
                         <div class="card-frame">
                             <div class="image-container">
-                                <img src="../img/waifus/avatar/" alt="Маї Сакурадзіма" class="waifu-image">
+                                <img src="../img/waifus/avatar/karla.webp" alt="" class="waifu-image">
                             </div>
                             <div class="waifu-info">
-                                <div class="waifu-name">Маї Сакурадзіма</div>
-                                <div class="waifu-anime">Сезон цвітіння</div>
+                                <div class="waifu-name">Karura Kure</div>
+                                <div class="waifu-anime">Kenganverse</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Character 5 -->
-                    <div class="waifu-card" data-waifu-id="5" data-music="https://assets.mixkit.co/music/preview/mixkit-dreaming-big-31.mp3" data-color="#ffe6cc" data-popup-image="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5">
+                    <div class="waifu-card" data-waifu-id="5" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
                         <div class="card-frame">
                             <div class="image-container">
-                                <img src="../img/waifus/avatar/" alt="Ерза Скарлет" class="waifu-image">
+                                <img src="../img/waifus/avatar/holo.webp" alt="" class="waifu-image">
                             </div>
                             <div class="waifu-info">
-                                <div class="waifu-name">Ерза Скарлет</div>
-                                <div class="waifu-anime">Хвіст Феї</div>
+                                <div class="waifu-name">Holo</div>
+                                <div class="waifu-anime">Spice and wolf</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Character 6 -->
-                    <div class="waifu-card" data-waifu-id="6" data-music="https://assets.mixkit.co/music/preview/mixkit-hip-hop-02-621.mp3" data-color="#f2e6ff" data-popup-image="https://images.unsplash.com/photo-1534528741775-53994a69daeb">
+                    <div class="waifu-card" data-waifu-id="6" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
                         <div class="card-frame">
                             <div class="image-container">
-                                <img src="../img/waifus/avatar/" alt="Ніко Робін" class="waifu-image">
+                                <img src="../img/waifus/avatar/aqua.webp" alt="" class="waifu-image">
                             </div>
                             <div class="waifu-info">
-                                <div class="waifu-name">Ніко Робін</div>
-                                <div class="waifu-anime">Ван Піс</div>
+                                <div class="waifu-name">Aqua</div>
+                                <div class="waifu-anime">Konosuba</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Character 7 -->
-                    <div class="waifu-card" data-waifu-id="7" data-music="https://assets.mixkit.co/music/preview/mixkit-feeling-happy-5.mp3" data-color="#ffccd9" data-popup-image="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+                    <div class="waifu-card" data-waifu-id="7" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
                         <div class="card-frame">
                             <div class="image-container">
-                                <img src="../img/waifus/avatar/" alt="Хіната Хюґа" class="waifu-image">
+                                <img src="../img/waifus/avatar/tohru.webp" alt="" class="waifu-image">
                             </div>
                             <div class="waifu-info">
-                                <div class="waifu-name">Хіната Хюґа</div>
-                                <div class="waifu-anime">Наруто</div>
+                                <div class="waifu-name">Tohru</div>
+                                <div class="waifu-anime">Miss Kobayashi's Dragon Maid</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Character 8 -->
-                    <div class="waifu-card" data-waifu-id="8" data-music="https://assets.mixkit.co/music/preview/mixkit-driving-ambition-32.mp3" data-color="#e6f9ff" data-popup-image="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04">
+                    <div class="waifu-card" data-waifu-id="8" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
                         <div class="card-frame">
                             <div class="image-container">
-                                <img src="../img/waifus/avatar/" alt="Йоруічі Шіхоїн" class="waifu-image">
+                                <img src="../img/waifus/avatar/mori.webp" alt="" class="waifu-image">
                             </div>
                             <div class="waifu-info">
-                                <div class="waifu-name">Йоруічі Шіхоїн</div>
-                                <div class="waifu-anime">Бліч</div>
+                                <div class="waifu-name">Mori Calliope</div>
+                                <div class="waifu-anime">Vtuber</div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Character 9 -->
+                    <div class="waifu-card" data-waifu-id="9" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/elaina.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Elaina</div>
+                                <div class="waifu-anime">The Journey of Elaina</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 10 -->
+                    <div class="waifu-card" data-waifu-id="10" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/felicia.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Felicia Hardy</div>
+                                <div class="waifu-anime">Spiderman</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 11 -->
+                    <div class="waifu-card" data-waifu-id="11" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/lena.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Lena</div>
+                                <div class="waifu-anime">Everlasting summer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 12 -->
+                    <div class="waifu-card" data-waifu-id="12" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/senko.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Senko</div>
+                                <div class="waifu-anime">The Helpful Fox Senko-san</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 13 -->
+                    <div class="waifu-card" data-waifu-id="13" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/dakini.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Dakini</div>
+                                <div class="waifu-anime">Imawabi no Dakini</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 14 -->
+                    <div class="waifu-card" data-waifu-id="14" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/fireke.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Fire Keeper</div>
+                                <div class="waifu-anime">Dark Souls 3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 15 -->
+                    <div class="waifu-card" data-waifu-id="15" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/saiko.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Saiko</div>
+                                <div class="waifu-anime">Saiko no Sutoka</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 16 -->
+                    <div class="waifu-card" data-waifu-id="16" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/froot.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Apricot Froot</div>
+                                <div class="waifu-anime">Vtuber</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 17 -->
+                    <div class="waifu-card" data-waifu-id="17" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/okayu.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Nekomata Okayu</div>
+                                <div class="waifu-anime">Vtuber</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 18 -->
+                    <div class="waifu-card" data-waifu-id="18" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/ayame.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Nakiri Ayame</div>
+                                <div class="waifu-anime">Vtuber</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 19 -->
+                    <div class="waifu-card" data-waifu-id="19" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/jahy.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Jahy</div>
+                                <div class="waifu-anime">The Great Jahy Will Not Be Defeated!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 20 -->
+                    <div class="waifu-card" data-waifu-id="20" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/karyl.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Karyl</div>
+                                <div class="waifu-anime">Princess Connect! Re:Dive</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 21 -->
+                    <div class="waifu-card" data-waifu-id="21" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/zerotwo.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Zero Two</div>
+                                <div class="waifu-anime">Darling in the Franxx</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character 22 -->
+                    <div class="waifu-card" data-waifu-id="22" data-music="../audio/waifus/" data-color="#e6f9ff" data-popup-image="../img/waifus/">
+                        <div class="card-frame">
+                            <div class="image-container">
+                                <img src="../img/waifus/avatar/raven.webp" alt="" class="waifu-image">
+                            </div>
+                            <div class="waifu-info">
+                                <div class="waifu-name">Raven</div>
+                                <div class="waifu-anime">Teen titans</div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </main>
@@ -192,41 +419,16 @@
                         <!-- Content will be dynamically populated -->
                     </div>
                     <div class="popup-stats">
-                        <div class="stat">
-                            <span class="stat-label">Сила:</span>
-                            <div class="stat-bar">
-                                <div class="stat-fill" data-stat="strength"></div>
-                            </div>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-label">Інтелект:</span>
-                            <div class="stat-bar">
-                                <div class="stat-fill" data-stat="intelligence"></div>
-                            </div>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-label">Харизма:</span>
-                            <div class="stat-bar">
-                                <div class="stat-fill" data-stat="charisma"></div>
-                            </div>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-label">Кавайність:</span>
-                            <div class="stat-bar">
-                                <div class="stat-fill" data-stat="kawaii"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Audio player for character themes -->
+    <!-- Audio elements -->
     <audio id="characterTheme" loop></audio>
-    
-    <!-- Shrine audio -->
-    <audio id="shrineAudio" src="https://assets.mixkit.co/music/preview/mixkit-epic-orchestra-loop-96.mp3" loop></audio>
+    <audio id="shrineAudio" loop></audio>
+    <audio id="hexShrineAudio" src="../audio/waifus/holo.mp3" loop></audio>
 
     <footer>
         <div class="footer-content">

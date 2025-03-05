@@ -35,7 +35,7 @@
 
 .waifu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
     gap: 2rem;
 }
 
@@ -62,7 +62,7 @@
     background-color: white;
     box-shadow: var(--card-shadow);
     overflow: hidden;
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/3.2;
     display: flex;
     flex-direction: column;
 }
@@ -78,6 +78,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
     transition: transform 0.5s ease;
 }
 
@@ -90,7 +91,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .waifu-name {
@@ -158,33 +159,34 @@
 .popup-frame {
     display: flex;
     background-color: white;
-    overflow: hidden;}
+    overflow: hidden;
+}
 
 .popup-frame::before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border-radius: inherit;
-            background: linear-gradient(270deg, hsl(234, 100%, 50%), hsl(324, 100%, 50%));
-            background-size: 200% 200%;
-            animation: animate-border 2s infinite linear;
-            z-index: -1;
-        }
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: inherit;
+    background: linear-gradient(270deg, hsl(234, 100%, 50%), hsl(324, 100%, 50%));
+    background-size: 200% 200%;
+    animation: animate-border 2s infinite linear;
+    z-index: -1;
+}
 
-        @keyframes animate-border {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+@keyframes animate-border {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 .popup-image-container {
     flex: 1;
@@ -332,13 +334,14 @@
     }
 }
 
-.waifu-card:hover .card-frame {
-    animation: pulse 1.5s infinite;
-}
-
-/* Special animations for first card */
-.waifu-card[data-waifu-id="1"] {
+/* Common card animations */
+.waifu-card[data-waifu-id="1"],
+.waifu-card[data-waifu-id="2"] {
     animation: bounce 2s infinite;
+}
+.waifu-card[data-waifu-id="2"] {
+    animation: bounce 2s infinite;
+    animation-delay: 0.5s; /* Затримка в 1 секунду */
 }
 
 @keyframes bounce {
@@ -353,7 +356,8 @@
     }
 }
 
-.waifu-card[data-waifu-id="1"] .card-frame {
+.waifu-card[data-waifu-id="1"] .card-frame,
+.waifu-card[data-waifu-id="2"] .card-frame {
     box-shadow: 0 0 15px 5px rgba(255, 107, 107, 0.7);
     animation: glow 2s infinite alternate;
 }
@@ -367,7 +371,8 @@
     }
 }
 
-.waifu-card[data-waifu-id="1"]:hover {
+.waifu-card[data-waifu-id="1"]:hover,
+.waifu-card[data-waifu-id="2"]:hover {
     animation: shake 0.5s infinite;
 }
 
@@ -383,13 +388,14 @@
 /* Character looking image */
 .character-looking {
     position: fixed;
-    right: -300px;
+    right: -600px;
     bottom: 50px;
     width: 300px;
     height: auto;
     z-index: 1001;
     transition: right 0.5s ease;
     cursor: pointer;
+    animation: hex-float 4s ease-in-out infinite;
 }
 
 .character-looking.active {
@@ -414,6 +420,38 @@
 
 .destroying {
     animation: destroy 1s forwards;
+}
+.hex-looking.destroying {
+    animation: destroy 1s forwards !important;
+    filter: drop-shadow(0 0 20px rgba(107, 63, 160, 0.8));
+}
+
+/* Hex Maniac specific styles */
+.hex-looking {
+    right: -600px;
+    bottom: 150px;
+    transform: scaleX(-1);
+    filter: brightness(0.8) contrast(1.2) drop-shadow(0 0 10px rgba(107, 63, 160, 0.5));
+}
+
+.hex-looking.active {
+    right: 40px;
+    animation: hex-float 4s ease-in-out infinite;
+}
+
+@keyframes hex-float {
+    0%, 100% {
+        transform: scaleX(-1) translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: scaleX(-1) translateY(-15px) rotate(-2deg);
+    }
+    50% {
+        transform: scaleX(-1) translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: scaleX(-1) translateY(-10px) rotate(2deg);
+    }
 }
 
 /* Shrine styles */
@@ -624,3 +662,39 @@
         font-size: 1rem;
     }
 }
+
+/* Add new styles for the music control button */
+.shrine-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.shrine-music-btn {
+    margin-top: -10px;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.shrine-music-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.shrine-music-btn i {
+    font-size: 1.2rem;
+}
+
+
+
