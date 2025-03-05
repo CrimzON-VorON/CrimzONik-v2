@@ -6,11 +6,19 @@
     --popup-border-width: 20px;
 }
 
+.sidebar {
+    background: linear-gradient(135deg, #167a38, #0d9a50, #18a44e);
+}
+
+footer {
+    background: linear-gradient(135deg, #18a44e, #0d9a50, #167a38 );
+}
+
 /* Header Section */
 .waifu-header {
     text-align: center;
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, #ff6b6b, #6b66ff);
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #0e4f26, #167a38, #10b460, #1ccc5c, #0e4f26);
     color: white;
     border-radius: 15px;
     margin-bottom: 2rem;
@@ -91,7 +99,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 1.0);
+    border: 10px dashed #24ac54;
 }
 
 .waifu-name {
@@ -198,6 +207,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 
 .popup-details {
@@ -279,6 +289,12 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1360px) {
+    .waifu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(215px, 4fr));
+    }
+}
+
 @media (max-width: 768px) {
     .waifu-header {
         padding: 2rem 1rem;
@@ -341,7 +357,7 @@
 }
 .waifu-card[data-waifu-id="2"] {
     animation: bounce 2s infinite;
-    animation-delay: 0.5s; /* Затримка в 1 секунду */
+    animation-delay: 0.5s;
 }
 
 @keyframes bounce {
@@ -364,10 +380,10 @@
 
 @keyframes glow {
     from {
-        box-shadow: 0 0 15px 5px rgba(255, 107, 107, 0.7);
+        box-shadow: 0 0 25px 10px rgba(255, 107, 107, 0.7);
     }
     to {
-        box-shadow: 0 0 25px 10px rgba(255, 107, 107, 0.9);
+        box-shadow: 0 0 35px 15px rgba(255, 107, 107, 0.9);
     }
 }
 

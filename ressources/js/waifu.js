@@ -30,83 +30,105 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         3: {
-            name: "Рем",
-            anime: "Re:Zero",
-            description: `Рем — покоївка з блакитним волоссям з аніме "Re:Zero — Життя з нуля в іншому світі". Вона відома своєю відданістю, працьовитістю та готовністю пожертвувати собою заради тих, кого любить.
-            <br><br>
-            Незважаючи на свою зовнішню м'якість, Рем надзвичайно сильна в бою, особливо коли використовує свою демонічну силу. Її безумовна любов до головного героя Субару зробила її однією з найпопулярніших вайфу в аніме-спільноті.`,
-            stats: {
-                strength: 100,
-                intelligence: 100,
-                charisma: 100,
-                kawaii: 100
-            }
+            name: "Neko Kuroha",
+            anime: "Brynhildr In The Darkness",
+            description: ``
         },
         4: {
-            name: "Маї Сакурадзіма",
-            anime: "Сезон цвітіння",
-            description: `Маї Сакурадзіма — головна героїня аніме "Сезон цвітіння". Вона колишня дитяча актриса та модель, яка через синдром підліткового віку стала невидимою для більшості людей.
-            <br><br>
-            Маї відома своєю зрілістю, розумом та прямолінійністю. Незважаючи на свою холодну зовнішність, вона має добре серце і глибоко піклується про головного героя Сакуту. Її стосунки з ним розвиваються природно і зворушливо протягом серіалу.`,
-            stats: {
-                strength: 100,
-                intelligence: 100,
-                charisma: 100,
-                kawaii: 85
-            }
+            name: "Karura Kure",
+            anime: "Kenganverse",
+            description: ``
         },
         5: {
-            name: "Ерза Скарлет",
-            anime: "Хвіст Феї",
-            description: `Ерза Скарлет — одна з головних героїнь аніме "Хвіст Феї". Вона S-класу маг, відома як "Титанія", і є однією з найсильніших членів гільдії Хвіст Феї.
-            <br><br>
-            Ерза володіє магією перевтілення, яка дозволяє їй миттєво змінювати броню та зброю. Вона сувора, дисциплінована і часто лякає інших членів гільдії, але також має м'яку сторону, особливо коли справа стосується її друзів або полуничного торта.`,
-            stats: {
-                strength: 98,
-                intelligence: 85,
-                charisma: 88,
-                kawaii: 75
-            }
+            name: "Holo",
+            anime: "Spice and wolf",
+            description: ``
         },
         6: {
-            name: "Ніко Робін",
-            anime: "Ван Піс",
-            description: `Ніко Робін — археолог команди Солом'яного Капелюха в аніме "Ван Піс". Вона володіє силою Дияволського Фрукту Хана-Хана, який дозволяє їй створювати копії частин свого тіла на будь-якій поверхні.
-            <br><br>
-            Робін має трагічне минуле, але знайшла свій дім серед команди Луффі. Вона розумна, спокійна і часто є голосом розуму в команді. Її знання історії та здатність читати Понегліфи роблять її ключовою фігурою в пошуку Ван Піса.`,
-            stats: {
-                strength: 75,
-                intelligence: 98,
-                charisma: 85,
-                kawaii: 80
-            }
+            name: "Aqua",
+            anime: "Konosuba",
+            description: ``
         },
         7: {
-            name: "Хіната Хюґа",
-            anime: "Наруто",
-            description: `Хіната Хюґа — куноічі з клану Хюґа в аніме "Наруто". Вона володіє Бякуґаном, який дозволяє їй бачити чакру та мати майже 360-градусний огляд.
-            <br><br>
-            Хіната спочатку була дуже сором'язливою і невпевненою в собі, але завдяки своїй любові до Наруто вона знайшла силу і мужність стати сильнішою. Її доброта, відданість і непохитна віра в Наруто зробили її улюбленицею багатьох фанатів.`,
-            stats: {
-                strength: 80,
-                intelligence: 75,
-                charisma: 70,
-                kawaii: 95
-            }
+            name: "Tohru",
+            anime: "Miss Kobayashi's Dragon Maid",
+            description: ``
         },
         8: {
-            name: "Йоруічі Шіхоїн",
-            anime: "Бліч",
-            description: `Йоруічі Шіхоїн — колишня капітан 2-го загону Готей 13 і колишня командир Таємного загону в аніме "Бліч". Вона відома як "Богиня Блискавки" завдяки своїй неперевершеній швидкості.
-            <br><br>
-            Йоруічі має здатність перетворюватися на чорного кота, що дозволяє їй шпигувати і пересуватися непомітно. Вона грайлива, впевнена в собі і часто дражнить інших персонажів, особливо Кіске Урахару, з яким має давні стосунки.`,
-            stats: {
-                strength: 95,
-                intelligence: 90,
-                charisma: 85,
-                kawaii: 80
-            }
-        }
+            name: "Mori Calliope",
+            anime: "Vtuber",
+            description: ``
+        },
+        9: {
+            name: "Elaina",
+            anime: "The Journey of Elaina",
+            description: ``
+        },
+        10: {
+            name: "Felicia Hardy",
+            anime: "Spiderman",
+            description: ``
+        },
+        11: {
+            name: "Lena",
+            anime: "Everlasting summer",
+            description: ``
+        },
+        12: {
+            name: "Senko",
+            anime: "The Helpful Fox Senko-san",
+            description: ``
+        },
+        13: {
+            name: "Dakini",
+            anime: "Imawabi no Dakini",
+            description: ``
+        },
+        14: {
+            name: "Fire Keeper",
+            anime: "Dark Souls 3",
+            description: ``
+        },
+        15: {
+            name: "Saiko",
+            anime: "Saiko no Sutoka",
+            description: ``
+        },
+        16: {
+            name: "Apricot Froot",
+            anime: "Vtuber",
+            description: ``
+        },
+        17: {
+            name: "Nekomata Okayu",
+            anime: "Vtuber",
+            description: ``
+        },
+        18: {
+            name: "Nakiri Ayame",
+            anime: "Vtuber",
+            description: ``
+        },
+        19: {
+            name: "Jahy",
+            anime: "The Great Jahy Will Not Be Defeated!",
+            description: ``
+        },
+        20: {
+            name: "Karyl",
+            anime: "Princess Connect! Re:Dive",
+            description: ``
+        },
+        21: {
+            name: "Zero Two",
+            anime: "Darling in the Franxx",
+            description: ``
+        },
+        22: {
+            name: "Raven",
+            anime: "Teen titans",
+            description: ``
+        },
     };
 
     // DOM Elements
