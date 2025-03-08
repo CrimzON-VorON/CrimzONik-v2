@@ -158,19 +158,31 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.toggle('active');
     });
 
-// Create character looking element for Shinobu
-    const characterLooking = document.createElement('img');
-    characterLooking.classList.add('character-looking');
-    characterLooking.src = '../img/waifus/avatar/shinobuyapp.webp';
-    characterLooking.alt = 'Shinobu дивиться';
-    document.body.appendChild(characterLooking);
+// Створюємо перший елемент (Shinobu)
+const characterLooking = document.createElement('img');
+characterLooking.classList.add('character-looking');
+characterLooking.src = '../img/waifus/avatar/shinobu2_first_frame.png'; // Стартовий кадр
+characterLooking.alt = 'Shinobu дивиться';
+characterLooking.style.display = 'none'; // Ховаємо його спочатку
+document.body.appendChild(characterLooking);
 
-// Create character looking element for Hex Maniac
+
+// Створюємо другий елемент (Hex Maniac)
     const hexLooking = document.createElement('img');
-    hexLooking.classList.add('character-looking', 'hex-looking');
-    hexLooking.src = '../img/waifus/hexy.webp';
+    hexLooking.classList.add('character-looking', 'hex-looking'); // Додаємо унікальний клас для Hex
+    hexLooking.src = '../img/waifus/hexy_huh.png';
     hexLooking.alt = 'Hex Maniac дивиться';
     document.body.appendChild(hexLooking);
+
+// Змінюємо розмір ТІЛЬКИ першого
+    characterLooking.style.width = '600px'; // Збільшити перше зображення
+    characterLooking.style.height = 'auto';
+    hexLooking.style.width = '450px'; // Збільшити ну і друге зображення
+    hexLooking.style.height = 'auto';
+
+    // Відзеркалюємо перше зображення
+    characterLooking.style.transform = 'scaleX(-1)'; // Відзеркалюємо по осі X
+
 
 
     // Initially hide the shrines
@@ -245,19 +257,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // First card click handler
     const firstCard = document.querySelector('.waifu-card[data-waifu-id="1"]');
     if (firstCard) {
-        firstCard.addEventListener('click', (e) => {
-            e.stopPropagation();
-            characterLooking.classList.add('active');
-            characterLooking.addEventListener('click', handleDestroyAnimation(
-                firstCard,
-                characterLooking,
-                waifuShrine,
-                shrineAudio,
-                shrineAudioControl,
-                isShrineAudioPlaying
-            ));
-        });
-    }
+    firstCard.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        // Показуємо перший кадр і додаємо клас active
+        characterLooking.style.display = 'block'; // Робимо зображення видимим
+        characterLooking.classList.add('active'); // Додаємо клас active
+
+        // Спочатку показуємо перший кадр
+        characterLooking.src = '../img/waifus/avatar/shinobu2_first_frame.png';
+
+        // Через 1 секунду запускаємо анімацію
+        setTimeout(() => {
+            characterLooking.src = '../img/waifus/avatar/shinobu2.gif'; // Запускаємо GIF
+        }, 200); // Через 1 секунду після натискання
+
+        // Через 3 секунди після старту анімації ставимо останній кадр
+        setTimeout(() => {
+            characterLooking.src = '../img/waifus/avatar/shinobu2_last_frame.png'; // Статичний кадр
+        }, 1100); // Через 3 секунди після старту анімації
+
+        // Викликаємо handleDestroyAnimation, якщо потрібно
+        characterLooking.addEventListener('click', handleDestroyAnimation(
+            firstCard,
+            characterLooking,
+            waifuShrine,
+            shrineAudio,
+            shrineAudioControl,
+            isShrineAudioPlaying
+        ));
+    });
+}
 
     // Second card click handler
     const secondCard = document.querySelector('.waifu-card[data-waifu-id="2"]');

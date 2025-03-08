@@ -3,53 +3,89 @@
     display: none;
     margin: 2rem auto;
     max-width: 1600px;
-    background: linear-gradient(135deg, #6b3fa0, #35155d);
-    border-radius: 20px;
-    padding: 3rem;
+    max-height: 2000px;
+    background: linear-gradient(135deg, rgba(107, 63, 160, 0.25), rgba(53, 21, 93, 0.25));
+    border-radius: 15px;
+    padding: 2rem;
     box-shadow: 0 15px 40px rgba(107, 63, 160, 0.3);
-    position: relative;
     overflow: hidden;
 }
 
-.hex-shrine::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../img/waifus/patterns/hex-pattern.png');
-    opacity: 0.1;
-    z-index: 0;
+
+.hex-shrine-content {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.hex-shrine.active {
+    opacity: 1;
+    display: block;
+    border-image-slice: 345 445 355 445;
+    border-image-width: 100px 100px 100px 100px;
+    border-image-outset: 20px 20px 20px 20px;
+    border-image-repeat: round round;
+    border-image-source: url("../img/waifus/border/hex_border.webp");
+    border-style: double;
+    z-index: 1;
 }
 
 .hex-shrine-content {
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hex-shrine.active .hex-shrine-content {
     opacity: 1;
-    transform: translateY(0);
 }
 
 .hex-shrine-images {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .hex-shrine-side {
     width: 25%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+}
+
+.hex-shrine-left {
+    transform: translateY(10px);
+}
+
+.hex-shrine-right {
+    transform: translateY(10px);
+}
+
+.hex-shrine-left img {
+    margin-top: 20px;
+}
+
+/* Видаляємо відступ у останнього зображення */
+.hex-shrine-left img:first-child {
+    margin: 0px;
+}
+
+.hex-shrine-right img {
+    margin-top: 40px;
+}
+
+/* Видаляємо відступ у останнього зображення */
+.hex-shrine-right img:first-child {
+    margin: 0px;
+}
+
+.hex-shrine-side img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .hex-shrine-center {
+    background: linear-gradient(135deg, #ff6b6b22, #6b66ff22);
+    border-image-slice: 214 295 182 336;
+    border-image-width: 300px 300px 300px 300px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: space space;
+    border-image-source: url("../img/waifus/border/web.png");
+    border-style: double;
     padding: 2rem;
     text-align: center;
     backdrop-filter: blur(5px);
@@ -57,65 +93,79 @@
     color: white;
     margin-bottom: 2rem;
     z-index: 2;
+    max-height: 1900px;
 }
 
 .hex-shrine-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .hex-shrine-name {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     color: #e6ccff;
     text-shadow: 0 0 20px rgba(107, 63, 160, 0.8);
-    margin: 0;
     font-family: 'Creepster', cursive;
     letter-spacing: 2px;
 }
 
 .hex-shrine-text {
-    color: #e6ccff;
-    font-size: 1.1rem;
+    font-size: 18px;
     line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #e6ccff;
     text-align: justify;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    margin-top: 1rem;
 }
 
 .hex-shrine-small-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hex-shrine-small-images img {
-    width: 100%;
+    width: 68%;
+    margin-bottom: 1rem;
     border-radius: 10px;
-    transform: scale(0.8) rotate(-10deg);
-    opacity: 0;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    filter: brightness(0.8) contrast(1.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .hex-shrine-large {
-    width: 100%;
-    border-radius: 15px;
-    transform: translateX(-50px) rotate(5deg);
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    filter: brightness(0.8) contrast(1.2);
+    margin-top: 1rem;
+    transform: translateY(-190px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+.hex-shrine-large img {
+    width: 200%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    clip-path: inset(0px round 10px);
+}
+
 
 .hex-shrine.active .hex-shrine-small-images img {
     transform: scale(1) rotate(0);
     opacity: 1;
+    z-index: 1;
+    width: 80%;
 }
 
 .hex-shrine.active .hex-shrine-large {
@@ -124,28 +174,58 @@
 }
 
 /* Staggered animation delays */
-.hex-shrine.active .hex-shrine-left .hex-shrine-small-images img:nth-child(1) {
-    transition-delay: 0.2s;
+.hex-shrine.active .hex-shrine-right .hex-shrine-large {
+    transition-delay: 0.3s;
+    transform: translateY(330px) rotate(10deg);
+    width: 280%;
+    margin-left: -200px;
+}
+.hex-shrine.active .hex-shrine-left .hex-shrine-large {
+    transition: transform 0.5s ease, margin-left 0.5s ease;
+    transition-delay: 10.3s;
+    transform:  translateY(660px) rotate(-3deg);
+    margin-left: -40px;
+    width: 180%;
 }
 
-.hex-shrine.active .hex-shrine-left .hex-shrine-small-images img:nth-child(2) {
-    transition-delay: 0.4s;
+.hex-shrine.active .hex-shrine-left .hex-shrine-small-images img:nth-child(1) {
+    transition-delay: 0.3s;
+    transform: translateY(0) rotate(-35deg);
+    margin-right: 5px;
 }
 
 .hex-shrine.active .hex-shrine-right .hex-shrine-small-images img:nth-child(1) {
+    transform: translateY(0) rotate(35deg);
+    margin-left: 5px;
+}
+
+.hex-shrine.active .hex-shrine-small-images img:nth-child(2) {
     transition-delay: 0.6s;
+    transform: translateY(-5px) rotate(0deg);
 }
 
-.hex-shrine.active .hex-shrine-right .hex-shrine-small-images img:nth-child(2) {
-    transition-delay: 0.8s;
+.hex-shrine.active .hex-shrine-small-images img:nth-child(3) {
+    transition-delay: 0.4s;
+    transform: translateY(-10px) rotate(35deg);
+    margin-left: 80px;
 }
 
-.hex-shrine.active .hex-shrine-left .hex-shrine-large {
+.hex-shrine.active .hex-shrine-small-images img:nth-child(4) {
     transition-delay: 0.5s;
+    transform: translateY(0) rotate(-35deg);
+    margin-left: 80px;
 }
 
-.hex-shrine.active .hex-shrine-right .hex-shrine-large {
-    transition-delay: 0.7s;
+.hex-shrine.active .hex-shrine-right .hex-shrine-small-images img:nth-child(3) {
+    transform: scaleX(-1);
+    transform: translateY(0) rotate(-35deg);
+    margin-right: 100px;
+}
+
+.hex-shrine.active .hex-shrine-right .hex-shrine-small-images img:nth-child(4) {
+    transition-delay: 0.8s;
+    transform: translateY(0) rotate(35deg);
+    margin-right: 110px;
 }
 
 /* Music button styles */
@@ -175,6 +255,21 @@
 }
 
 /* Responsive design */
+@media (max-width: 1360px) {
+    .hex-shrine {
+        max-width: 1600px;
+        max-height: 2400px;
+    }
+    .hex-shrine-center {
+        max-height: 2300px;
+    } 
+    .hex-shrine.active .hex-shrine-right .hex-shrine-large {
+        transform: translateY(730px) rotate(10deg);
+    }
+    .hex-shrine.active .hex-shrine-left .hex-shrine-large {
+        transform:  translateY(1210px) rotate(-3deg);
+    }
+}
 @media (max-width: 1200px) {
     .hex-shrine-images {
         flex-direction: column;

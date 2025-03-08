@@ -11,7 +11,7 @@
 }
 
 footer {
-    background: linear-gradient(135deg, #18a44e, #0d9a50, #167a38 );
+    background: linear-gradient(135deg, #18a44e, #0d9a50, #167a38);
 }
 
 /* Header Section */
@@ -404,19 +404,21 @@ footer {
 /* Character looking image */
 .character-looking {
     position: fixed;
-    right: -600px;
-    bottom: 50px;
+    bottom: -10px;
     width: 300px;
     height: auto;
     z-index: 1001;
-    transition: right 0.5s ease;
     cursor: pointer;
-    animation: hex-float 4s ease-in-out infinite;
+    animation: shinobu-float 4s ease-in-out infinite;
+    transform: translateX(-600px) scaleX(-1); /* Відзеркалення по X */
+    transition: transform 0.5s ease; /* Перехід для трансформації */
+    filter: brightness(0.8) contrast(1.4) drop-shadow(0 0 10px rgba(107, 63, 160, 0.5));
 }
 
 .character-looking.active {
-    right: 20px;
+    transform: translateX(-180px) scaleX(1); /* Позиція зміщується, відзеркалення скасовується */
 }
+
 
 /* Destroy animations */
 @keyframes destroy {
@@ -445,13 +447,13 @@ footer {
 /* Hex Maniac specific styles */
 .hex-looking {
     right: -600px;
-    bottom: 150px;
+    bottom: 220px;
     transform: scaleX(-1);
     filter: brightness(0.8) contrast(1.2) drop-shadow(0 0 10px rgba(107, 63, 160, 0.5));
 }
 
 .hex-looking.active {
-    right: 40px;
+    right: 370px;
     animation: hex-float 4s ease-in-out infinite;
 }
 
@@ -470,11 +472,28 @@ footer {
     }
 }
 
+@keyframes shinobu-float {
+    0%, 100% {
+        transform: scaleX(-1) translateX(0) translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: scaleX(-1) translateX(-5px) translateY(-15px) rotate(-2deg);
+    }
+    50% {
+        transform: scaleX(-1) translateX(0) translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: scaleX(-1) translateX(5px) translateY(-10px) rotate(2deg);
+    }
+}
+
+
 /* Shrine styles */
 .waifu-shrine {
     display: none;
     margin: 2rem auto;
     max-width: 1600px;
+    max-height: 2100px;
     background-color: rgba(0, 0, 0, 0.85);
     border-radius: 15px;
     padding: 2rem;
@@ -502,6 +521,7 @@ footer {
     color: white;
     margin-bottom: 2rem;
     z-index: 2;
+    max-height: 2000px;
 }
 
 .shrine-name {
@@ -541,17 +561,46 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-height: 1600px;
+}
+
+.shrine-left {
+    transform: translateY(10px);
+}
+
+.shrine-right {
+    transform: translateY(60px);
+}
+
+.shrine-left img {
+    margin-top: 20px;
+}
+
+/* Видаляємо відступ у останнього зображення */
+.shrine-left img:first-child {
+    margin: 0px;
+}
+
+.shrine-right img {
+    margin-top: 40px;
+}
+
+/* Видаляємо відступ у останнього зображення */
+.shrine-right img:first-child {
+    margin: 0px;
 }
 
 .shrine-big-images {
-    margin-top: 6rem;
+    margin-top: 1rem;
+    transform: translateY(-190px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    min-height: 400px;
 }
 
 .shrine-small-images img {
-    width: 48%;
+    width: 88%;
     margin-bottom: 1rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -569,16 +618,17 @@ footer {
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     clip-path: inset(0px round 10px);
+    min-height: 400px;
 }
 
 .waifu-shrine.active {
     display: block;
-    border-image-slice: 150 150 150 150;
-    border-image-width: 50px 50px 50px 50px;
+    border-image-slice: 27 27 27 27;
+    border-image-width: 20px 20px 20px 20px;
     border-image-outset: 0px 0px 0px 0px;
     border-image-repeat: repeat repeat;
-    border-image-source: url("../img/waifus/border/shinobu_border.png");
-    border-style: solid;
+    border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-1.png");
+    border-style: double;
     z-index: 1;
 }
 
@@ -591,11 +641,6 @@ footer {
 }
 
 /* Delay for images to appear sequentially */
-.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(1) {
-    transition-delay: 0.3s;
-    transform: translateY(0) rotate(35deg);
-    margin-right: 100px;
-}
 .waifu-shrine.active .shrine-left .shrine-small-images img:nth-child(1) {
     transition-delay: 0.3s;
     transform: translateY(0) rotate(-35deg);
@@ -603,33 +648,111 @@ footer {
 }
 .waifu-shrine.active .shrine-right .shrine-big-images img {
     transition-delay: 0.3s;
-    transform: translateY(0) rotate(5deg) scaleX(-1);
-    margin-left: -60px;
+    transform: translateY(150px) rotate(5deg);
+    width: 420%;
+    margin-left: -110px;
 }
 .waifu-shrine.active .shrine-left .shrine-big-images img {
     transition-delay: 0.3s;
-    transform:  rotate(-5deg);
+    transform:  translateY(210px) rotate(-5deg);
     margin-left: -160px;
 }
 
-.waifu-shrine.active .shrine-side img:nth-child(2) {
-    transition-delay: 0.6s;
-}
-
-.waifu-shrine.active .shrine-small-images img:nth-child(1) {
-    transition-delay: 0.4s;
-}
-
 .waifu-shrine.active .shrine-small-images img:nth-child(2) {
-    transition-delay: 0.5s;
+    transition-delay: 0.6s;
+    transform: translateY(-5px) rotate(0deg);
 }
 
 .waifu-shrine.active .shrine-small-images img:nth-child(3) {
-    transition-delay: 0.7s;
+    transition-delay: 0.4s;
+    transform: translateY(-10px) rotate(35deg);
+    margin-left: 80px;
 }
 
 .waifu-shrine.active .shrine-small-images img:nth-child(4) {
+    transition-delay: 0.5s;
+    transform: translateY(0) rotate(-35deg);
+    margin-left: 80px;
+}
+.waifu-shrine.active .shrine-small-images img:nth-child(5) {
+    transition-delay: 0.5s;
+    transform: translateY(0) rotate(35deg);
+    margin-left: 80px;
+}
+.waifu-shrine.active .shrine-small-images img:nth-child(6) {
+    transition-delay: 0.5s;
+    transform: translateY(0) rotate(-35deg);
+    margin-left: 80px;
+}
+.waifu-shrine.active .shrine-small-images img:nth-child(7) {
+    transition-delay: 0.5s;
+    transform: translateY(0) rotate(35deg);
+    margin-left: 80px;
+}
+.waifu-shrine.active .shrine-small-images img:nth-child(8) {
+    transition-delay: 0.5s;
+    transform: translateY(0) rotate(-35deg);
+    margin-left: 80px;
+}
+.waifu-shrine.active .shrine-small-images img:nth-child(9) {
+    transition-delay: 0.5s;
+    transform: translateY(-400px) rotate(15deg);
+    margin-left: 80px;
+}
+
+.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(1) {
+    transition-delay: 0.3s;
+    transform: translateY(0) rotate(15deg);
+    margin-right: 50px;
+    width: 120%;
+}
+.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(2) {
+    transition-delay: 0.3s;
+    transform: translateY(0) rotate(-15deg);
+    margin-right: 50px;
+    width: 120%;
+}
+
+.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(3) {
+    transform: scaleX(-1);
+    transform: translateY(0) rotate(15deg);
+    margin-right: 100px;
+    width: 120%;
+}
+
+.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(4) {
     transition-delay: 0.8s;
+    transform: translateY(0) rotate(-15deg);
+    margin-right: 100px;
+    width: 120%;
+}
+
+.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(5) {
+    transition-delay: 0.8s;
+    transform: translateY(0) rotate(15deg);
+    margin-right: 100px;
+    width: 120%;
+}
+
+.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(6) {
+    transition-delay: 0.8s;
+    transform: translateY(0) rotate(-15deg);
+    margin-right: 100px;
+    width: 120%;
+}
+
+.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(7) {
+    transition-delay: 0.8s;
+    transform: translateY(0) rotate(15deg);
+    margin-right: 100px;
+    width: 120%;
+}
+
+.waifu-shrine.active .shrine-right .shrine-small-images img:nth-child(8) {
+    transition-delay: 0.8s;
+    transform: translateY(0) rotate(-15deg);
+    margin-right: 100px;
+    width: 120%;
 }
 
 /* Add a close button for the shrine */
@@ -656,6 +779,32 @@ footer {
 }
 
 /* Responsive shrine */
+@media (max-width: 1360px) {
+    .waifu-shrine {
+        max-width: 1600px;
+        max-height: 2400px;
+    }
+
+    .shrine-big-images {
+        transform: translateY(300px);
+        transition: margin-top 0.5s ease;
+    }
+
+    .shrine-center {
+        max-height: 2300px;
+    } 
+
+    .waifu-shrine.active .shrine-left .shrine-big-images img {
+        transition-delay: 0.3s;
+        transform:  translateY(400px) rotate(-5deg);
+        margin-left: -110px;
+    } 
+
+    .sidebar.hidden + .shrine-big-images img {
+        margin-top: -50px; 
+    }
+}
+
 @media (max-width: 992px) {
     .shrine-images {
         flex-direction: column;
