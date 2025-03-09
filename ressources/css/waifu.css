@@ -203,6 +203,13 @@ footer {
     height: 600px;
 }
 
+.popup-image-container:nth-child(4) {
+    flex: 1;
+    max-width: 50%;
+    height: 600px;
+    background: linear-gradient(0deg, rgba(249,250,247,255) 14%, rgba(46,48,97,255) 84%);
+}
+
 .popup-image {
     width: 100%;
     height: 100%;
@@ -215,6 +222,7 @@ footer {
     padding: 2rem;
     overflow-y: auto;
     max-height: 600px;
+    background: linear-gradient(0deg, rgba(249,250,247,255) 14%, rgba(46,48,97,255) 84%);
 }
 
 .popup-name {
@@ -621,6 +629,10 @@ footer {
     min-height: 400px;
 }
 
+.sidebar.hidden ~ .main-content .shrine-big-images {
+    transform: translateY(-560px);
+}
+
 .waifu-shrine.active {
     display: block;
     border-image-slice: 27 27 27 27;
@@ -647,13 +659,11 @@ footer {
     margin-left: 100px;
 }
 .waifu-shrine.active .shrine-right .shrine-big-images img {
-    transition-delay: 0.3s;
     transform: translateY(150px) rotate(5deg);
     width: 420%;
     margin-left: -110px;
 }
 .waifu-shrine.active .shrine-left .shrine-big-images img {
-    transition-delay: 0.3s;
     transform:  translateY(210px) rotate(-5deg);
     margin-left: -160px;
 }
@@ -800,8 +810,17 @@ footer {
         margin-left: -110px;
     } 
 
-    .sidebar.hidden + .shrine-big-images img {
-        margin-top: -50px; 
+    .sidebar.hidden ~ .main-content .shrine-big-images {
+    transform: translateY(-100px);
+    }
+
+    .sidebar.hidden ~ .main-content .shrine-left .shrine-big-images {
+    transform: translateY(-300px);
+    }
+
+    .hex-looking {
+        right: -600px;
+        bottom: 120px;
     }
 }
 
