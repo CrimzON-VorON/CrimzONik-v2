@@ -10,7 +10,7 @@
 .game-link {
     flex: 1;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 15px;
     transition: transform 0.3s ease;
 }
@@ -26,8 +26,135 @@
     transition: transform 0.5s ease;
 }
 
-.game-link:hover img {
-    transform: scale(1.1);
+.game-link.right img:not(.main-image) {
+    object-fit: contain;
+}
+
+.game-link.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hover-effect {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 1.0;
+}
+.main-image:hover {
+    opacity: 0.4;
+}
+.main-image img {
+    object-fit: cover;
+}
+
+.hero-images {
+    position: absolute;
+    top: 34%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.hero {
+    position: absolute;
+    width: 50%;
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Initial hero positions - two main heroes visible */
+.hero1 {
+    transform: translateX(-30%) scale(1.2);
+    opacity: 1;
+    z-index: 4;
+}
+
+.hero2 {
+    transform: translateX(30%) scale(1.2);
+    opacity: 1;
+    z-index: 4;
+}
+
+/* Background heroes slightly visible */
+.hero3 { 
+    transform: translateX(-60%) scale(0.8) translateY(20px);
+    opacity: 0.3;
+    z-index: 3;
+}
+
+.hero4 { 
+    transform: translateX(60%) scale(0.8) translateY(20px);
+    opacity: 0.3;
+    z-index: 2;
+}
+
+.hero5 { 
+    transform: translateX(-90%) scale(0.7) translateY(40px);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+.hero6 { 
+    transform: translateX(90%) scale(0.7) translateY(40px);
+    opacity: 0.2;
+    z-index: 2;
+}
+
+.hero7 { 
+    transform: translateY(60%) scale(0.7);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+/* Hero hover animations - main heroes stay in place, others burst out */
+.hover-effect:hover .hero1 {
+    transform: translateX(-25%) scale(1.2);
+}
+
+.hover-effect:hover .hero2 {
+    transform: translateX(25%) translateY(-0%) scale(1.35);
+}
+
+.hover-effect:hover .hero3 {
+    transform: translateX(0%) scale(1.1) translateY(-45%);
+    opacity: 1;
+}
+
+.hover-effect:hover .hero4 {
+    transform: translateX(-80%) scale(2.9) translateY(20%) rotate(-25deg);
+    opacity: 1;
+}
+
+.hover-effect:hover .hero5 {
+    transform: translateX(30%) scale(2.7) translateY(18%) rotate(30deg);
+    opacity: 1;
+}
+
+.hover-effect:hover .hero6 {
+    transform: translateX(30%) scale(2.8) translateY(-10%) rotate(30deg);
+    opacity: 1;
+}
+
+.hover-effect:hover .hero7 {
+    transform: translateX(-30%) scale(2.2) translateY(-1%) rotate(-25deg);
+    opacity: 1;
 }
 
 .game-overlay {
@@ -38,6 +165,7 @@
     padding: 20px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: white;
+    z-index: 4;
 }
 
 .game-overlay h2 {
@@ -556,8 +684,6 @@ body.games {
   margin: 0;
   background-attachment: fixed;
 }
-
-
 
 .search-box {
     margin-bottom: 1rem;

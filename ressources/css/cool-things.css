@@ -466,6 +466,41 @@ html, body {
     background-repeat: no-repeat;
 }
 
+.game-box.nokia {
+    background: url('../img/Штуки/PSP/game/zelda.jpg') top/contain;
+    background-repeat: no-repeat;
+    background-size: 67%;
+}
+
+.game-box.nokia2 {
+    background: url('../img/Штуки/PSP/game/Doom_RPG.jpg') top/contain;
+    background-repeat: no-repeat;
+    background-size: 87%;
+}
+
+.game-box.nokia3 {
+    background: url('../img/Штуки/PSP/game/Doom_II_RPG_cover.jpg') top/contain;
+    background-repeat: no-repeat;
+    background-size: 67%;
+}
+
+.game-box.nokia4 {
+    background: url('../img/Штуки/PSP/game/wolfe.jpg') top/contain;
+    background-repeat: no-repeat;
+}
+
+.game-box.nokia5 {
+    background: url('../img/Штуки/PSP/game/orcs_and_elves.webp') top/contain;
+    background-repeat: no-repeat;
+    background-size: 57%;
+}
+
+.game-box.nokia6 {
+    background: url('../img/Штуки/PSP/game/sddefault.jpg') top/contain;
+    background-repeat: no-repeat;
+}
+
+
 /* Logo Container */
 .logo-container {
     text-align: center;

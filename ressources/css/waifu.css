@@ -154,8 +154,8 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     width: 90%;
-    max-width: 1000px;
-    max-height: 90vh;
+    max-width: 1200px;
+    max-height: 98vh;
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -203,18 +203,13 @@ footer {
     height: 600px;
 }
 
-.popup-image-container:nth-child(4) {
-    flex: 1;
-    max-width: 50%;
-    height: 600px;
-    background: linear-gradient(0deg, rgba(249,250,247,255) 14%, rgba(46,48,97,255) 84%);
-}
 
 .popup-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
 
 .popup-details {
@@ -222,18 +217,19 @@ footer {
     padding: 2rem;
     overflow-y: auto;
     max-height: 600px;
-    background: linear-gradient(0deg, rgba(249,250,247,255) 14%, rgba(46,48,97,255) 84%);
 }
 
 .popup-name {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: white;
+    mix-blend-mode: difference;
 }
 
 .popup-anime {
     font-size: 1.2rem;
-    color: #666;
+    color: white;
+    mix-blend-mode: difference;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #eee;
@@ -242,6 +238,9 @@ footer {
 .popup-description {
     margin-bottom: 2rem;
     line-height: 1.6;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .close-popup {
@@ -880,5 +879,164 @@ footer {
     font-size: 1.2rem;
 }
 
+/* Popup background colors for each waifu card */
+.waifu-card[data-waifu-id="3"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #2b1055, #7597de);
+}
 
+.waifu-card[data-waifu-id="3"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #7597de, #2b1055);
+}
+
+.waifu-card[data-waifu-id="4"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+}
+
+.waifu-card[data-waifu-id="4"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #4ecdc4, #ff6b6b);
+}
+
+.waifu-card[data-waifu-id="5"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #f7d794, #786fa6);
+}
+
+.waifu-card[data-waifu-id="5"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #786fa6, #f7d794);
+}
+
+.waifu-card[data-waifu-id="6"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #00b894, #0984e3);
+}
+
+.waifu-card[data-waifu-id="6"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #0984e3, #00b894);
+}
+
+.waifu-card[data-waifu-id="7"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #e056fd, #686de0);
+}
+
+.waifu-card[data-waifu-id="7"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #686de0, #e056fd);
+}
+
+.waifu-card[data-waifu-id="8"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #ff7675, #fd79a8);
+}
+
+.waifu-card[data-waifu-id="8"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #fd79a8, #ff7675);
+}
+
+.waifu-card[data-waifu-id="9"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #6c5ce7, #a8e6cf);
+}
+
+.waifu-card[data-waifu-id="9"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #a8e6cf, #6c5ce7);
+}
+
+.waifu-card[data-waifu-id="10"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #ff9ff3, #feca57);
+}
+
+.waifu-card[data-waifu-id="10"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #feca57, #ff9ff3);
+}
+
+.waifu-card[data-waifu-id="11"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #48dbfb, #ff6b6b);
+}
+
+.waifu-card[data-waifu-id="11"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #ff6b6b, #48dbfb);
+}
+
+.waifu-card[data-waifu-id="12"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #1dd1a1, #5f27cd);
+}
+
+.waifu-card[data-waifu-id="12"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #5f27cd, #1dd1a1);
+}
+
+.waifu-card[data-waifu-id="13"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #ff9f43, #ee5253);
+}
+
+.waifu-card[data-waifu-id="13"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #ee5253, #ff9f43);
+}
+
+.waifu-card[data-waifu-id="14"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #2e86de, #ff6b81);
+}
+
+.waifu-card[data-waifu-id="14"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #ff6b81, #2e86de);
+}
+
+.waifu-card[data-waifu-id="15"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #a8e6cf, #ff9f43);
+}
+
+.waifu-card[data-waifu-id="15"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #ff9f43, #a8e6cf);
+}
+
+.waifu-card[data-waifu-id="16"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #ff6b6b, #4834d4);
+}
+
+.waifu-card[data-waifu-id="16"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #4834d4, #ff6b6b);
+}
+
+.waifu-card[data-waifu-id="17"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #686de0, #95afc0);
+}
+
+.waifu-card[data-waifu-id="17"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #95afc0, #686de0);
+}
+
+.waifu-card[data-waifu-id="18"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #ff9ff3, #6c5ce7);
+}
+
+.waifu-card[data-waifu-id="18"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #6c5ce7, #ff9ff3);
+}
+
+.waifu-card[data-waifu-id="19"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #ff6b81, #ffd32a);
+}
+
+.waifu-card[data-waifu-id="19"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #ffd32a, #ff6b81);
+}
+
+.waifu-card[data-waifu-id="20"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #0abde3, #ff9f43);
+}
+
+.waifu-card[data-waifu-id="20"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #ff9f43, #0abde3);
+}
+
+.waifu-card[data-waifu-id="21"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #ee5253, #ff9ff3);
+}
+
+.waifu-card[data-waifu-id="21"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #ff9ff3, #ee5253);
+}
+
+.waifu-card[data-waifu-id="22"] ~ .waifu-popup .popup-image-container {
+    background: linear-gradient(135deg, #2e86de, #ff6b6b);
+}
+
+.waifu-card[data-waifu-id="22"] ~ .waifu-popup .popup-details {
+    background: linear-gradient(135deg, #ff6b6b, #2e86de);
+}
 
