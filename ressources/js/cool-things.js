@@ -489,3 +489,16 @@ function animateColors(duration = 800) {
 setTimeout(() => {
     animateColors();
 }, 2000);
+
+
+    let images = [
+        "../img/Штуки/PSP/IMG_0104.jpeg", 
+        "../img/Штуки/PSP/IMG_0129.jpeg"
+    ];
+    let currentImageIndex = 0;
+    let pictureElement = document.getElementById('picture');
+
+    setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        pictureElement.src = images[currentImageIndex];
+    }, 4000);

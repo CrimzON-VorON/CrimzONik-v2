@@ -75,6 +75,7 @@ body {
 
 .sidebar a {
     display: block;
+    width: 250px;
     padding: 1rem 2rem;
     color: var(--text-color);
     text-decoration: none;
@@ -774,29 +775,3 @@ footer {
         padding: 1rem;
     }
 } *//
-.shrine-big-images {
-    margin-top: 1rem;
-    transform: translateY(-190px);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    min-height: 400px;
-    transition: transform 0.3s ease;
-}
-
-.shrine-big-images img {
-    width: 200%;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    clip-path: inset(0px round 10px);
-    min-height: 400px;
-}
-
-/* Add this new style for when sidebar is hidden */
-.sidebar.hidden ~ .main-content .shrine-big-images {
-    transform: translateY(-590px);
-}

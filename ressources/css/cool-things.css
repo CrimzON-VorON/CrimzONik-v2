@@ -368,6 +368,7 @@ html, body {
     transform: scale(1.05);
 }
 
+
 .picture-item h4 {
     color: white;
     margin: 1rem;
@@ -941,6 +942,57 @@ html, body {
     font-size: 1rem;
     opacity: 0.9;
 }
+
+.sidebar nav:nth-of-type(2) ul {
+    position: fixed; /* Виправлення для нормального потоку документа */
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Відстань між елементами */
+    padding: 0;
+    margin-top: 350px; /* Відступ від першого списку */
+    width: 35%;
+}
+
+.sidebar nav:nth-of-type(2) li {
+    width: calc(100% - 5px); /* Дві колонки в межах 250px */
+    list-style: none;
+    text-align: center;
+}
+
+.sidebar nav:nth-of-type(2) a {
+    display: block;
+    width: 24%;
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    color: violet;
+}
+.sidebar nav:nth-of-type(3) ul {
+    position: fixed; /* Виправлення для нормального потоку документа */
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Відстань між елементами */
+    padding: 0;
+    margin-left: 120px;
+    margin-top: 350px; /* Відступ від першого списку */
+    width: 35%;
+}
+
+.sidebar nav:nth-of-type(3) li {
+    width: calc(100% - 5px); /* Дві колонки в межах 250px */
+    list-style: none;
+    text-align: center;
+}
+
+.sidebar nav:nth-of-type(3) a {
+    display: block;
+    width: 25.5%;
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    color: violet;
+}
+
 
 /* Responsive Design */
 @media (max-width: 1360px) {
