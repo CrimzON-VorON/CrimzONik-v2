@@ -950,7 +950,7 @@ html, body {
     gap: 5px; /* Відстань між елементами */
     padding: 0;
     margin-top: 350px; /* Відступ від першого списку */
-    width: 35%;
+    width: 9%;
 }
 
 .sidebar nav:nth-of-type(2) li {
@@ -961,7 +961,7 @@ html, body {
 
 .sidebar nav:nth-of-type(2) a {
     display: block;
-    width: 24%;
+    width: 98%;
     padding: 0.5rem;
     text-align: left;
     font-size: 0.9rem;
@@ -975,20 +975,20 @@ html, body {
     padding: 0;
     margin-left: 120px;
     margin-top: 350px; /* Відступ від першого списку */
-    width: 35%;
+    width: 9%;
 }
 
 .sidebar nav:nth-of-type(3) li {
-    width: calc(100% - 5px); /* Дві колонки в межах 250px */
+    width: calc(100% + 255px); /* Дві колонки в межах 250px */
     list-style: none;
     text-align: center;
 }
 
 .sidebar nav:nth-of-type(3) a {
     display: block;
-    width: 25.5%;
+    width: 98%;
     padding: 0.5rem;
-    text-align: left;
+    text-align: center;
     font-size: 0.9rem;
     color: violet;
 }

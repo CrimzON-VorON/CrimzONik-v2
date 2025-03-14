@@ -829,7 +829,7 @@ body.games {
     margin-top: 10px;
     padding: 10px;
     border: 1px solid #000;
-    background-color: #f3f3f3;
+    background-image: url(../img/games/minecraft/End_Stone_background_BE2.webp);
 }
 
 /* Responsive Design */
