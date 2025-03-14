@@ -54,3 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("gameTitle").textContent = images[currentIndex].title;
     }
     setInterval(changeImage, 4000);
+    
+        function toggleDetails(id) {
+            let details = document.getElementById('details' + id);
+            let audio = document.getElementById('audio' + id);
+            details.classList.toggle('hidden');
+            audio.play();
+        }

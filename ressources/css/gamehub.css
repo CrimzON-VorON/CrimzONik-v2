@@ -79,17 +79,33 @@
     transition: transform 1s ease, opacity 1s ease;
 }
 
+/* Animation of breathing for heroes */
+
+@keyframes breathe {
+    0% { transform: translateX(-30%) scale(1.2); }
+    50% { transform: translateX(-30%) scale(1.22); }
+    100% { transform: translateX(-30%) scale(1.2); }
+}
+
+@keyframes breathe-right {
+    0% { transform: translateX(30%) scale(1.2); }
+    50% { transform: translateX(30%) scale(1.22); }
+    100% { transform: translateX(30%) scale(1.2); }
+}
+
 /* Initial hero positions - two main heroes visible */
 .hero1 {
     transform: translateX(-30%) scale(1.2);
     opacity: 1;
     z-index: 4;
+    animation: breathe 3s infinite ease-in-out;
 }
 
 .hero2 {
     transform: translateX(30%) scale(1.2);
     opacity: 1;
     z-index: 4;
+    animation: breathe-right 3s infinite ease-in-out;
 }
 
 /* Background heroes slightly visible */
@@ -201,11 +217,11 @@
 
 .popup-content {
     position: relative;
-    width: 90%;
-    max-width: 1000px;
+    width: 90wh;
+    max-width: 1200px;
     height: 90vh;
     margin: 5vh auto;
-    background-color: var(--main-color);
+    background-image: url(../img/games/minecraft/Dirt_background_BE1.webp);
     border-radius: 15px;
     padding: 30px;
     overflow-y: auto;
@@ -742,6 +758,80 @@ body.games {
     background-color: var(--second-color);
     border-color: var(--hover-color);
 }
+
+.container_minecraft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.item {
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+.item::after {
+    content: ""; 
+    position: absolute;
+    top: -100px;
+    left: 70px;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.item:hover::after {
+    opacity: 1;
+}
+.item:hover {
+    filter: drop-shadow(0 0 3px rgba(249, 19, 31, 0.8));
+
+}
+.item:nth-child(1)::after {
+    content: url(../img/games/minecraft/play.png);
+    transform: scale(0.2);
+    filter: brightness(2.0);
+}
+
+.item:nth-child(2)::after {
+    content: url(../img/games/minecraft/play.png);
+    transform: scale(0.2);
+    filter: brightness(2.0);
+}
+
+.item:nth-child(3)::after {
+    content: url(../img/games/minecraft/play.png);
+    transform: scale(0.2);
+    filter: brightness(2.0);
+}
+
+.minecraft-world {
+    width: 70%;
+}
+
+.minecraft-image {
+    width: 90%;
+}
+
+.alittledark {
+    background-color: rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(1px 1px 2px black);
+
+}
+
+.hidden {
+    display: none;
+}
+
+.details {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #f3f3f3;
+}
+
 /* Responsive Design */
 @media (max-width: 1360px) {
     div[class*="review-content"] {
