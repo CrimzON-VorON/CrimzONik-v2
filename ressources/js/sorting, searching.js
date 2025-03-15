@@ -143,21 +143,48 @@ setInterval(changeBackground, 5000);
 document.getElementById('showButton').addEventListener('click', function() {
     let img = document.getElementById('image');
     let sound1 = document.getElementById('sound1');
+
+    this.style.display = 'none'; // Ховаємо кнопку
     img.style.left = '80px';
     img.style.opacity = '1';
     sound1.play();
 });
 
+document.getElementById('image').addEventListener('mouseenter', function() {
+    let sound3 = document.getElementById('sound3');
+    sound3.currentTime = 0;
+    sound3.play();
+});
+
+document.getElementById('image').addEventListener('mouseleave', function() {
+    let sound3 = document.getElementById('sound3');
+    sound3.pause();
+    sound3.currentTime = 0;
+});
+
 document.getElementById('image').addEventListener('click', function() {
     let sound2 = document.getElementById('sound2');
+    let sound3 = document.getElementById('sound3');
     let img = document.getElementById('image');
+    let overlay = document.getElementById('darkOverlay');
 
-    img.style.animation = 'none'; // Вимикаємо тряску
-    img.style.transform = 'none'; // Скидаємо зміщення, щоб не зависло
+    sound3.pause();
+    sound3.currentTime = 0;
+
+    img.style.animation = 'none';
+    img.style.transform = 'none';
+    img.style.opacity = '0'; // Зникає картинка
+
+    overlay.style.background = 'rgba(0, 0, 0, 1.0)'; // Темний екран
+    document.body.style.background = 'rgba(0, 0, 0, 1.0)'; // Темніє вся сторінка
 
     sound2.play();
     setTimeout(() => {
         window.location.href = 'newpage.html';
     }, 5000);
 });
+
+
+
+
 
