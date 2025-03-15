@@ -26,6 +26,10 @@
     transition: transform 0.5s ease;
 }
 
+.game-link.left {
+    cursor: pointer;
+}
+
 .game-link.right img:not(.main-image) {
     object-fit: contain;
 }
@@ -832,6 +836,45 @@ body.games {
     background-image: url(../img/games/minecraft/End_Stone_background_BE2.webp);
 }
 
+.main-content.full {margin-left: 0px;} .sidebar.hidden {transform: translateX(0px);}
+
+.horror {
+    position: relative;
+    z-index: 666;
+}
+#image {
+    position: fixed;
+    top: 10px;
+    left: -500px;
+    opacity: 0;
+    transition: left 2s ease, opacity 2s ease;
+    width: 200px;
+    cursor: pointer;
+    z-index: 666;
+}
+#image:hover {
+    animation: shake 1.2s infinite linear;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-15px, 5px); }
+    20% { transform: translate(5px, -5px); }
+    30% { transform: translate(-5px, 5px); }
+    40% { transform: translate(5px, -5px); }
+    50% { transform: translate(-5px, 5px) scale(1.2); }
+    60% { transform: translate(5px, -5px); }
+    70% { transform: translate(-5px, 5px); }
+    80% { transform: translate(5px, -5px) scale(0.8); }
+    90% { transform: translate(-5px, 5px); }
+    100% { transform: translate(0, 0); }
+}      
+#showButton {
+    position: absolute;
+    top: 20px; /* Відстань від верхнього краю */
+    left: 600px; /* Відстань від лівого краю */
+    z-index: 100;
+}
 /* Responsive Design */
 @media (max-width: 1360px) {
     div[class*="review-content"] {

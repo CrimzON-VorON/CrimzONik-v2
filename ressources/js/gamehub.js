@@ -54,10 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("gameTitle").textContent = images[currentIndex].title;
     }
     setInterval(changeImage, 4000);
-    
+
         function toggleDetails(id) {
             let details = document.getElementById('details' + id);
             let audio = document.getElementById('audio' + id);
             details.classList.toggle('hidden');
             audio.play();
         }
+
+    
+        document.getElementById('showButton').addEventListener('click', function() {
+            let img = document.getElementById('image');
+            let sound1 = document.getElementById('sound1');
+            img.style.left = '20px';
+            img.style.opacity = '1';
+            sound1.play();
+        });
+        
+        document.getElementById('image').addEventListener('click', function() {
+            let sound2 = document.getElementById('sound2');
+            sound2.play();
+            setTimeout(() => {
+                window.location.href = 'newpage.html';
+            }, 5000);
+        });

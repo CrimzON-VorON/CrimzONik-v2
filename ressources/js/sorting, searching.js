@@ -138,3 +138,26 @@ changeBackground();
 
 // Змінюємо фон кожні 5 секунд (5000 мілісекунд)
 setInterval(changeBackground, 5000);
+
+// Хоррор)
+document.getElementById('showButton').addEventListener('click', function() {
+    let img = document.getElementById('image');
+    let sound1 = document.getElementById('sound1');
+    img.style.left = '80px';
+    img.style.opacity = '1';
+    sound1.play();
+});
+
+document.getElementById('image').addEventListener('click', function() {
+    let sound2 = document.getElementById('sound2');
+    let img = document.getElementById('image');
+
+    img.style.animation = 'none'; // Вимикаємо тряску
+    img.style.transform = 'none'; // Скидаємо зміщення, щоб не зависло
+
+    sound2.play();
+    setTimeout(() => {
+        window.location.href = 'newpage.html';
+    }, 5000);
+});
+
