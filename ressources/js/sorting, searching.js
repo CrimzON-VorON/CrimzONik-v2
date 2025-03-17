@@ -180,7 +180,7 @@ document.getElementById('image').addEventListener('click', function() {
 
     sound2.play();
     setTimeout(() => {
-        window.location.href = 'newpage.html';
+        window.location.href = 'horror.html';
     }, 5000);
 });
 
