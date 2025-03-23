@@ -452,50 +452,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Show popup for other waifu cards (3 and above)
-    waifuCards.forEach(card => {
-        const waifuId = parseInt(card.getAttribute('data-waifu-id'));
+ // Show popup for other waifu cards (3 and above)
+waifuCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const waifuId = parseInt(card.getAttribute('data-waifu-id')); // Тут він доступний правильно
         if (waifuId > 2) {
-            card.addEventListener('click', () => {
-                const musicUrl = card.getAttribute('data-music');
-                const waifu = waifuData[waifuId];
-                const popupImageContainer = document.querySelector('.popup-image-container');
-                const popupDetails = document.querySelector('.popup-details');
-                
-                if (waifu) {
-                    popupName.textContent = waifu.name;
-                    popupAnime.textContent = waifu.anime;
-                    popupDescription.innerHTML = waifu.description;
-                    popupImage.src = card.getAttribute('data-popup-image') || card.querySelector('.waifu-image').src;
-                    popupImage.alt = waifu.name;
+            const musicUrl = card.getAttribute('data-music');
+            const waifu = waifuData[waifuId];
+            const popupImageContainer = document.querySelector('.popup-image-container');
+            const popupDetails = document.querySelector('.popup-details');
 
-                    // Apply gradients
-                    if (waifu.gradients) {
-                        popupImageContainer.style.background = waifu.gradients.image;
-                        popupDetails.style.background = waifu.gradients.details;
-                    }
-                    
-                    if (waifu.stats) {
-                        statFills.forEach(fill => {
-                            const statType = fill.getAttribute('data-stat');
-                            if (waifu.stats[statType]) {
-                                setTimeout(() => {
-                                    fill.style.width = waifu.stats[statType] + '%';
-                                }, 100);
-                            }
-                        });
-                    }
-                    
-                    if (musicUrl) {
-                        characterTheme.src = musicUrl;
-                        characterTheme.play().catch(e => console.log("Audio autoplay prevented:", e));
-                    }
-                    
-                    popup.classList.add('active');
+            if (waifu) {
+                popupName.textContent = waifu.name;
+                popupAnime.textContent = waifu.anime;
+                popupDescription.innerHTML = waifu.description;
+                popupImage.src = card.getAttribute('data-popup-image') || card.querySelector('.waifu-image').src;
+                popupImage.alt = waifu.name;
+
+                // Apply gradients
+                if (waifu.gradients) {
+                    popupImageContainer.style.background = waifu.gradients.image;
+                    popupDetails.style.background = waifu.gradients.details;
                 }
-            });
+
+                if (waifu.stats) {
+                    statFills.forEach(fill => {
+                        const statType = fill.getAttribute('data-stat');
+                        if (waifu.stats[statType]) {
+                            setTimeout(() => {
+                                fill.style.width = waifu.stats[statType] + '%';
+                            }, 100);
+                        }
+                    });
+                }
+
+                if (musicUrl) {
+                    characterTheme.src = musicUrl;
+                    characterTheme.play().catch(e => console.log("Audio autoplay prevented:", e));
+                }
+
+                popup.classList.add('active');
+
+                // Trigger pet dialogue for waifu card (game 6)
+                if (waifuId === 6) {
+                    const pet = document.querySelector('.pet-container');
+                    if (pet) {
+                        const petInstance = window.petInstance;
+                        if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                            petInstance.sayDialogue('waifu-water', true);
+                        }
+                    }
+                }
+            }
         }
     });
+});
+
 
     // Close popup
     closePopup.addEventListener('click', () => {

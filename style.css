@@ -3,6 +3,7 @@
     --second-color: #8b0000;
     --text-color: #ffffff;
     --third-color: #2d2d2d;
+    --fourth-color: #ff9f7b;
     --hover-color: #a00000;
 }
 
@@ -82,9 +83,11 @@ body {
     transition: background-color 0.3s;
 }
 
-.sidebar a:hover,
+.sidebar a:hover {
+    background-color: #4c008b;
+}
 .sidebar a.active {
-    background-color: var(--second-color);
+    background-color: var(--second-color);;
 }
 
 /* Logo Container */
@@ -170,7 +173,7 @@ body {
 
 .updates h2 {
     margin-bottom: 1.5rem;
-    color: var(--second-color);
+    color: var(--fourth-color);
 }
 
 .updates a {
@@ -205,12 +208,12 @@ body {
     background-color: var(--third-color);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid var(--second-color);
+    border: 1px solid var(--fourth-color);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
 
 .slide h3 {
-    color: var(--second-color);
+    color: var(--fourth-color);
     margin-bottom: 0.5rem;
 }
 
@@ -281,7 +284,7 @@ footer {
     background: rgba(45, 45, 45, 0.4);
     backdrop-filter: blur(3px);
     border-radius: 8px;
-    border: 1px solid var(--second-color);
+    border: 1px solid var(--fourth-color);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
 
@@ -307,7 +310,7 @@ footer {
     backdrop-filter: blur(3px);
     border-radius: 8px;
     padding: 2rem;
-    border: 1px solid var(--second-color);
+    border: 1px solid var(--fourth-color);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
 
@@ -329,7 +332,7 @@ footer {
 }
 
 .specs-details h3 {
-    color: var(--second-color);
+    color: var(--fourth-color);
     margin-bottom: 1rem;
 }
 
@@ -345,13 +348,13 @@ footer {
 
 .specs-details li::before {
     content: "•";
-    color: var(--second-color);
+    color: var(--fourth-color);
     position: absolute;
     left: 0;
 }
 
 .peripherals h3 {
-    color: var(--second-color);
+    color: var(--fourth-color);
     margin-bottom: 1.5rem;
 }
 
@@ -365,7 +368,7 @@ footer {
     background-color: var(--main-color);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid var(--second-color);
+    border: 1px solid var(--fourth-color);
     margin-bottom: 1.5rem;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
@@ -386,7 +389,7 @@ footer {
 }
 
 .peripheral-item h4 {
-    color: var(--second-color);
+    color: var(--fourth-color);
     margin-bottom: 0.5rem;
 }
 

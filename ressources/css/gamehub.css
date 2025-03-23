@@ -649,7 +649,7 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease, opacity 0.3s ease;
-    z-index: 1200;
+    z-index: 12000;
     opacity: 0.7;
 }
 
@@ -664,6 +664,7 @@
 
 .nav-button.next {
     right: 20px;
+    z-index: 99999;
 }
 
 /* Logo Container */
@@ -866,7 +867,7 @@ body.games {
     background: rgba(0, 0, 0, 0);
     pointer-events: none;
     transition: background 2s ease;
-    z-index: 666;
+    z-index: 666999;
 }
 
 @keyframes shake {
@@ -900,6 +901,28 @@ body.games {
 #showButton:hover {
     filter: brightness(1.5);
 }
+
+.skin-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.skin-row video {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.video-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
 
 /* Responsive Design */
 @media (max-width: 1360px) {

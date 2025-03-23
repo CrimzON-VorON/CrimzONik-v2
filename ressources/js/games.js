@@ -88,6 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 screenshotsGrid.appendChild(thumbContainer);
             });
             openPopup(screenshotsPopup);
+
+            // Trigger pet dialogue for Code Vein screenshots (game 5)
+            if (screenshotsId === "5") {
+                const pet = document.querySelector('.pet-container');
+                if (pet) {
+                    const petInstance = window.petInstance;
+                    if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                        petInstance.sayDialogue('game-code-vein', true);
+                    }
+                }
+            }
         });
     });
 

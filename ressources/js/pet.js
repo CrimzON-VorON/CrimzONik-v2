@@ -7,14 +7,38 @@ class Pet {
         this.controls = document.querySelector('.pet-controls');
         this.hideButton = document.querySelector('.hide-button');
         this.scrollTopButton = document.querySelector('.scroll-top-button');
+        this.showOffButton = document.querySelector('.show-off-button');
+        this.sizeToggleButton = document.querySelector('.size-toggle-button');
+        
+        // Get current page
+        this.currentPage = this.getCurrentPage();
         
         // Animation states
         this.animations = {
-            idle: '../img/pet/CrimzONika.png',
-            showing: '../img/pet/CrimzON.png',
-            hiding: '../img/pet/CrimzON_DS3.png',
-            talking: '../img/pet/CrimzONika_DS2.png'
+            idle: '../img/pet/idle.gif',
+            showing: '../img/pet/waving.gif',
+            hiding: '../img/pet/leaving.gif',
+            talking: '../img/pet/speaking2.gif',
+            showOff: '../img/pet/show-off.gif',
+            scroll: '../img/pet/scroll.gif'
         };
+
+        // Animation durations in milliseconds
+        this.durations = {
+            showing: 3900,
+            hiding: 4000,
+            talking: 3000,
+            showOff: 10000,
+            scroll: 6600,
+            buttonActive: 3000
+        };
+
+        // Sound setup
+        this.dialogueSound = new Audio('../audio/Minecraft Menu Button Sound Effect  Sounffex.mp3');
+        this.dialogueSound.volume = 0.5;
+
+        // Preloaded GIFs storage
+        this.preloadedGifs = {};
         
         // Current animation state
         this.currentAnimation = 'idle';
@@ -26,52 +50,166 @@ class Pet {
         // Dialogue database
         this.dialogues = {
             random: [
-                "Hey there! Need any help?",
-                "Having fun exploring?",
-                "Don't forget to take breaks!",
-                "I love this website!",
-                "Click around, there's lots to see!"
+                "Якщо заважаю, то заховай мене...  ⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀ ⠀⠀⠀⠀  Тільки ненадовго. Або зменши, це краще буде.",
+                "З минулого сайту мій брат набрався навичок і створив мене! ⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀ ⠀⠀⠀⠀  Але як пета для сайту...",
+                "Розважаєшся переглядом цього сайту?",
+                "Не забувайте відпочивати!",
+                "Ех... іноді так самотньо...",
+                "Ти ще тут?",
+                "Скучаю по минулим часам...",
+                "Як справи?",
+                "Тут так багато всього цікавого!",
+                "Натисни на мене!"
             ],
             random2: [
-                "Hehe, that tickles!",
-                "Hey, watch where you're clicking!",
-                "Wanna be friends?",
-                "You found my secret tickle spot!",
-                "*giggles* That's fun!"
+                "Хей, лоскотно!",
+                "Хей, дивись куди тикаєщ)",
+                "Куди натискаєш? :)",
+                "Хочеш історію? Може пізніше.",
+                "Колись ми з братом перемогли напів-бога."
+            ],
+            showOff: [
+                "Заціни!",
+                "Я добре виглядаю?",
+                "Подобається, що бачиш?",
+                "Та-да! Це я!"
             ],
             popup: [
-                "Ooh, a popup! What's inside?",
-                "I love when things pop up!",
-                "Let's see what we have here..."
+                "О, вспливаюче вікно! Що всередині?",
+                "Я люблю, коли щось спливає!",
+                "Давайте подивимось, що у нас тут..."
             ],
             button: [
-                "Click click!",
-                "Buttons are fun!",
-                "What does this one do?"
+                "Клік клік!",
+                "Кнопки прикольні!",
+                "Що вона робить?"
             ],
             hide: [
-                "See you later!",
-                "Taking a quick break!",
-                "I'll be right back!"
+                "Побачимося!",
+                "Трохи відпочину!",
+                "Скоро повернуся!"
             ],
             show: [
-                "I'm back!",
-                "Did you miss me?",
-                "Hello again!"
+                "Я повернулася!",
+                "Скучав за мною?",
+                "Знову привіт!"
             ],
             scroll: [
-                "Up we go!",
-                "Back to the top!",
-                "Wheee!"
+                "Вгору!",
+                "*Wheee!*"
+            ],
+            shrink: [
+                "Ой, я зменшилась! Мене видно?",
+                "Не ховай мене тільки, коли я зменшилась, бо загублюся в коді...",
+                "Маленька, але все ще красуня!"
+            ],
+            grow: [
+                "Знову велика!",
+                "Це я збільшилась, чи ти завжди був таким.. маленьким?)",
+                "Тепер мене краще видно!"
+            ],
+            // Діалоги-привітання для окремих сторінок
+            info: [
+                "Тут знайдеш різну інформацію."
+            ],
+            waifu: [
+                "О, тут його улюблені вайфу! Тут стільки красунь! Диви, декілька карточок рухаються!",
+                "Стільки гарних персонажів... Диви, декілька карточок рухаються!",
+                "Яка твоя улюблена вайфу? Диви, декілька карточок рухаються!"
+            ],
+            watching: [
+                "Тепер ці бокси повинні виглядати нормально."
+            ],
+            games: [
+                "Багато ігор.. Хей, я щось відчуваю.. на цій сторінці щось є..."
+            ],
+            cookpad: [
+                "Ох ммм як тут багато всього смачного!"
+            ],
+            'cool-things': [
+                "Ох як тут віє ностальгією, тут багато всього цікавого."
+            ],
+            // Діалоги для реагування на кнопки та інші дії
+            horror: [
+                "О, так це воно! Наведи на нього."
+            ],
+            horror2: [
+                "Хахаха!"
+            ],
+            'waifu-water': [
+                "Схоже він трохи захопився з описом Вайф, багато вже води."
+            ],
+            'game-code-vein': [
+                "О, я є тут."
+            ],
+            'cool-things-plush': [
+                "Вау, які милі плюші!"
+            ],
+            'cool-things-anime': [
+                "Скільки тут аніме речей!"
+            ],
+            zelda: [
+                "Вау... Як же красиво..."
             ]
         };
 
-        this.init();
+        // Make the instance available globally for external access
+        window.petInstance = this;
+
+        // Start preloading immediately
+        this.preloadAnimations();
+    }
+
+    getCurrentPage() {
+        const path = window.location.pathname;
+        if (path.includes('waifu')) return 'waifu';
+        if (path.includes('horror')) return 'horror';
+        if (path.includes('info')) return 'info';
+        if (path.includes('watching')) return 'watching';
+        if (path.includes('games')) return 'games';
+        if (path.includes('cookpad')) return 'cookpad';
+        if (path.includes('cool-things')) return 'cool-things';
+        return 'default';
+    }
+
+    async preloadAnimations() {
+        const preloadPromises = Object.entries(this.animations).map(([key, url]) => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => {
+                    this.preloadedGifs[key] = img;
+                    resolve();
+                };
+                img.onerror = () => reject(`Failed to load ${url}`);
+                img.src = url;
+            });
+        });
+
+        try {
+            await Promise.all(preloadPromises);
+            console.log('All animations preloaded successfully');
+            this.init(); // Initialize only after preloading
+        } catch (error) {
+            console.error('Error preloading animations:', error);
+            this.init(); // Initialize anyway to ensure functionality
+        }
     }
 
     init() {
-        // Show pet after a delay
-        setTimeout(() => this.appear(), 1000);
+        // Check if there's a saved state
+        const isHidden = localStorage.getItem('petHidden') === 'true';
+        const isShrunk = localStorage.getItem('petShrunk') === 'true';
+        
+        if (!isHidden) {
+            // Show pet after a delay only if it wasn't hidden before
+            setTimeout(() => this.appear(), 2000);
+        } else {
+            // If it was hidden before, keep it hidden
+            this.container.classList.remove('visible');
+            this.controls.classList.add('hidden');
+            this.sprite.style.display = 'none';
+        }
+
 
         // Setup event listeners
         this.setupEventListeners();
@@ -81,11 +219,42 @@ class Pet {
 
         // Set initial animation
         this.setAnimation('idle');
+
+        // Add horror button listeners if they exist
+        const showButton = document.getElementById('showButton');
+        const horrorImage = document.getElementById('image');
+        
+        if (showButton) {
+            showButton.addEventListener('click', () => {
+                this.sayDialogue('horror', true);
+            });
+        }
+        
+        if (horrorImage) {
+            horrorImage.addEventListener('click', () => {
+                this.sayDialogue('horror2', true);
+            });
+        }
+    }
+
+    playDialogueSound() {
+        // Reset and play the sound
+        this.dialogueSound.currentTime = 0;
+        this.dialogueSound.play().catch(error => {
+            console.warn('Failed to play dialogue sound:', error);
+        });
     }
 
     setAnimation(state, duration = 0) {
         this.currentAnimation = state;
-        this.sprite.style.backgroundImage = `url(${this.animations[state]})`;
+        
+        // Use preloaded GIF if available
+        if (this.preloadedGifs[state]) {
+            this.sprite.style.backgroundImage = `url(${this.preloadedGifs[state].src})`;
+        } else {
+            // Fallback to direct URL
+            this.sprite.style.backgroundImage = `url(${this.animations[state]})`;
+        }
 
         if (duration > 0) {
             setTimeout(() => {
@@ -103,72 +272,62 @@ class Pet {
                 // Hiding
                 this.toggleButtonImage(this.hideButton);
                 this.sayDialogue('hide');
-                this.setAnimation('hiding', 2000);
+                this.setAnimation('hiding', this.durations.hiding);
                 setTimeout(() => {
                     this.container.classList.remove('visible');
                     this.controls.classList.add('hidden');
                     this.sprite.style.display = 'none';
-                }, 2000);
+                    localStorage.setItem('petHidden', 'true');
+                }, this.durations.hiding);
             } else {
                 // Showing
                 this.container.classList.add('visible');
                 this.controls.classList.remove('hidden');
                 this.sprite.style.display = 'block';
-                this.setAnimation('showing', 2000);
+                this.setAnimation('showing', this.durations.showing);
                 this.toggleButtonImage(this.hideButton);
                 this.sayDialogue('show');
+                localStorage.setItem('petHidden', 'false');
             }
         });
 
-        // Popup buttons
-        document.querySelectorAll('.test-button').forEach((button, index) => {
-            button.addEventListener('click', () => {
-                const popupId = `popup${index + 1}`;
-                const popup = document.getElementById(popupId);
-                if (popup) {
-                    popup.classList.add('active');
-                    this.sayDialogue('popup');
-                }
-            });
-        });
-
-        // Close popup buttons
-        document.querySelectorAll('.close-popup').forEach(button => {
-            button.addEventListener('click', () => {
-                const popup = button.closest('.popup');
-                if (popup) {
-                    popup.classList.remove('active');
-                }
-            });
-        });
-
-        // Close popups when clicking outside
-        document.querySelectorAll('.popup').forEach(popup => {
-            popup.addEventListener('click', (e) => {
-                if (e.target === popup) {
-                    popup.classList.remove('active');
-                }
-            });
+        // Show-off button
+        this.showOffButton.addEventListener('click', () => {
+            this.toggleButtonImage(this.showOffButton);
+            this.setAnimation('showOff', this.durations.showOff);
+            this.sayDialogue('showOff', true);
         });
 
         // Scroll top button
         this.scrollTopButton.addEventListener('click', () => {
             this.toggleButtonImage(this.scrollTopButton);
+            this.setAnimation('scroll', this.durations.scroll);
             this.sayDialogue('scroll', true);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
+        // Size toggle button
+        this.sizeToggleButton.addEventListener('click', () => {
+            this.toggleButtonImage(this.sizeToggleButton);
+            const isShrunk = this.container.classList.toggle('shrunk');
+            localStorage.setItem('petShrunk', isShrunk);
+            this.setAnimation('talking', this.durations.talking);
+            this.sayDialogue(isShrunk ? 'shrink' : 'grow', true);
+        });
+
         // Pet click interaction
         this.sprite.addEventListener('click', () => {
-            this.setAnimation('talking', 2000);
+            this.setAnimation('talking', this.durations.talking);
             this.sayDialogue('random2', true);
         });
     }
 
     appear() {
         this.container.classList.add('visible');
-        this.setAnimation('showing', 2000);
-        this.sayDialogue('random', true);
+        this.setAnimation('showing', this.durations.showing);
+        // Use page-specific dialogue if available, otherwise use default show dialogue
+        const dialogueType = this.dialogues[this.currentPage] ? this.currentPage : 'show';
+        this.sayDialogue(dialogueType, true);
     }
 
     toggleButtonImage(button) {
@@ -179,7 +338,7 @@ class Pet {
         img.src = activeUrl;
         setTimeout(() => {
             img.src = defaultUrl;
-        }, 2000);
+        }, this.durations.buttonActive);
     }
 
     async sayDialogue(type, isPriority = true) {
@@ -205,9 +364,12 @@ class Pet {
         this.currentDialog = dialogue;
         this.speechBubble.textContent = '';
         this.speechBubble.classList.add('visible');
+
+        // Play sound when dialogue starts
+        this.playDialogueSound();
         
-        // Set talking animation
-        if (this.currentAnimation !== 'showing' && this.currentAnimation !== 'hiding') {
+        // Set talking animation if not in a special animation state
+        if (!['showing', 'hiding', 'showOff', 'scroll'].includes(this.currentAnimation)) {
             this.setAnimation('talking');
         }
         
@@ -227,16 +389,16 @@ class Pet {
                 if (this.currentDialog === dialogue) {
                     this.speechBubble.classList.remove('visible');
                     this.currentDialog = null;
-                    // Return to idle animation only if not in showing/hiding state
-                    if (this.currentAnimation !== 'showing' && this.currentAnimation !== 'hiding') {
+                    // Return to idle animation only if not in a special animation state
+                    if (!['showing', 'hiding', 'showOff', 'scroll'].includes(this.currentAnimation)) {
                         this.setAnimation('idle');
                     }
                 }
-            }, 3000);
+            }, 5000);
         } catch (error) {
             console.error('Dialog interrupted:', error);
-            // Return to idle animation on error
-            if (this.currentAnimation !== 'showing' && this.currentAnimation !== 'hiding') {
+            // Return to idle animation on error if not in a special animation state
+            if (!['showing', 'hiding', 'showOff', 'scroll'].includes(this.currentAnimation)) {
                 this.setAnimation('idle');
             }
         }
@@ -245,9 +407,9 @@ class Pet {
     startRandomDialogues() {
         setInterval(() => {
             if (Math.random() < 0.3 && this.container.classList.contains('visible')) {
-                this.sayDialogue('random', true);
+                this.sayDialogue('random', false);
             }
-        }, 10000);
+        }, 20000);
     }
 }
 

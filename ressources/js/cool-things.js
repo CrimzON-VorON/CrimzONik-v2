@@ -44,6 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
         viewMoreBtn.addEventListener('click', () => {
             const popup = document.getElementById(`itemPopup${itemId}`);
             popup.classList.add('active');
+
+                // Trigger pet dialogue for specific item (item 11)
+                if (parseInt(itemId) === 11) {
+                    const pet = document.querySelector('.pet-container');
+                    if (pet) {
+                        const petInstance = window.petInstance;
+                        if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                            petInstance.sayDialogue('cool-things-anime', true);
+                        }
+                    }
+                }
+
+                // Trigger pet dialogue for specific item (item 7)
+                if (parseInt(itemId) === 7) {
+                    const pet = document.querySelector('.pet-container');
+                    if (pet) {
+                        const petInstance = window.petInstance;
+                        if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                            petInstance.sayDialogue('cool-things-plush', true);
+                        }
+                    }
+                }
         });
     });
 
@@ -331,6 +353,17 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
             const popup = document.getElementById(`game${index + 1}Popup`);
             popup.classList.add('active');
+
+                // Trigger pet dialogue for Game boxes (Game 13)
+                if (index + 1 === 13) {
+                    const pet = document.querySelector('.pet-container');
+                    if (pet) {
+                        const petInstance = window.petInstance;
+                        if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                            petInstance.sayDialogue('zelda', true);
+                        }
+                    }
+                }
         });
     });
 

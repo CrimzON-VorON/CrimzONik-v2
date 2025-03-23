@@ -4,9 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.querySelector('.close-popup');
 
     function openPopup() {
-        popup.classList.add('active');
-        document.body.style.overflow = 'hidden';
+    popup.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+        document.querySelectorAll("#gamePopup video").forEach(video => {
+            video.playbackRate = 0.6; // Сповільнення
+        });
+    }, 300); // Дати відео трохи часу на завантаження
     }
+
 
     function closePopup() {
         popup.classList.remove('active');
