@@ -903,6 +903,7 @@ body.games {
 }
 
 .skin-row {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -912,6 +913,12 @@ body.games {
 .skin-row video {
     max-width: 300px;
     border-radius: 10px;
+}
+
+.center-moin {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .video-container1 {

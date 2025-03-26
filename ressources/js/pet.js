@@ -20,7 +20,9 @@ class Pet {
             hiding: '../img/pet/leaving.gif',
             talking: '../img/pet/speaking2.gif',
             showOff: '../img/pet/show-off.gif',
-            scroll: '../img/pet/scroll.gif'
+            scroll: '../img/pet/scroll.gif',
+            shinob: '../img/pet/Shinob.gif',
+            shinob2: '../img/pet/shinob2.png'
         };
 
         // Animation durations in milliseconds
@@ -30,11 +32,13 @@ class Pet {
             talking: 3000,
             showOff: 10000,
             scroll: 6600,
-            buttonActive: 3000
+            buttonActive: 3000,
+            shinob: 6000,
+            shinob2: 20000
         };
 
         // Sound setup
-        this.dialogueSound = new Audio('../audio/Minecraft Menu Button Sound Effect  Sounffex.mp3');
+        this.dialogueSound = new Audio('../audio/Notifications Pet.mp3');
         this.dialogueSound.volume = 0.5;
 
         // Preloaded GIFs storage
@@ -63,7 +67,7 @@ class Pet {
             ],
             random2: [
                 "Хей, лоскотно!",
-                "Хей, дивись куди тикаєщ)",
+                "Хей, дивись куди тикаєш)",
                 "Куди натискаєш? :)",
                 "Хочеш історію? Може пізніше.",
                 "Колись ми з братом перемогли напів-бога."
@@ -127,7 +131,19 @@ class Pet {
                 "Ох ммм як тут багато всього смачного!"
             ],
             'cool-things': [
-                "Ох як тут віє ностальгією, тут багато всього цікавого."
+                "Ох як тут віє ностальгією, тут багато всього цікавого. Краще зменши мене тут, щоб тобі не заважати клікати. Але тільки не ховай!"
+            ],
+            anime: [
+                "Рецензія та опис є тільки в улюблених, в інших всередині є тільки теги."
+            ],
+            manga: [
+                "Опис є тільки в улюблених, тегів тут немає. Нажаль тут ти не знайдеш нормальну рецензію по деяким причинам."
+            ],
+            movies: [
+                "На цій сторінці немає рецензій і жанрів навіть, ніде... уви..."
+            ],
+            series: [
+                "На цій сторінці немає рецензій і жанрів навіть, ніде... уви..."
             ],
             // Діалоги для реагування на кнопки та інші дії
             horror: [
@@ -148,8 +164,41 @@ class Pet {
             'cool-things-anime': [
                 "Скільки тут аніме речей!"
             ],
+            'cool-things-pen': [
+                "Ось би він мене намалював..."
+            ],
             zelda: [
                 "Вау... Як же красиво..."
+            ],
+            'cookpad-1': [
+                "Насправді, не буде лишнім добавити ще цибулі."
+            ],
+            'cookpad-2': [
+                "Тут по тісту все те саме що і в звичайному пирозі, просто начинка інша."
+            ],
+            'cookpad-5': [
+                "Його тортів, правда, тут ще нема."
+            ],
+            'cookpad-11': [
+                "А тобі подобаються гриби?)"
+            ],
+            'cookpad-18': [
+                "Да... цей рецепт треба буде обновити і зробити кращі."
+            ],
+            'cookpad-19': [
+                "Щоб змінити колір млинців на коричневий, можно просто добавити какао, а щоб зробити зелені, то можна добавити подріблений шпинат."
+            ],
+            shinob: [
+                "Ка-ка-ка, я все ще тут! Я тут внизу!"
+            ],
+            shinob2: [
+                "Ка-ка-ка!"
+            ],
+            'surprise-event': [
+                "Ой! Що це..."
+            ],
+            'hentai-warning': [
+                "( ͡~ ͜ʖ ͡°)"
             ]
         };
 
@@ -169,6 +218,10 @@ class Pet {
         if (path.includes('games')) return 'games';
         if (path.includes('cookpad')) return 'cookpad';
         if (path.includes('cool-things')) return 'cool-things';
+        if (path.includes('anime')) return 'anime';
+        if (path.includes('manga')) return 'manga';
+        if (path.includes('movies')) return 'movies';
+        if (path.includes('series')) return 'series';
         return 'default';
     }
 

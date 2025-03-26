@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryContainer.addEventListener('mouseleave', startAutoScroll);
     });
 
-    // Recipe card click handlers
+// Recipe card click handlers
     recipeCards.forEach(card => {
         card.addEventListener('click', () => {
             const recipeId = card.getAttribute('data-recipe');
@@ -127,6 +127,67 @@ document.addEventListener('DOMContentLoaded', () => {
             popup.classList.add('active');
             currentPopup = popup;
             document.body.style.overflow = 'hidden';
+
+            // Trigger pet dialogue for рецепт (рецепт 1)
+            if (parseInt(recipeId) === 1) { // Фіксована перевірка
+                const pet = document.querySelector('.pet-container');
+                if (pet) {
+                    const petInstance = window.petInstance;
+                    if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                        petInstance.sayDialogue('cookpad-1', true);
+                    }
+                }
+            }
+            // Trigger pet dialogue for рецепт (рецепт 2)
+            if (parseInt(recipeId) === 2) { // Фіксована перевірка
+                const pet = document.querySelector('.pet-container');
+                if (pet) {
+                    const petInstance = window.petInstance;
+                    if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                        petInstance.sayDialogue('cookpad-2', true);
+                    }
+                }
+            }
+            // Trigger pet dialogue for рецепт (рецепт 5)
+            if (parseInt(recipeId) === 5) { // Фіксована перевірка
+                const pet = document.querySelector('.pet-container');
+                if (pet) {
+                    const petInstance = window.petInstance;
+                    if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                        petInstance.sayDialogue('cookpad-5', true);
+                    }
+                }
+            }
+            // Trigger pet dialogue for рецепт (рецепт 11)
+            if (parseInt(recipeId) === 11) { // Фіксована перевірка
+                const pet = document.querySelector('.pet-container');
+                if (pet) {
+                    const petInstance = window.petInstance;
+                    if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                        petInstance.sayDialogue('cookpad-11', true);
+                    }
+                }
+            }
+            // Trigger pet dialogue for рецепт (рецепт 18)
+            if (parseInt(recipeId) === 18) { // Фіксована перевірка
+                const pet = document.querySelector('.pet-container');
+                if (pet) {
+                    const petInstance = window.petInstance;
+                    if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                        petInstance.sayDialogue('cookpad-18', true);
+                    }
+                }
+            }
+            // Trigger pet dialogue for рецепт (рецепт 19)
+            if (parseInt(recipeId) === 19) { // Фіксована перевірка
+                const pet = document.querySelector('.pet-container');
+                if (pet) {
+                    const petInstance = window.petInstance;
+                    if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                        petInstance.sayDialogue('cookpad-19', true);
+                    }
+                }
+            }
 
             // Reset and start gallery
             const thumbnailsContainer = popup.querySelector('.thumbnails-container');
@@ -147,7 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }, 1600);
         });
-    });
+});
+
 
     // Fullscreen gallery navigation
     fullscreenGallery.querySelector('.prev').addEventListener('click', () => {

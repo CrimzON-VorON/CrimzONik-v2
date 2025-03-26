@@ -55,7 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 }
-
+                // Trigger pet dialogue for specific item (item 5)
+                if (parseInt(itemId) === 5) {
+                    const pet = document.querySelector('.pet-container');
+                    if (pet) {
+                        const petInstance = window.petInstance;
+                        if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                            petInstance.sayDialogue('cool-things-pen', true);
+                        }
+                    }
+                }
                 // Trigger pet dialogue for specific item (item 7)
                 if (parseInt(itemId) === 7) {
                     const pet = document.querySelector('.pet-container');

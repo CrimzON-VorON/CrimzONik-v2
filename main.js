@@ -37,6 +37,7 @@ document.getElementById('toggleSidebar').addEventListener('click', () => {
     } else {
         toggleBtn.style.left = '250px';
     }
+
     
     // Save state to localStorage
     localStorage.setItem('sidebarHidden', sidebar.classList.contains('hidden'));
@@ -118,6 +119,84 @@ if (slider && prevBtn && nextBtn) {
     // Initialize slider
     updateSlider();
 }
+
+    // New Surprise Button Functionality
+    const surpriseButton = document.querySelector('.surprise-button');
+    const gifUrls = [
+        '../img/misc/afs.gif',
+        '../img/misc/fsfs.gif',
+        '../img/misc/2.gif',
+        '../img/misc/cfgn.gif',
+        '../img/misc/AliceScary.gif',
+        '../img/misc/nepnep1Dead.gif',
+        '../img/misc/cat-shaking.gif',
+        '../img/misc/81dec4de86e9c87ecde04cec59c524b8.gif',
+        '../img/misc/fsfsfsa.gif',
+        '../img/misc/ep.gif',
+        '../img/misc/stare.gif',
+        '../img/misc/derp.gif',
+        '../img/misc/bork.gif',
+        '../img/misc/com.gif',
+        '../img/misc/yeee.gif',
+        '../img/misc/kura.gif',
+        '../img/misc/dragon.gif',
+        '../img/misc/fox.gif',
+        '../img/misc/drive.gif',
+        '../img/misc/tap.gif',
+        '../img/misc/roll.gif',
+        '../img/misc/clipp.gif',
+        '../img/misc/whirl.gif'
+    ];
+    let activeGifs = [];
+
+    function createGif(url) {
+        const gif = document.createElement('img');
+        gif.src = url;
+        gif.className = 'surprise-gif';
+        gif.style.width = '150px';
+        gif.style.height = '150px';
+        gif.style.position = 'fixed';
+        gif.style.left = `${Math.random() * (window.innerWidth - 150)}px`;
+        gif.style.top = `${Math.random() * (window.innerHeight - 150)}px`;
+        document.body.appendChild(gif);
+        return gif;
+    }
+
+    function showGif(gif, index) {
+        setTimeout(() => {
+            gif.classList.add('visible');
+            setTimeout(() => {
+                gif.classList.remove('visible');
+                setTimeout(() => {
+                    gif.remove();
+                    activeGifs = activeGifs.filter(g => g !== gif);
+                }, 500);
+            }, 3000);
+        }, index * 500);
+    }
+
+    surpriseButton.addEventListener('click', () => {
+    // Remove any existing gifs
+    activeGifs.forEach(gif => gif.remove());
+    activeGifs = [];
+
+    // Create and show new gifs
+    gifUrls.forEach((url, index) => {
+        const gif = createGif(url);
+        activeGifs.push(gif);
+        showGif(gif, index);
+    });
+
+    // Trigger pet dialogue for surprise event
+    const pet = document.querySelector('.pet-container');
+    if (pet) {
+        const petInstance = window.petInstance;
+        if (petInstance && typeof petInstance.sayDialogue === 'function') {
+            petInstance.sayDialogue('surprise-event', true);
+        }
+    }
+});
+
 
 // Fullscreen Image Viewer
 const createFullscreenViewer = () => {

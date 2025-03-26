@@ -407,6 +407,20 @@ document.addEventListener('DOMContentLoaded', () => {
             characterLooking.classList.add('active');
             characterLooking.src = '../img/waifus/avatar/shinobu2_first_frame.png';
 
+            // Trigger pet dialogue for рецепт (рецепт 1)
+            const pet = document.querySelector('.pet-container');
+            if (pet) {
+                const petInstance = window.petInstance;
+                if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                    petInstance.sayDialogue('shinob', true);
+
+                    // Запускаємо анімацію
+                    if (typeof petInstance.setAnimation === 'function') {
+                        petInstance.setAnimation('shinob', petInstance.durations.showOff);
+                    }
+                }
+            }
+
             setTimeout(() => {
                 characterLooking.src = '../img/waifus/avatar/shinobu2.gif';
             }, 200);
@@ -425,6 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ));
         });
     }
+
 
     // Second card click handler
     const secondCard = document.querySelector('.waifu-card[data-waifu-id="2"]');

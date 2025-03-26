@@ -241,6 +241,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     fullscreenViewer.classList.add('active');
                 });
             });
+
+        // Trigger pet dialogue for рецепт (рецепт 19)
+        if (card.getAttribute('data-anime-id') === "1") { // Фіксована перевірка
+            const pet = document.querySelector('.pet-container');
+            if (pet) {
+                const petInstance = window.petInstance;
+                if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                    petInstance.sayDialogue('shinob2', true);
+                }
+                    // Запускаємо анімацію
+                    if (typeof petInstance.setAnimation === 'function') {
+                        petInstance.setAnimation('shinob2', petInstance.durations.showOff);
+                    }
+            }
+        }
             
             popup.classList.add('active');
         });

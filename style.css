@@ -25,9 +25,9 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url(ressources/img/cool-background.png);
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/61d05cf3-9538-4c39-af1a-66a4b356b56a/d9xsm5r-5c27d979-a513-4ebe-a779-9973233222e2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzYxZDA1Y2YzLTk1MzgtNGMzOS1hZjFhLTY2YTRiMzU2YjU2YVwvZDl4c201ci01YzI3ZDk3OS1hNTEzLTRlYmUtYTc3OS05OTczMjMzMjIyZTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g4_c7yzEsg7AppM3H-B3F6xGVpjrl_gAQEkUqkYDPGA);
-    background-size: contain;
+    background-image: url(ressources/img/thumb-1920-683908.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     color: var(--text-color);
     line-height: 1.6;
@@ -698,6 +698,35 @@ footer {
     translate: -50%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 0;
+}
+/* Surprise Button */
+.surprise-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+.sidebar:hover .surprise-button {
+    opacity: 1;
+}
+
+/* Surprise GIFs */
+.surprise-gif {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.surprise-gif.visible {
+    opacity: 1;
 }
 
 /* Responsive Design */

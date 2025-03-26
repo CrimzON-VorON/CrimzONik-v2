@@ -85,6 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             filterByTags();
+    // Trigger pet dialogue when "Hentai" tag is clicked
+            if (tagName === "Hentai") {
+                const pet = document.querySelector('.pet-container');
+                if (pet) {
+                    const petInstance = window.petInstance;
+                    if (petInstance && typeof petInstance.sayDialogue === 'function') {
+                        petInstance.sayDialogue('hentai-warning', true);
+                    }
+                    // Запускаємо анімацію
+                    if (typeof petInstance.setAnimation === 'function') {
+                        petInstance.setAnimation('idle', petInstance.durations.showOff);
+                    }
+                }
+            }
+
         });
     });
 
@@ -183,8 +198,3 @@ document.getElementById('image').addEventListener('click', function() {
         window.location.href = 'horror.html';
     }, 5000);
 });
-
-
-
-
-

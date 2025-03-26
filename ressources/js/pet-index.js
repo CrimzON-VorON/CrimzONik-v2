@@ -8,6 +8,7 @@ class Pet {
         this.hideButton = document.querySelector('.hide-button');
         this.scrollTopButton = document.querySelector('.scroll-top-button');
         this.showOffButton = document.querySelector('.show-off-button');
+        this.sizeToggleButton = document.querySelector('.size-toggle-button');
         
         // Get current page
         this.currentPage = this.getCurrentPage();
@@ -32,6 +33,10 @@ class Pet {
             buttonActive: 3000
         };
 
+        // Sound setup
+        this.dialogueSound = new Audio('ressources/audio/Notifications Pet.mp3');
+        this.dialogueSound.volume = 0.5;
+
         // Preloaded GIFs storage
         this.preloadedGifs = {};
         
@@ -45,7 +50,7 @@ class Pet {
         // Dialogue database
         this.dialogues = {
             random: [
-                "Якщо заважаю, то заховай мене...  ⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀ ⠀⠀⠀⠀  Тільки ненадовго. ",
+                "Якщо заважаю, то заховай мене...  ⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀ ⠀⠀⠀⠀  Тільки ненадовго. Або зменши, це краще буде.",
                 "З минулого сайту мій брат набрався навичок і створив мене! ⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀ ⠀⠀⠀⠀  Але як пета для сайту...",
                 "Розважаєшся переглядом цього сайту?",
                 "Не забувайте відпочивати!",
@@ -58,7 +63,7 @@ class Pet {
             ],
             random2: [
                 "Хей, лоскотно!",
-                "Хей, дивись куди тикаєщ)",
+                "Хей, дивись куди тикаєш)",
                 "Куди натискаєш? :)",
                 "Хочеш історію? Може пізніше.",
                 "Колись ми з братом перемогли напів-бога."
@@ -80,9 +85,7 @@ class Pet {
                 "Що вона робить?"
             ],
             hide: [
-                "Побачимося!",
-                "Трохи відпочину!",
-                "Скоро повернуся!"
+                "Не забудь мене повернути до переходу на наступну сторінку!"
             ],
             show: [
                 "Привіт, я CrimzONika! Я буду допомагати тобі по сайту, та щось розказувати, щоб було не нудно."
@@ -91,22 +94,69 @@ class Pet {
                 "Вгору!",
                 "*Wheee!*"
             ],
-            // Page-specific dialogues
+            shrink: [
+                "Ой, я зменшилась! Мене видно?",
+                "Не ховай мене тільки, коли я зменшилась, бо загублюся в коді...",
+                "Маленька, але все ще красуня!"
+            ],
+            grow: [
+                "Знову велика!",
+                "Це я збільшилась, чи ти завжди був таким.. маленьким?)",
+                "Тепер мене краще видно!"
+            ],
+            // Діалоги-привітання для окремих сторінок
             info: [
                 "Тут знайдеш різну інформацію."
             ],
             waifu: [
                 "О, тут його улюблені вайфу! Тут стільки красунь! Диви, декілька карточок рухаються!",
                 "Стільки гарних персонажів... Диви, декілька карточок рухаються!",
-                "Яка твоя улюблена вайфу?"
+                "Яка твоя улюблена вайфу? Диви, декілька карточок рухаються!"
             ],
+            watching: [
+                "Тепер ці бокси повинні виглядати нормально."
+            ],
+            games: [
+                "Багато ігор.. Хей, я щось відчуваю.. на цій сторінці щось є..."
+            ],
+            cookpad: [
+                "Ох ммм як тут багато всього смачного!"
+            ],
+            'cool-things': [
+                "Ох як тут віє ностальгією, тут багато всього цікавого."
+            ],
+            anime: [
+                "Рецензія та опис є тільки в улюблених, в інших всередині є тільки теги."
+            ],
+            // Діалоги для реагування на кнопки та інші дії
             horror: [
-                "Тут... трохи страшно...",
-                "Я... я буду поруч з тобою...",
-                "Не бійся, я з тобою!",
-                "Тримайся міцніше..."
+                "О, так це воно! Наведи на нього."
+            ],
+            horror2: [
+                "Хахаха!"
+            ],
+            'waifu-water': [
+                "Схоже він трохи захопився з описом Вайф, багато вже води."
+            ],
+            'game-code-vein': [
+                "О, я є тут."
+            ],
+            'cool-things-plush': [
+                "Вау, які милі плюші!"
+            ],
+            'cool-things-anime': [
+                "Скільки тут аніме речей!"
+            ],
+            zelda: [
+                "Вау... Як же красиво..."
+            ],
+            'surprise-event': [
+                "Ой! Що це..."
             ]
         };
+
+        // Make the instance available globally for external access
+        window.petInstance = this;
 
         // Start preloading immediately
         this.preloadAnimations();
@@ -117,6 +167,11 @@ class Pet {
         if (path.includes('waifu')) return 'waifu';
         if (path.includes('horror')) return 'horror';
         if (path.includes('info')) return 'info';
+        if (path.includes('watching')) return 'watching';
+        if (path.includes('games')) return 'games';
+        if (path.includes('cookpad')) return 'cookpad';
+        if (path.includes('cool-things')) return 'cool-things';
+        if (path.includes('anime')) return 'anime';
         return 'default';
     }
 
@@ -146,6 +201,7 @@ class Pet {
     init() {
         // Check if there's a saved state
         const isHidden = localStorage.getItem('petHidden') === 'true';
+        const isShrunk = localStorage.getItem('petShrunk') === 'true';
         
         if (!isHidden) {
             // Show pet after a delay only if it wasn't hidden before
@@ -157,6 +213,7 @@ class Pet {
             this.sprite.style.display = 'none';
         }
 
+
         // Setup event listeners
         this.setupEventListeners();
 
@@ -165,6 +222,30 @@ class Pet {
 
         // Set initial animation
         this.setAnimation('idle');
+
+        // Add horror button listeners if they exist
+        const showButton = document.getElementById('showButton');
+        const horrorImage = document.getElementById('image');
+        
+        if (showButton) {
+            showButton.addEventListener('click', () => {
+                this.sayDialogue('horror', true);
+            });
+        }
+        
+        if (horrorImage) {
+            horrorImage.addEventListener('click', () => {
+                this.sayDialogue('horror2', true);
+            });
+        }
+    }
+
+    playDialogueSound() {
+        // Reset and play the sound
+        this.dialogueSound.currentTime = 0;
+        this.dialogueSound.play().catch(error => {
+            console.warn('Failed to play dialogue sound:', error);
+        });
     }
 
     setAnimation(state, duration = 0) {
@@ -228,35 +309,13 @@ class Pet {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Popup buttons
-        document.querySelectorAll('.test-button').forEach((button, index) => {
-            button.addEventListener('click', () => {
-                const popupId = `popup${index + 1}`;
-                const popup = document.getElementById(popupId);
-                if (popup) {
-                    popup.classList.add('active');
-                    this.sayDialogue('popup');
-                }
-            });
-        });
-
-        // Close popup buttons
-        document.querySelectorAll('.close-popup').forEach(button => {
-            button.addEventListener('click', () => {
-                const popup = button.closest('.popup');
-                if (popup) {
-                    popup.classList.remove('active');
-                }
-            });
-        });
-
-        // Close popups when clicking outside
-        document.querySelectorAll('.popup').forEach(popup => {
-            popup.addEventListener('click', (e) => {
-                if (e.target === popup) {
-                    popup.classList.remove('active');
-                }
-            });
+        // Size toggle button
+        this.sizeToggleButton.addEventListener('click', () => {
+            this.toggleButtonImage(this.sizeToggleButton);
+            const isShrunk = this.container.classList.toggle('shrunk');
+            localStorage.setItem('petShrunk', isShrunk);
+            this.setAnimation('talking', this.durations.talking);
+            this.sayDialogue(isShrunk ? 'shrink' : 'grow', true);
         });
 
         // Pet click interaction
@@ -308,6 +367,9 @@ class Pet {
         this.currentDialog = dialogue;
         this.speechBubble.textContent = '';
         this.speechBubble.classList.add('visible');
+
+        // Play sound when dialogue starts
+        this.playDialogueSound();
         
         // Set talking animation if not in a special animation state
         if (!['showing', 'hiding', 'showOff', 'scroll'].includes(this.currentAnimation)) {
