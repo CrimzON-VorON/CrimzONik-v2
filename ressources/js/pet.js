@@ -15,23 +15,23 @@ class Pet {
         
         // Animation states
         this.animations = {
-            idle: '../img/pet/idle.gif',
-            showing: '../img/pet/waving.gif',
-            hiding: '../img/pet/leaving.gif',
-            talking: '../img/pet/speaking2.gif',
-            showOff: '../img/pet/show-off.gif',
-            scroll: '../img/pet/scroll.gif',
+            idle: '../img/pet/idle1.gif',
+            showing: '../img/pet/waving1.gif',
+            hiding: '../img/pet/leaving1.gif',
+            talking: '../img/pet/speaking1.gif',
+            showOff: '../img/pet/show-off1.gif',
+            scroll: '../img/pet/scroll1.gif',
             shinob: '../img/pet/Shinob.gif',
             shinob2: '../img/pet/shinob2.png'
         };
 
         // Animation durations in milliseconds
         this.durations = {
-            showing: 3900,
+            showing: 4600,
             hiding: 4000,
             talking: 3000,
-            showOff: 10000,
-            scroll: 6600,
+            showOff: 7100,
+            scroll: 3600,
             buttonActive: 3000,
             shinob: 6000,
             shinob2: 20000

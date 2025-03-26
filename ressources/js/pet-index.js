@@ -15,21 +15,32 @@ class Pet {
         
         // Animation states
         this.animations = {
-            idle: 'ressources/img/pet/idle.gif',
-            showing: 'ressources/img/pet/waving.gif',
-            hiding: 'ressources/img/pet/leaving.gif',
-            talking: 'ressources/img/pet/speaking2.gif',
-            showOff: 'ressources/img/pet/show-off.gif',
-            scroll: 'ressources/img/pet/scroll.gif'
+            idle: 'ressources/img/pet/idle1.gif',
+            showing: 'ressources/img/pet/waving1.gif',
+            hiding: 'ressources/img/pet/leaving1.gif',
+            talking: 'ressources/img/pet/speaking1.gif',
+            showOff: 'ressources/img/pet/show-off1.gif',
+            scroll: 'ressources/img/pet/scroll1.gif'
         };
+
+        const preloadImages = () => {
+        Object.values(this.animations).forEach(src => {
+        const img = new Image();
+            img.src = src;
+            });
+        };
+
+        preloadImages();
+
+
 
         // Animation durations in milliseconds
         this.durations = {
-            showing: 3900,
+            showing: 4600,
             hiding: 4000,
             talking: 3000,
-            showOff: 10000,
-            scroll: 6600,
+            showOff: 7100,
+            scroll: 3600,
             buttonActive: 3000
         };
 
