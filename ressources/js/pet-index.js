@@ -1,6 +1,11 @@
 // Pet class implementation
 class Pet {
     constructor() {
+        // Only initialize if the loading screen is not active
+        if (document.querySelector('.loading-screen.active')) {
+            return;
+        }
+        
         this.container = document.querySelector('.pet-container');
         this.sprite = document.querySelector('.pet-sprite');
         this.speechBubble = document.querySelector('.speech-bubble');
