@@ -111,7 +111,6 @@ body {
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
 
-
 /* Toggle Button */
 .toggle-btn {
     position: fixed;
@@ -420,15 +419,15 @@ footer {
     box-shadow: 0 0 50px rgba(124,62,144,1);
 }
 .waifu-link:before {
-    content: ""; /* Псевдоелемент для обводки */
+    content: "";
     position: absolute;
-    width: calc(100% + 2px); /* Ширина більше за ширину елемента */
-    height: calc(100% + 2px); /* Висота більше за висоту елемента */
-    border-radius: inherit; /* Наслідує форму елемента */
-    border: 3px solid transparent; /* Спочатку обводка невидима */
-    border-radius: inherit; /* Наслідуємо форму елемента */
-    z-index: -1; /* Псевдоелемент позаду основного блоку */
-    transition: border-color 0.5s ease; /* Плавна зміна кольору обводки */
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: inherit;
+    border: 3px solid transparent;
+    border-radius: inherit;
+    z-index: -1;
+    transition: border-color 0.5s ease;
 }
 
 .waifu-link img {
@@ -699,6 +698,7 @@ footer {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
+
 /* Surprise Button */
 .surprise-button {
     position: fixed;
@@ -729,6 +729,85 @@ footer {
     opacity: 1;
 }
 
+/* Todo Button */
+.todo-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+.todo-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Todo Popup */
+.todo-popup {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 400px;
+    max-height: 600px;
+    background: rgba(45, 45, 45, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999999;
+    border: 1px solid var(--fourth-color);
+    overflow: auto;
+}
+
+.todo-popup.active {
+    display: block;
+}
+
+.todo-section {
+    margin-bottom: 20px;
+}
+
+.todo-section h3 {
+    color: var(--fourth-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.completed-list .todo-item {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: line-through;
+}
+
 /* Responsive Design */
 @media (max-width: 1360px) {
     .toggle-btn {
@@ -748,62 +827,3 @@ footer {
         min-width: calc(50% - 1rem);
     }
 }
-
-/*@media (max-width: 1200px) {
-    .social-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .peripherals-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 1024px) {
-    .slide {
-        min-width: calc(50% - 1rem);
-    }
-}
-
-@media (max-width: 768px) {
-    .slide {
-        min-width: calc(100% - 1rem);
-    }
-    
-    .sidebar {
-        position: fixed;
-        height: 100%;
-        z-index: 99;
-    }
-    
-    .main-content {
-        margin-left: 0;
-        padding: 1rem;
-    }
-
-    .toggle-btn {
-        left: 1rem;
-    }
-
-    .sidebar:not(.hidden) + .main-content .toggle-btn {
-        left: 250px;
-    }
-
-    .social-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .pc-specs {
-        grid-template-columns: 1fr;
-    }
-
-    .peripherals-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .specs-container {
-        padding: 1rem;
-    }
-} *//

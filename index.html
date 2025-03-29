@@ -130,5 +130,56 @@
     <script src="ressources/js/loading-screen.js"></script>
     <script src="ressources/js/main-index.js"></script>
     <script src="ressources/js/pet-index.js"></script>
+
+    <button class="todo-button">
+        <img src="ressources/img/misc/todo.gif" alt="Todo List">
+    </button>
+
+    <div class="todo-popup">
+        <div class="todo-section">
+            <h3>📝 Зараз роблю</h3>
+            <ul class="todo-list active-list">
+                <li class="todo-item">- Задуматися</li>
+                <li class="todo-item">- Добавляти медія</li>
+            <h4>⛏ Майнкрафт</h4>
+                <li class="todo-item">- Постройка деревні жителей</li>
+                <li class="todo-item">- Збирання ресурсів на піксель арти</li>
+                <li class="todo-item">- Збирання ресурсів на залізну дорогу</li>
+            </ul>
+        </div>
+        <div class="todo-section">
+            <h3>📝 Потрібно зробити</h3>
+            <ul class="todo-list active-list">
+                <li class="todo-item">- Допройти челендж без урону на боссах (Dark Souls III)</li>
+                <li class="todo-item">- Почати челендж без урону на боссах (Elden Ring)</li>
+                <li class="todo-item">- Зробити монтаж по челенджу без урону на боссах (DS1/DS2)</li>
+                <li class="todo-item">- Купити новий Елден</li>
+            </ul>
+        </div>
+        
+        <div class="todo-section">
+            <h3>✅ Зроблені</h3>
+            <ul class="todo-list completed-list">
+                <li class="todo-item">✅ Зробити сайт</li>
+                <li class="todo-item">✅ Зробити пета сайту</li>
+                <li class="todo-item">✅ Змонтувати відик на одну сторіку</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+    const todoButton = document.querySelector('.todo-button');
+    const todoImage = todoButton.querySelector('img');
+    const todoPopup = document.querySelector('.todo-popup');
+
+    let isGif1 = true; // Стан гіфки
+
+    todoButton.addEventListener('click', () => {
+        todoPopup.classList.toggle('active');
+        // Зміна гіфки
+        todoImage.src = isGif1 ? "ressources/img/misc/todo2.gif" : "ressources/img/misc/todo.gif";
+        isGif1 = !isGif1;
+    });
+    </script>
 </body>
 </html>
