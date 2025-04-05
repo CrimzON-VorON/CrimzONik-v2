@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         }
 
-        // Check if 20 minutes (1000000 milliseconds) have passed
-        if (now - parseInt(lastVisit) > 1000000) {
+        // Check if 20 minutes (10000000 milliseconds) have passed
+        if (now - parseInt(lastVisit) > 10000000) {
             localStorage.setItem('lastVisit', now);
             return true;
         }
