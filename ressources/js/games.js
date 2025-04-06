@@ -158,4 +158,86 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Achievements popup functionality
+    const logoContainer = document.querySelector('.logo-container');
+    const achievementsPopup = document.createElement('div');
+    achievementsPopup.className = 'achievements-popup';
+    achievementsPopup.innerHTML = `
+        <h3>Поточні ігри з досягненнями</h3>
+        <div class="game-item-achiv" data-tooltip="Разраб додав всі внутріігрові ачівки і тепер їх треба всі робити... А було вже ачівок 64/68 всього. Думаю ачівок буде ще більше з новим 7 світом в ближчий час.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1476970/header.jpg?t=1741024848.webp" alt="Idleon">
+            <div class="game-info-achiv">
+                <h4 class="game-name">IdleOn - The Idle RPG</h4>
+                <div class="achievement-count">192/276 Ачівок</div>
+            </div>
+        </div>
+        <div class="game-item-achiv" data-tooltip="Треба зробити мільон кліків)">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3419430/a72a5965134f12a6cf86879fa2eb34ba16040486/capsule_184x69.jpg?t=1743708477" alt="Bongo Cat">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Bongo Cat</h4>
+                <div class="achievement-count">6/7 Ачівок</div>
+            </div>
+        </div>
+        <div class="game-item-achiv" data-tooltip="Не тороплюсь виповняти, та і ліміти на день є для деяких дій.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2989820/capsule_184x69.jpg?t=1742668595" alt="Pocket Waifu">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Pocket Waifu: Desktop Pet</h4>
+                <div class="achievement-count">22/32 Ачівок</div>
+            </div>
+        </div>
+        <div class="game-item-achiv" data-tooltip="Розраб знову добавив нові ачівки.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/304930/header.jpg?t=1734630748" alt="Unturned">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Unturned</h4>
+                <div class="achievement-count">82/83 Ачівок</div>
+            </div>
+        </div>
+    `;
+
+    logoContainer.appendChild(achievementsPopup);
+
+    const tooltip = document.createElement('div');
+tooltip.className = 'achievement-tooltip';
+document.body.appendChild(tooltip);
+const gameItems = achievementsPopup.querySelectorAll('.game-item-achiv');
+
+gameItems.forEach(item => {
+    item.addEventListener('mouseenter', (e) => {
+        tooltip.textContent = item.getAttribute('data-tooltip');
+        tooltip.style.display = 'block';
+    });
+
+    item.addEventListener('mousemove', (e) => {
+        tooltip.style.left = e.pageX + 10 + 'px';
+        tooltip.style.top = e.pageY + 10 + 'px';
+    });
+
+    item.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+    });
+});
+
+
+    logoContainer.addEventListener('click', () => {
+        achievementsPopup.classList.toggle('active');
+    });
+
+    achievementsPopup.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    // Close achievements popup when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!logoContainer.contains(e.target) && achievementsPopup.classList.contains('active')) {
+            achievementsPopup.classList.remove('active');
+        }
+    });
+
+    // Close achievements popup on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && achievementsPopup.classList.contains('active')) {
+            achievementsPopup.classList.remove('active');
+        }
+    });
 });

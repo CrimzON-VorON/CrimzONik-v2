@@ -548,7 +548,7 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 .review-text:hover {
-    background-color: rgba(0, 0, 0, 1.9);
+    backdrop-filter: blur(25px);
 }
 /* Screenshots Grid */
 .screenshots-grid  {
@@ -672,6 +672,7 @@
     text-align: center;
     margin: 2rem 0;
     padding: 1rem;
+    cursor: pointer;
 }
 .logo-container img {
     backdrop-filter: blur(0px);
@@ -687,6 +688,88 @@
     height: auto;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
+
+.achievements-popup {
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    width: 400px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.achievements-popup.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.achievements-popup h3 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.game-item-achiv {
+    display: flex;
+    align-items: center;
+    background-color: var(--second-color);
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.game-item-achiv:hover {
+    background-color: #343451;
+}
+
+.game-item-achiv img {
+    width: 100px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.game-info-achiv {
+    flex-grow: 1;
+}
+
+.game-info-achiv .game-name {
+    font-size: 16px;
+    margin: 0;
+}
+
+.achievement-count {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.achievement-tooltip {
+    position: absolute;
+    background-color: #111;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    max-width: 250px;
+    z-index: 2000;
+    pointer-events: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: none;
+    white-space: normal;
+}
+
 
 /* Search and Filter Section */
 .search-filter {
