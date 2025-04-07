@@ -727,6 +727,7 @@
     padding: 8px;
     margin-bottom: 10px;
     transition: background-color 0.2s ease;
+    cursor: help;
 }
 
 .game-item-achiv:hover {
@@ -737,7 +738,7 @@
     width: 100px;
     height: 60px;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: contain;
     margin-right: 10px;
 }
 
