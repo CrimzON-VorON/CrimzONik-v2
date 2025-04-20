@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1476970/header.jpg?t=1741024848.webp" alt="Idleon">
             <div class="game-info-achiv">
                 <h4 class="game-name">IdleOn - The Idle RPG</h4>
-                <div class="achievement-count">192/276 Ачівок</div>
+                <div class="achievement-count">209/276 Ачівок</div>
             </div>
         </div>
         <div class="game-item-achiv" data-tooltip="Треба зробити мільон кліків)">
@@ -183,14 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2989820/capsule_184x69.jpg?t=1742668595" alt="Pocket Waifu">
             <div class="game-info-achiv">
                 <h4 class="game-name">Pocket Waifu: Desktop Pet</h4>
-                <div class="achievement-count">22/32 Ачівок</div>
-            </div>
-        </div>
-        <div class="game-item-achiv" data-tooltip="Розраб знову добавив нові ачівки.">
-            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/304930/header.jpg?t=1734630748" alt="Unturned">
-            <div class="game-info-achiv">
-                <h4 class="game-name">Unturned</h4>
-                <div class="achievement-count">82/83 Ачівок</div>
+                <div class="achievement-count">23/32 Ачівок</div>
             </div>
         </div>
     `;
