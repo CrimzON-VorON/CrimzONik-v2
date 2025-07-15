@@ -165,35 +165,104 @@ document.addEventListener('DOMContentLoaded', () => {
     achievementsPopup.className = 'achievements-popup';
     achievementsPopup.innerHTML = `
         <h3>Поточні ігри з досягненнями</h3>
-        <div class="game-item-achiv" data-tooltip="Разраб додав всі внутріігрові ачівки і тепер їх треба всі робити... А було вже ачівок 64/68 всього. Думаю ачівок буде ще більше з новим 7 світом в ближчий час.">
+        <a href="#section9"><div class="game-item-achiv" data-tooltip="Разраб додав всі внутріігрові ачівки і тепер їх треба всі робити... А було вже ачівок 64/68 всього. Думаю ачівок буде ще більше з новим 7 світом в ближчий час.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1476970/header.jpg?t=1741024848.webp" alt="Idleon">
             <div class="game-info-achiv">
                 <h4 class="game-name">IdleOn - The Idle RPG</h4>
-                <div class="achievement-count">210/276 Ачівок</div>
+                <div class="achievement-count">220/276 Ачівок</div>
             </div>
-        </div>
-        <div class="game-item-achiv" data-tooltip="Треба зробити мільон кліків)">
-            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3419430/a72a5965134f12a6cf86879fa2eb34ba16040486/capsule_184x69.jpg?t=1743708477" alt="Bongo Cat">
-            <div class="game-info-achiv">
-                <h4 class="game-name">Bongo Cat</h4>
-                <div class="achievement-count">6/7 Ачівок</div>
-            </div>
-        </div>
-        <div class="game-item-achiv" data-tooltip="Не тороплюсь виповняти, та і ліміти на день є для деяких дій.">
-            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2989820/capsule_184x69.jpg?t=1742668595" alt="Pocket Waifu">
-            <div class="game-info-achiv">
-                <h4 class="game-name">Pocket Waifu: Desktop Pet</h4>
-                <div class="achievement-count">24/32 Ачівок</div>
-            </div>
-        </div>
+        </div></a>
     `;
+    
 
     logoContainer.appendChild(achievementsPopup);
 
+    // Create second popup (right side)
+    const achievementsPopupRight = document.createElement('div');
+    achievementsPopupRight.className = 'achievements-popup-right';
+    achievementsPopupRight.innerHTML = `
+        <h3>Активність (останні зіграні)</h3>
+        <a href="#section12"><div class="game-item-achiv" data-tooltip="Ігрушка з великими бубами фурей знову.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2294930/header.jpg?t=1746454695" alt="I wish it was morning all the time">
+            <div class="game-info-achiv">
+                <h4 class="game-name">I wish it was morning all the time</h4>
+            </div>
+        </div></a>
+        <a href="#section11"><div class="game-item-achiv" data-tooltip="Ігрушка з великими бубами фурей знову.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2725700/header.jpg?t=1728248672" alt="DINNERDINNNER">
+            <div class="game-info-achiv">
+                <h4 class="game-name">DINNERDINNNER</h4>
+                <div class="achievement-count">5/5 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section10"><div class="game-item-achiv" data-tooltip="Ігрушка з великими бубами фурей.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2417490/header.jpg?t=1746456185" alt="HOLEHOLE">
+            <div class="game-info-achiv">
+                <h4 class="game-name">HOLEHOLE</h4>
+                <div class="achievement-count">5/5 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section8"><div class="game-item-achiv" data-tooltip="Коопимся з Kolern з модами.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1748630546" alt="ELDEN RING">
+            <div class="game-info-achiv">
+                <h4 class="game-name">ELDEN RING</h4>
+                <div class="achievement-count">42/42 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section6"><div class="game-item-achiv" data-tooltip="Коопились з Kolern.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3121110/header.jpg?t=1741804510" alt="Content Warning">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Zort</h4>
+            </div>
+        </div></a>
+        <a href="#section5"><div class="game-item-achiv" data-tooltip="Коопились з Kolern.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2881650/header.jpg?t=1736717925" alt="Content Warning">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Content Warning</h4>
+            </div>
+        </div></a>
+        <a href="#section7"><div class="game-item-achiv" data-tooltip="Коопились в новий Елден з Kolern.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2622380/header.jpg?t=1749150157" alt="ELDEN RING NIGHTREIGN">
+            <div class="game-info-achiv">
+                <h4 class="game-name">ELDEN RING NIGHTREIGN</h4>
+                <div class="achievement-count">37/37 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section4"><div class="game-item-achiv" data-tooltip="Пройшов ради ачівок всю трилогію. Нема ніяких покращень, нічого не ісправили стало наче хуже.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2427430/24ab390192735d4e56efc64f9135353457ac981c/header.jpg?t=1747757839" alt="Stalker">
+            <div class="game-info-achiv">
+                <h4 class="game-name">S.T.A.L.K.E.R. Enhanced Edition</h4>
+                <div class="achievement-count">47/47 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section3"><div class="game-item-achiv" data-tooltip="Пройшов ради ачівок.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2280/header.jpg?t=1750785073">
+            <div class="game-info-achiv">
+                <h4 class="game-name">DOOM + DOOM II</h4>
+                <div class="achievement-count">33/33 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section2"><div class="game-item-achiv" data-tooltip="Милий тамагочі.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2989820/capsule_184x69.jpg?t=1742668595" alt="Pocket Waifu">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Pocket Waifu: Desktop Pet</h4>
+                <div class="achievement-count">32/32 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section1"><div class="game-item-achiv" data-tooltip="Нафармив купу предметів в інвентар, правда продавати їх по 0.5 копійок так впадлу, тому просто мусоряться, лежать">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3419430/a72a5965134f12a6cf86879fa2eb34ba16040486/capsule_184x69.jpg?t=1743708477" alt="Bongo Cat">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Bongo Cat</h4>
+                <div class="achievement-count">7/7 Ачівок</div>
+            </div>
+        </div></a>
+    `;
+    
+    logoContainer.appendChild(achievementsPopupRight);
     const tooltip = document.createElement('div');
 tooltip.className = 'achievement-tooltip';
 document.body.appendChild(tooltip);
-const gameItems = achievementsPopup.querySelectorAll('.game-item-achiv');
+const gameItems = document.querySelectorAll('.game-item-achiv');
 
 gameItems.forEach(item => {
     item.addEventListener('mouseenter', (e) => {
@@ -212,25 +281,46 @@ gameItems.forEach(item => {
 });
 
 
+    let currentPopup = null;
+
     logoContainer.addEventListener('click', () => {
-        achievementsPopup.classList.toggle('active');
+        if (currentPopup === null) {
+            // Show both popups at once
+            achievementsPopup.classList.add('active');
+            achievementsPopupRight.classList.add('active');
+            currentPopup = 'both';
+        } else {
+            // Close both popups
+            achievementsPopup.classList.remove('active');
+            achievementsPopupRight.classList.remove('active');
+            currentPopup = null;
+        }
     });
 
+    // Prevent popup clicks from closing the popups
     achievementsPopup.addEventListener('click', (e) => {
         e.stopPropagation();
     });
 
-    // Close achievements popup when clicking outside
+    achievementsPopupRight.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    // Close achievements popups when clicking outside
     document.addEventListener('click', (e) => {
-        if (!logoContainer.contains(e.target) && achievementsPopup.classList.contains('active')) {
+        if (!logoContainer.contains(e.target)) {
             achievementsPopup.classList.remove('active');
+            achievementsPopupRight.classList.remove('active');
+            currentPopup = null;
         }
     });
 
-    // Close achievements popup on escape key
+    // Close achievements popups on escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && achievementsPopup.classList.contains('active')) {
+        if (e.key === 'Escape' && (achievementsPopup.classList.contains('active') || achievementsPopupRight.classList.contains('active'))) {
             achievementsPopup.classList.remove('active');
+            achievementsPopupRight.classList.remove('active');
+            currentPopup = null;
         }
     });
 });
