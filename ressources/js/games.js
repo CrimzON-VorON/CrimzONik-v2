@@ -182,6 +182,12 @@ document.addEventListener('DOMContentLoaded', () => {
     achievementsPopupRight.className = 'achievements-popup-right';
     achievementsPopupRight.innerHTML = `
         <h3>Активність (останні зіграні)</h3>
+        <a href="#section12"><div class="game-item-achiv" data-tooltip="Ігрушка з великими бубами фурей знову і знову.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3046350/header.jpg?t=1728248191" alt="CHURIP">
+            <div class="game-info-achiv">
+                <h4 class="game-name">CHURIP</h4>
+            </div>
+        </div></a>
         <a href="#section12"><div class="game-item-achiv" data-tooltip="Ігрушка з великими бубами фурей знову.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2294930/header.jpg?t=1746454695" alt="I wish it was morning all the time">
             <div class="game-info-achiv">
