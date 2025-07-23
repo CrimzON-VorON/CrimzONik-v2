@@ -182,10 +182,46 @@ document.addEventListener('DOMContentLoaded', () => {
     achievementsPopupRight.className = 'achievements-popup-right';
     achievementsPopupRight.innerHTML = `
         <h3>Активність (останні зіграні)</h3>
+        <a href="#section8"><div class="game-item-achiv" data-tooltip="Коопимся з Kolern з модами.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1748630546" alt="ELDEN RING">
+            <div class="game-info-achiv">
+                <h4 class="game-name">ELDEN RING</h4>
+                <div class="achievement-count">42/42 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section16"><div class="game-item-achiv" data-tooltip="Сисяста корівка та класна музика">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2454060/header.jpg?t=1746456703" alt="MAZEMAZE">
+            <div class="game-info-achiv">
+                <h4 class="game-name">MAZEMAZE</h4>
+                <div class="achievement-count">3/3 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section16"><div class="game-item-achiv" data-tooltip="Дуже скучна прогулянка">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/520720/header.jpg?t=1751541816" alt="Dear Esther">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Dear Esther</h4>
+                <div class="achievement-count">10/10 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section15"><div class="game-item-achiv" data-tooltip="Коротка смішна гра про цицясту дівчинку джестера.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2562350/header.jpg?t=1728248805" alt="Escape Escape">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Escape Escape</h4>
+                <div class="achievement-count">6/6 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section14"><div class="game-item-achiv" data-tooltip="Погана ігрушка з бубами циклопа.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2966110/header.jpg?t=1728248596" alt="EYE TO ME">
+            <div class="game-info-achiv">
+                <h4 class="game-name">EYE TO ME</h4>
+                <div class="achievement-count">5/5 Ачівок</div>
+            </div>
+        </div></a>
         <a href="#section13"><div class="game-item-achiv" data-tooltip="Ігрушка з великими бубами фурей знову і знову.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3046350/header.jpg?t=1728248191" alt="CHURIP">
             <div class="game-info-achiv">
                 <h4 class="game-name">CHURIP</h4>
+                <div class="achievement-count">5/5 Ачівок</div>
             </div>
         </div></a>
         <a href="#section12"><div class="game-item-achiv" data-tooltip="Ігрушка з великими бубами фурей знову.">
@@ -206,13 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="game-info-achiv">
                 <h4 class="game-name">HOLEHOLE</h4>
                 <div class="achievement-count">5/5 Ачівок</div>
-            </div>
-        </div></a>
-        <a href="#section8"><div class="game-item-achiv" data-tooltip="Коопимся з Kolern з модами.">
-            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1748630546" alt="ELDEN RING">
-            <div class="game-info-achiv">
-                <h4 class="game-name">ELDEN RING</h4>
-                <div class="achievement-count">42/42 Ачівок</div>
             </div>
         </div></a>
         <a href="#section6"><div class="game-item-achiv" data-tooltip="Коопились з Kolern.">

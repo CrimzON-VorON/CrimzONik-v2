@@ -5,6 +5,47 @@ body.cookbookimage {
 
 }
 
+.book-toggle-buttons {
+    position: fixed;
+    bottom: 50px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.toggle-book-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.toggle-book-btn:hover {
+    opacity: 1;
+}
+
+.toggle-book-btn:disabled {
+    background: #555;
+    cursor: default;
+    opacity: 0.5;
+}
+.book-overlay.hidden {
+    display: none !important;
+}
+.book-overlay {
+    transition: opacity 0.3s;
+}
+.book-hidden .book-overlay {
+    display: none !important;
+}
+
 /* Book Animation */
 .book-overlay {
     position: fixed;

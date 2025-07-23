@@ -1,22 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Book Animation
     const bookOverlay = document.querySelector('.book-overlay');
     const book = document.querySelector('.book');
     const bookContent = document.querySelector('.book-content');
-    let isBookOpened = false;
 
-    book.addEventListener('click', () => {
-        if (!isBookOpened) {
+    const enableBtn = document.getElementById('enable-book');
+    const disableBtn = document.getElementById('disable-book');
+
+    // Статус з localStorage
+    let hideBook = localStorage.getItem('hideBook') === 'true';
+
+    // Оновлення кнопок
+    function updateButtons() {
+        enableBtn.disabled = !hideBook;
+        disableBtn.disabled = hideBook;
+    }
+
+    // Відображення або приховування книги
+    function applyBookVisibility() {
+        if (hideBook) {
+            bookOverlay.classList.add('hidden');
+            bookContent?.classList.add('visible');
+        } else {
+            bookOverlay.classList.remove('hidden');
+            bookContent?.classList.remove('visible');
+        }
+    }
+
+    // Ініціалізація
+    applyBookVisibility();
+    updateButtons();
+
+    // Клік по книзі — тільки анімація відкриття
+    let isBookOpened = false;
+    book?.addEventListener('click', () => {
+        if (!hideBook && !isBookOpened) {
             isBookOpened = true;
             book.classList.add('opened');
-            
-            // Wait for book animation to complete
             setTimeout(() => {
                 bookOverlay.classList.add('hidden');
-                bookContent.classList.add('visible');
+                bookContent?.classList.add('visible');
             }, 1000);
         }
     });
+
+    // Вмикання книги
+    enableBtn.addEventListener('click', () => {
+        localStorage.setItem('hideBook', 'false');
+        hideBook = false;
+        applyBookVisibility();
+        updateButtons();
+        alert('Книга буде знову показана при перезавантаженні.');
+    });
+
+    // Вимикання книги
+    disableBtn.addEventListener('click', () => {
+        localStorage.setItem('hideBook', 'true');
+        hideBook = true;
+        applyBookVisibility();
+        updateButtons();
+        alert('Книга більше не буде показана.');
+    });
+
 
     // Existing gallery and popup functionality
     const recipeCards = document.querySelectorAll('.recipe-card');
