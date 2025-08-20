@@ -26,6 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // jopatest
+   // console.log(localStorage.getItem('hideBook'));
+   // if (localStorage.getItem('hideBook') == 'false') {
+     //   hideBook = false;
+     //   console.log('EtoIF');
+
+     //   const Jopa = document.querySelector('.book-overlay');
+     //   Jopa.style.display = 'flex';
+     //   Jopa.style.pointerEvents = 'auto';
+      //  book.style.display = 'flex';
+      //  book.style.pointerEvents = 'auto';
+    //}
+   // else  {
+
+       // console.log('EtoELSE');
+        // book.style.pointerEvents = 'auto';
+       // bookOverlay.classList.add('hidden');
+       // bookContent?.classList.add('visible');
+
+   // };
+
     // Ініціалізація
     applyBookVisibility();
     updateButtons();
@@ -50,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         applyBookVisibility();
         updateButtons();
         alert('Книга буде знову показана при перезавантаженні.');
+        console.log('Vmikanie');
     });
 
     // Вимикання книги
@@ -59,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         applyBookVisibility();
         updateButtons();
         alert('Книга більше не буде показана.');
+        console.log('Vimikanie');
     });
 
 

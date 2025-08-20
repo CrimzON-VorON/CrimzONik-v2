@@ -36,9 +36,12 @@ body.cookbookimage {
     cursor: default;
     opacity: 0.5;
 }
-.book-overlay.hidden {
+
+.book-hidden .book-overlay {
     display: none !important;
 }
+
+
 .book-overlay {
     transition: opacity 0.3s;
 }

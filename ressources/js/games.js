@@ -189,7 +189,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="achievement-count">42/42 Ачівок</div>
             </div>
         </div></a>
-        <a href="#section16"><div class="game-item-achiv" data-tooltip="Сисяста корівка та класна музика">
+        <a href="#section19"><div class="game-item-achiv" data-tooltip="Калова частина.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2013300/header.jpg?t=1655832203" alt="Alien Shooter 2 - New Era">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Alien Shooter 2 - New Era</h4>
+                <div class="achievement-count">16/16 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section18"><div class="game-item-achiv" data-tooltip="Сисяста висока леді.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3187770/header.jpg?t=1733491750" alt="NAGAISAN">
+            <div class="game-info-achiv">
+                <h4 class="game-name">NAGAISAN</h4>
+                <div class="achievement-count">10/10 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section17"><div class="game-item-achiv" data-tooltip="Сисяста корівка та класна музика">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2454060/header.jpg?t=1746456703" alt="MAZEMAZE">
             <div class="game-info-achiv">
                 <h4 class="game-name">MAZEMAZE</h4>
