@@ -169,7 +169,14 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1476970/header.jpg?t=1741024848.webp" alt="Idleon">
             <div class="game-info-achiv">
                 <h4 class="game-name">IdleOn - The Idle RPG</h4>
-                <div class="achievement-count">220/276 Ачівок</div>
+                <div class="achievement-count">237/276 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section26"><div class="game-item-achiv" data-tooltip="Шо?">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2527500/header.jpg?t=1754525790" alt="MiSide">
+            <div class="game-info-achiv">
+                <h4 class="game-name">MiSide</h4>
+                <div class="achievement-count">0/26 Ачівок</div>
             </div>
         </div></a>
     `;
@@ -187,6 +194,47 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="game-info-achiv">
                 <h4 class="game-name">ELDEN RING</h4>
                 <div class="achievement-count">42/42 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section25"><div class="game-item-achiv" data-tooltip="Годна ігрушка про стрімершу з багатьма концовками.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2988620/f6b2f33d0af2a97327af50613d9e24f40682d645/header.jpg?t=1758210963" alt="I Hate My Waifu Streamer">
+            <div class="game-info-achiv">
+                <h4 class="game-name">I Hate My Waifu Streamer</h4>
+            </div>
+        </div></a>
+        <a href="#section24"><div class="game-item-achiv" data-tooltip="Класний рогалік про збір спелів і іх використанню.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/881100/header.jpg?t=1675987871" alt="Noita">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Noita</h4>
+                <div class="achievement-count">14/14 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section23"><div class="game-item-achiv" data-tooltip="Хоррор в поїзді.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1349960/header.jpg?t=1662352030" alt="The Ghost Train">
+            <div class="game-info-achiv">
+                <h4 class="game-name">The Ghost Train</h4>
+                <div class="achievement-count">5/5 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section22"><div class="game-item-achiv" data-tooltip="Головоломка.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3236460/header.jpg?t=1731780976" alt="NNNNNIGHT">
+            <div class="game-info-achiv">
+                <h4 class="game-name">NNNNNIGHT</h4>
+                <div class="achievement-count">6/6 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section21"><div class="game-item-achiv" data-tooltip="Собака-мілфа.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3627340/3e5d5f110b0f9932b2e469c9c86fff955641a575/ss_3e5d5f110b0f9932b2e469c9c86fff955641a575.600x338.jpg?t=1746463222" alt="monoch room">
+            <div class="game-info-achiv">
+                <h4 class="game-name">monoch room</h4>
+                <div class="achievement-count">11/11 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section20"><div class="game-item-achiv" data-tooltip="Собака.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3627340/74337e229a6fe160533f16bf38956b9ac18a4370/header.jpg?t=1746463222" alt="SAYONALAIKA">
+            <div class="game-info-achiv">
+                <h4 class="game-name">SAYONALAIKA</h4>
+                <div class="achievement-count">3/3 Ачівок</div>
             </div>
         </div></a>
         <a href="#section19"><div class="game-item-achiv" data-tooltip="Калова частина.">
