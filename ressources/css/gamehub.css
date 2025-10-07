@@ -1051,6 +1051,11 @@ body.games {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
 }
+@keyframes glowRed {
+  from { filter: drop-shadow(0 0 3px red); }
+  to { filter: drop-shadow(0 0 35px red); }
+}
+
 
 
 
