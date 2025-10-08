@@ -546,10 +546,13 @@
     color: var(--text-color);
     line-height: 1.6;
     background-color: rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    max-height: 400px;
 }
 .review-text:hover {
     backdrop-filter: blur(25px);
 }
+
 /* Screenshots Grid */
 .screenshots-grid  {
     display: grid;
