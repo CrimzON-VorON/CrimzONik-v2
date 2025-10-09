@@ -172,13 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="achievement-count">237/276 Ачівок</div>
             </div>
         </div></a>
-        <a href="#section26"><div class="game-item-achiv" data-tooltip="Шо?">
-            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2527500/header.jpg?t=1754525790" alt="MiSide">
-            <div class="game-info-achiv">
-                <h4 class="game-name">MiSide</h4>
-                <div class="achievement-count">0/26 Ачівок</div>
-            </div>
-        </div></a>
     `;
     
 
@@ -194,6 +187,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="game-info-achiv">
                 <h4 class="game-name">ELDEN RING</h4>
                 <div class="achievement-count">42/42 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section26"><div class="game-item-achiv" data-tooltip="Я в грі з купую дівчат.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2527500/header.jpg?t=1754525790" alt="MiSide">
+            <div class="game-info-achiv">
+                <h4 class="game-name">MiSide</h4>
+                <div class="achievement-count">26/26 Ачівок</div>
             </div>
         </div></a>
         <a href="#section25"><div class="game-item-achiv" data-tooltip="Годна ігрушка про стрімершу з багатьма концовками.">
