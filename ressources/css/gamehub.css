@@ -552,6 +552,19 @@
 .review-text:hover {
     backdrop-filter: blur(25px);
 }
+/* Повністю прибирає будь-які елементи управління у fullscreen */
+video::-webkit-media-controls {
+    display: none !important;
+}
+video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+video::-webkit-media-controls-panel {
+    display: none !important;
+}
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
 
 /* Screenshots Grid */
 .screenshots-grid  {

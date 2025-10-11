@@ -50,19 +50,50 @@ document.addEventListener('DOMContentLoaded', () => {
             currentImageIndex = (currentImageIndex + 1) % currentImages.length;
             updateFullscreenImage();
         }
+    }document.querySelectorAll('.review-btn').forEach(button => {
+  button.addEventListener('click', async () => {
+    const reviewId = button.getAttribute('data-review');
+
+    if (reviewId === "137") {
+      const video = document.getElementById('reviewVideo137');
+      video.style.display = 'block';
+
+      try {
+        await video.requestFullscreen();
+        await video.play();
+      } catch (err) {
+        console.error('Не вдалось запустити відео:', err);
+        video.style.display = 'none';
+        return;
+      }
+
+      video.addEventListener('ended', async () => {
+        if (document.fullscreenElement) await document.exitFullscreen();
+        video.pause();
+        video.currentTime = 0;
+        video.style.display = 'none'; // приховуємо знову
+
+        // відкриваємо твій попап
+        const reviewContent = reviewsContainer.querySelector(`[data-review="${reviewId}"]`).cloneNode(true);
+        const reviewContainer = reviewPopup.querySelector('.review-container');
+        reviewContainer.innerHTML = '';
+        reviewContainer.appendChild(reviewContent);
+        openPopup(reviewPopup);
+      }, { once: true });
+
+      return;
     }
 
-    // Review button click handler
-    document.querySelectorAll('.review-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const reviewId = button.getAttribute('data-review');
-            const reviewContent = reviewsContainer.querySelector(`[data-review="${reviewId}"]`).cloneNode(true);
-            const reviewContainer = reviewPopup.querySelector('.review-container');
-            reviewContainer.innerHTML = '';
-            reviewContainer.appendChild(reviewContent);
-            openPopup(reviewPopup);
-        });
-    });
+    // стандарт для інших кнопок
+    const reviewContent = reviewsContainer.querySelector(`[data-review="${reviewId}"]`).cloneNode(true);
+    const reviewContainer = reviewPopup.querySelector('.review-container');
+    reviewContainer.innerHTML = '';
+    reviewContainer.appendChild(reviewContent);
+    openPopup(reviewPopup);
+  });
+});
+
+
 
     // Screenshots button click handler
     document.querySelectorAll('.screenshots-btn').forEach(button => {
@@ -164,12 +195,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const achievementsPopup = document.createElement('div');
     achievementsPopup.className = 'achievements-popup';
     achievementsPopup.innerHTML = `
-        <h3>Поточні ігри з досягненнями</h3>
+        <h3>Поточні ігри</h3>
+        <a href="#section8"><div class="game-item-achiv" data-tooltip="Коопимся з Kolern з модами.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1748630546" alt="ELDEN RING">
+            <div class="game-info-achiv">
+                <h4 class="game-name">ELDEN RING</h4>
+                <div class="achievement-count">42/42 Ачівок</div>
+            </div>
+        </div></a>
         <a href="#section9"><div class="game-item-achiv" data-tooltip="Разраб додав всі внутріігрові ачівки і тепер їх треба всі робити... А було вже ачівок 64/68 всього. Думаю ачівок буде ще більше з новим 7 світом в ближчий час.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1476970/header.jpg?t=1741024848.webp" alt="Idleon">
             <div class="game-info-achiv">
                 <h4 class="game-name">IdleOn - The Idle RPG</h4>
                 <div class="achievement-count">237/276 Ачівок</div>
+            </div>
+        </div></a>
+        <a href="#section27"><div class="game-item-achiv" data-tooltip="Прикольний Дум про сильних, красивих і мускулистих демонес.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1072150/header.jpg?t=1717716092" alt="Hedon Bloodrite">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Hedon Bloodrite</h4>
             </div>
         </div></a>
     `;
@@ -182,13 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
     achievementsPopupRight.className = 'achievements-popup-right';
     achievementsPopupRight.innerHTML = `
         <h3>Активність (останні зіграні)</h3>
-        <a href="#section8"><div class="game-item-achiv" data-tooltip="Коопимся з Kolern з модами.">
-            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1748630546" alt="ELDEN RING">
-            <div class="game-info-achiv">
-                <h4 class="game-name">ELDEN RING</h4>
-                <div class="achievement-count">42/42 Ачівок</div>
-            </div>
-        </div></a>
         <a href="#section26"><div class="game-item-achiv" data-tooltip="Я в грі з купую дівчат.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2527500/header.jpg?t=1754525790" alt="MiSide">
             <div class="game-info-achiv">
