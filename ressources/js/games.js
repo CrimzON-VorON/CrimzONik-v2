@@ -226,6 +226,18 @@ document.addEventListener('DOMContentLoaded', () => {
     achievementsPopupRight.className = 'achievements-popup-right';
     achievementsPopupRight.innerHTML = `
         <h3>Активність (останні зіграні)</h3>
+        <a href="#section29"><div class="game-item-achiv" data-tooltip="Хентай ігрушка про зйомку фурей.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1526900/header.jpg?t=1756897293" alt="Sapphire Safari">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Sapphire Safari</h4>
+            </div>
+        </div></a>
+        <a href="#section28"><div class="game-item-achiv" data-tooltip="Хентай ігрушка з багатьма бубастими тьотками.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1621540/8931a302fa88d3f31ae60c4837c2bb471ff5da69/header.jpg?t=1758783310" alt="Spooky Milk Life">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Spooky Milk Life</h4>
+            </div>
+        </div></a>
         <a href="#section26"><div class="game-item-achiv" data-tooltip="Я в грі з купую дівчат.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2527500/header.jpg?t=1754525790" alt="MiSide">
             <div class="game-info-achiv">
