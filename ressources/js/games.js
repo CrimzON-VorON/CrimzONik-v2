@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
             currentImageIndex = (currentImageIndex + 1) % currentImages.length;
             updateFullscreenImage();
         }
-    }document.querySelectorAll('.review-btn').forEach(button => {
+    }
+
+document.querySelectorAll('.review-btn').forEach(button => {
   button.addEventListener('click', async () => {
     const reviewId = button.getAttribute('data-review');
 
@@ -71,9 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.fullscreenElement) await document.exitFullscreen();
         video.pause();
         video.currentTime = 0;
-        video.style.display = 'none'; // приховуємо знову
+        video.style.display = 'none';
 
-        // відкриваємо твій попап
+        // відкриваємо попап після відео
         const reviewContent = reviewsContainer.querySelector(`[data-review="${reviewId}"]`).cloneNode(true);
         const reviewContainer = reviewPopup.querySelector('.review-container');
         reviewContainer.innerHTML = '';
@@ -84,7 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // стандарт для інших кнопок
+    if (reviewId === "141") {
+      // видаляємо старі GIF-и
+      document.querySelectorAll('.side-gif').forEach(g => g.remove());
+
+      // створюємо нові GIF-и
+      const leftGif = document.createElement('img');
+      leftGif.src = '../img/Lunacid1.gif';
+      leftGif.className = 'side-gif left-gif';
+
+      const rightGif = document.createElement('img');
+      rightGif.src = '../img/Lunacid2.gif';
+      rightGif.className = 'side-gif right-gif';
+
+      document.body.appendChild(leftGif);
+      document.body.appendChild(rightGif);
+    }
+
+    // відкриваємо попап завжди
     const reviewContent = reviewsContainer.querySelector(`[data-review="${reviewId}"]`).cloneNode(true);
     const reviewContainer = reviewPopup.querySelector('.review-container');
     reviewContainer.innerHTML = '';
@@ -92,6 +111,15 @@ document.addEventListener('DOMContentLoaded', () => {
     openPopup(reviewPopup);
   });
 });
+
+// ===== ФІКС ДЛЯ GIF-ІВ =====
+// Прибираємо GIF-и при закритті попапа
+const originalClosePopup = closePopup;
+closePopup = function(popup) {
+  originalClosePopup(popup); // викликаємо оригінальне закриття
+  document.querySelectorAll('.side-gif').forEach(g => g.remove());
+};
+
 
 
 
@@ -210,12 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="achievement-count">237/276 Ачівок</div>
             </div>
         </div></a>
-        <a href="#section27"><div class="game-item-achiv" data-tooltip="Прикольний Дум про сильних, красивих і мускулистих демонес.">
-            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1072150/header.jpg?t=1717716092" alt="Hedon Bloodrite">
-            <div class="game-info-achiv">
-                <h4 class="game-name">Hedon Bloodrite</h4>
-            </div>
-        </div></a>
     `;
     
 
@@ -226,6 +248,18 @@ document.addEventListener('DOMContentLoaded', () => {
     achievementsPopupRight.className = 'achievements-popup-right';
     achievementsPopupRight.innerHTML = `
         <h3>Активність (останні зіграні)</h3>
+        <a href="#section30"><div class="game-item-achiv" data-tooltip="Крута темна фентезі натхненна іграми FromSoftware.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1745510/header.jpg?t=1734627655" alt="Lunacid">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Lunacid</h4>
+            </div>
+        </div></a>
+        <a href="#section27"><div class="game-item-achiv" data-tooltip="Прикольний Дум про сильних, красивих і мускулистих демонес.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1072150/header.jpg?t=1717716092" alt="Hedon Bloodrite">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Hedon Bloodrite</h4>
+            </div>
+        </div></a>
         <a href="#section29"><div class="game-item-achiv" data-tooltip="Хентай ігрушка про зйомку фурей.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1526900/header.jpg?t=1756897293" alt="Sapphire Safari">
             <div class="game-info-achiv">

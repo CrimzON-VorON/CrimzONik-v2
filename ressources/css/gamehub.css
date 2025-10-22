@@ -566,6 +566,28 @@ video::-webkit-media-controls-start-playback-button {
     display: none !important;
 }
 
+.side-gif {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 99vh;
+  width: auto;
+  object-fit: contain;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.left-gif {
+  left: 0;
+  transform: rotate(-5deg) translateY(-45%) translate(-30%);
+}
+
+.right-gif {
+  right: 0;
+  transform: rotate(5deg) translateY(-45%) translate(25%);
+}
+
+
 /* Screenshots Grid */
 .screenshots-grid  {
     display: grid;
