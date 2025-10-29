@@ -923,6 +923,61 @@ html, body {
     padding: 0.5rem;
 }
 
+.art-item img.blurred {
+    filter: blur(20px);
+}
+
+/* Центральна кнопка */
+.blur-toggle {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.global-toggle {
+    position: absolute;
+    top: calc(20% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0,0,0,0.4);
+    border-radius: 6px;
+    padding: 3px 6px;
+    font-size: 13px;
+}
+
+/* Кнопка "заблюрити?" */
+.reblur-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.reblur-all {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    border-radius: 6px;
+    padding: 3px 6px;
+    font-size: 13px;
+}
+
 /* Update Fullscreen Viewer for Art Gallery */
 .fullscreen-caption {
     display: flex;
