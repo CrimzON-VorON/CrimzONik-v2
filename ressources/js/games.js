@@ -235,7 +235,7 @@ closePopup = function(popup) {
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1476970/header.jpg?t=1741024848.webp" alt="Idleon">
             <div class="game-info-achiv">
                 <h4 class="game-name">IdleOn - The Idle RPG</h4>
-                <div class="achievement-count">237/276 Ачівок</div>
+                <div class="achievement-count">238/276 Ачівок</div>
             </div>
         </div></a>
     `;
@@ -248,6 +248,12 @@ closePopup = function(popup) {
     achievementsPopupRight.className = 'achievements-popup-right';
     achievementsPopupRight.innerHTML = `
         <h3>Активність (останні зіграні)</h3>
+        <a href="#section31"><div class="game-item-achiv" data-tooltip="Такий собі ремейк.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1154790/header.jpg?t=1724164827" alt="XIII">
+            <div class="game-info-achiv">
+                <h4 class="game-name">XIII</h4>
+            </div>
+        </div></a>
         <a href="#section30"><div class="game-item-achiv" data-tooltip="Крута темна фентезі натхненна іграми FromSoftware.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1745510/header.jpg?t=1734627655" alt="Lunacid">
             <div class="game-info-achiv">
