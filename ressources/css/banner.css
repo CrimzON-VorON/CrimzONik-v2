@@ -1,0 +1,102 @@
+#banner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeIn 5s ease forwards;
+  z-index: 9999;
+  padding: 20px; /* щоб не прилипав до країв */
+  box-sizing: border-box;
+}
+
+.banner-content {
+  position: relative;
+  background: #fff;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80vh; /* обмеження по висоті */
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  animation: scaleIn 5.8s ease forwards;
+  overflow-y: auto; /* якщо текст не влазить — з’явиться скрол */
+  box-sizing: border-box;
+}
+
+.banner-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 5px dashed red;
+  object-fit: cover;
+  max-height: 60vh; /* щоб картинка не займала занадто багато */
+}
+
+.banner-content p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+#close-banner {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+#close-banner:hover {
+  background: #d32f2f;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 📱 Адаптив для менших екранів */
+@media (max-width: 768px) {
+  .banner-content {
+    width: 95%;
+    max-height: 85vh;
+    padding: 10px;
+  }
+
+  .banner-content p {
+    font-size: 0.95rem;
+  }
+
+  #close-banner {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+}

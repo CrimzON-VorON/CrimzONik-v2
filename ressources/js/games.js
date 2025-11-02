@@ -248,6 +248,12 @@ closePopup = function(popup) {
     achievementsPopupRight.className = 'achievements-popup-right';
     achievementsPopupRight.innerHTML = `
         <h3>Активність (останні зіграні)</h3>
+        <a href="#section32"><div class="game-item-achiv" data-tooltip="Забавна хентай ігрушка з даванням кофе з інгрідієнтами які ти напишеш які перетворять дівчину в будь що.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3173560/header.jpg?t=1758028869" alt="Anomalous Coffee Machine">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Anomalous Coffee Machine</h4>
+            </div>
+        </div></a>
         <a href="#section31"><div class="game-item-achiv" data-tooltip="Такий собі ремейк.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1154790/header.jpg?t=1724164827" alt="XIII">
             <div class="game-info-achiv">
