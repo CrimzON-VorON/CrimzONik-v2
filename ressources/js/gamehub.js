@@ -85,3 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'newpage.html';
             }, 5000);
         });
+
+    // для відео мейд для облегшення
+    document.addEventListener("DOMContentLoaded", () => {
+      const videos = document.querySelectorAll(".video-container1 video");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.play();
+          } else {
+            entry.target.pause();
+          }
+        });
+      }, { threshold: 0.25 }); // 25% у полі зору
+
+      videos.forEach(video => observer.observe(video));
+    });
