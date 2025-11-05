@@ -248,6 +248,12 @@ closePopup = function(popup) {
     achievementsPopupRight.className = 'achievements-popup-right';
     achievementsPopupRight.innerHTML = `
         <h3>Активність (останні зіграні)</h3>
+        <a href="#section32"><div class="game-item-achiv" data-tooltip="Чілова візуальна новелла про бартендера.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/447530/header.jpg?t=1730740610" alt="VA-11 Hall-A: Cyberpunk Bartender Action">
+            <div class="game-info-achiv">
+                <h4 class="game-name">VA-11 Hall-A: Cyberpunk Bartender Action</h4>
+            </div>
+        </div></a>
         <a href="#section32"><div class="game-item-achiv" data-tooltip="Забавна хентай ігрушка з даванням кофе з інгрідієнтами які ти напишеш які перетворять дівчину в будь що.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3173560/header.jpg?t=1758028869" alt="Anomalous Coffee Machine">
             <div class="game-info-achiv">
