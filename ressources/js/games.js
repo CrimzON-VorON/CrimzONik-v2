@@ -235,7 +235,7 @@ closePopup = function(popup) {
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1476970/header.jpg?t=1741024848.webp" alt="Idleon">
             <div class="game-info-achiv">
                 <h4 class="game-name">IdleOn - The Idle RPG</h4>
-                <div class="achievement-count">238/276 Ачівок</div>
+                <div class="achievement-count">242/276 Ачівок</div>
             </div>
         </div></a>
     `;
@@ -248,7 +248,13 @@ closePopup = function(popup) {
     achievementsPopupRight.className = 'achievements-popup-right';
     achievementsPopupRight.innerHTML = `
         <h3>Активність (останні зіграні)</h3>
-        <a href="#section32"><div class="game-item-achiv" data-tooltip="Чілова візуальна новелла про бартендера.">
+        <a href="#section34"><div class="game-item-achiv" data-tooltip="Клікер під тематику Hololive.">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3543350/4c42b086e951bad8d58833e76232ab3e8a26704e/header.jpg?t=1749178594" alt="Holoidle">
+            <div class="game-info-achiv">
+                <h4 class="game-name">Holoidle</h4>
+            </div>
+        </div></a>
+        <a href="#section33"><div class="game-item-achiv" data-tooltip="Чілова візуальна новелла про бартендера.">
             <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/447530/header.jpg?t=1730740610" alt="VA-11 Hall-A: Cyberpunk Bartender Action">
             <div class="game-info-achiv">
                 <h4 class="game-name">VA-11 Hall-A: Cyberpunk Bartender Action</h4>
